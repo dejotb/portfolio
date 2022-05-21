@@ -35,13 +35,17 @@
 
   &__logo {
     width: 4rem;
+
+    & img {
+      transition: all 0.2s linear;
+    }
+
+    // :hover {
+    //   transform: scale(1.1);
+    // }
     // justify-self: end;
     @media screen and (min-width: $bp-sm) {
       width: 6rem;
-    }
-
-    img {
-      width: 100%;
     }
   }
 }
