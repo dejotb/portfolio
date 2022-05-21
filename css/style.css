@@ -135,6 +135,7 @@ p:not(:last-child) {
 .nav__list--wrapper {
   position: fixed;
   font-family: var(--ff-display);
+  background-color: var(--color-primary);
   display: grid;
   grid-gap: 10rem;
   align-content: center;
@@ -142,12 +143,12 @@ p:not(:last-child) {
   transition: 0.7s all 0.2s ease-in-out;
   height: 100vh;
   inset: 0;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   z-index: var(--z-index-popup);
 }
 @media screen and (min-width: 45em) {
   .nav__list--wrapper {
-    inset: 0 50vw 0 0;
+    inset: 0;
   }
 }
 .nav__logo {
