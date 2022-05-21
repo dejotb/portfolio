@@ -1,0 +1,45 @@
+// RESPONSIVE BREAKPOINTS
+
+$bp-xxl: 90em; // 1400px
+$bp-xl: 75em; // 1200px
+$bp-lg: 60em; // 1000px
+$bp-md: 55em; // 800px;
+$bp-sm: 45em; // 600px;
+
+:root {
+  // font family
+  --ff-primary: "Lato", sans-serif;
+  --ff-display: "Neuton", serif;
+
+  //font size
+  --fs-xl: clamp(3.5rem, 6vw + 1rem, 5rem);
+  --fs-600: clamp(3.25rem, 6vw + 1rem, 4rem);
+  --fs-500: 2rem;
+  --fs-400: 1.8rem;
+
+  @media screen and (min-width: var(--bp-xl)) {
+    :root {
+      --fs-500: 2.75rem;
+      --fs-400: 2.5rem;
+    }
+  }
+
+  // colors
+  --color-font: #11347d;
+  --color-primary: #ffc600;
+
+  --color-green: #07793d;
+  --color-yellow: #fdd01b;
+  --color-blue: #275fac;
+  --color-red: #db3445;
+  --color-white: #ffffff;
+  --color-grey: #363636;
+
+  // z-index
+
+  --z-index-negative: -1;
+  --z-index-box: 1000;
+  --z-index-popup: 1100;
+  --z-index-modal: 1200;
+  --z-index-loader: 1300;
+}

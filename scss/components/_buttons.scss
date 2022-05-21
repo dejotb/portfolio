@@ -1,0 +1,52 @@
+.btn {
+  //   background-color: red;
+  position: relative;
+  text-decoration: none;
+  padding: 7px 15px;
+  border-radius: 2rem;
+  height: 3rem;
+  min-width: 12rem;
+  background-color: transparent;
+
+  &:hover {
+    :after {
+      transform: translate3d(4px, 5px, 4px);
+      background-color: var(--color-white);
+    }
+  }
+
+  ::before {
+    content: "";
+    background-color: #fff;
+    -webkit-transform: translate(4px, 5px);
+    -o-transform: translate(4px, 5px);
+    transform: translate(4px, 5px);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12.17857vh;
+    border: 1px solid #000;
+  }
+
+  ::after {
+    content: "MENU";
+    // z-index: 1;
+    display: grid;
+    align-content: center;
+    color: #000;
+    background-color: var(--color-yellow);
+    padding: inherit;
+    transition: background-color 0.125s linear, transform 0.125s ease-out;
+    // display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12.17857vh;
+    border: 1px solid #000;
+  }
+}
