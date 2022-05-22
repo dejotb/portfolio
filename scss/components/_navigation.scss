@@ -2,6 +2,7 @@
 
 .nav {
   //   grid-area: nav;
+  align-self: start;
   background-color: var(--color-yellow);
   width: 100%;
   display: flex;

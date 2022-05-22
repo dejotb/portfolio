@@ -55,6 +55,8 @@ body {
   font-weight: 400;
   line-height: 1.6;
   text-rendering: optimizeSpeed;
+  display: grid;
+  min-height: 100vh;
 }
 
 ::selection {
@@ -124,7 +126,36 @@ p:not(:last-child) {
   margin-bottom: 1rem;
 }
 
+.header {
+  align-self: start;
+  pad: 1rem;
+}
+.header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.1;
+  grid-gap: 2rem;
+}
+.header__title span:first-of-type {
+  display: block;
+  font-size: calc(var(--fs-600) * 1.5);
+}
+.header__title span:nth-of-type(2) {
+  display: block;
+  font-size: calc(var(--fs-600) * 1.2);
+}
+.header__image {
+  background-color: transparent;
+  border: none;
+  width: auto;
+}
+.header__image img {
+  height: 100%;
+}
+
 .nav {
+  align-self: start;
   background-color: var(--color-yellow);
   width: 100%;
   display: flex;
