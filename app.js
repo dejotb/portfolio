@@ -21,24 +21,28 @@ hamburger.addEventListener('click', function(e) {
 
 
 
-const h1 = document.querySelector('h1')
 
-// console.log(h1.offsetHeight);
+const calcHeight = function() {
+    const h1 = document.querySelector('h1')
+    const headingCompStyles = window.getComputedStyle(h1);
+    const img = document.querySelector('.header__image');
+
+    const handleHeadingHeight = headingCompStyles.getPropertyValue('height').split('px').join().slice(0, -1);
+
+    img.style.height = `${handleHeadingHeight * 1.3}px`;
+}
+
+calcHeight()
 
 
-const compStyles = window.getComputedStyle(h1);
 
-const h1Height2 = compStyles.getPropertyValue('height').split('px').join().slice(0, -1);
 
-console.log(h1Height2);
 
-const h1Height = compStyles.getPropertyValue('font-size').split('px').join().slice(0, -1);
+window.addEventListener('resize', calcHeight)
 
-const img = document.querySelector('.header__image');
 
-console.log(h1Height.split('px').join().slice(0, -1));
 
-img.style.height = `${h1Height2 * 1.4}px`;
+
 // Console Information
 
 console.info('Hey! 👋')
