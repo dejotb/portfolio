@@ -27,7 +27,8 @@ html {
 body {
   font-size: calc(15px + 0.2vw);
   font-family: var(--ff-primary);
-  color: var(--color-font);
+  color: var(--color-white);
+  background-color: #8191e6;
   font-weight: 400;
   line-height: 1.6;
   text-rendering: optimizeSpeed;
@@ -35,6 +36,7 @@ body {
   // align-items: center;
   min-height: 100vh;
   // grid-gap: 2rem;
+  padding: 1rem;
 }
 
 ::selection {

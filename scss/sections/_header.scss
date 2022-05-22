@@ -9,19 +9,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.1;
-    grid-gap: 2rem;
+    line-height: 0.9;
+    grid-gap: 1rem;
 
     & span:first-of-type {
       display: block;
-      font-size: calc(var(--fs-600) * 1.5);
-      //   color: red;
+      font-size: calc(var(--fs-600) * 1.4);
+
+      @media screen and (min-width: $bp-sm) {
+        font-size: calc(var(--fs-600) * 2.5);
+      }
     }
 
     & span:nth-of-type(2) {
       display: block;
-      font-size: calc(var(--fs-600) * 1.2);
+      font-size: calc(var(--fs-600) * 1.075);
       //   color: var(--color-blue);
+
+      @media screen and (min-width: $bp-sm) {
+        font-size: calc(var(--fs-600) * 2);
+      }
     }
   }
 

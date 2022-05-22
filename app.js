@@ -38,7 +38,7 @@ const img = document.querySelector('.header__image');
 
 console.log(h1Height.split('px').join().slice(0, -1));
 
-img.style.height = `${h1Height2 *2}px`;
+img.style.height = `${h1Height2 * 1.4}px`;
 // Console Information
 
 console.info('Hey! 👋')

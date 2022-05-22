@@ -3,12 +3,12 @@
 .nav {
   //   grid-area: nav;
   align-self: start;
-  background-color: var(--color-yellow);
+  // background-color: var(--color-yellow);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  // padding: 1rem;
   //   padding: 1rem 0;
   //   font-size: 3rem;
   //   align-self: start;
@@ -35,7 +35,8 @@
   }
 
   &__logo {
-    width: 4rem;
+    // width: 4rem;
+    display: none;
 
     & img {
       transition: all 0.2s linear;
@@ -46,6 +47,7 @@
     // }
     // justify-self: end;
     @media screen and (min-width: $bp-sm) {
+      display: block;
       width: 6rem;
     }
   }
