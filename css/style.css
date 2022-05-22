@@ -62,7 +62,7 @@ body {
 }
 @media screen and (min-width: 45em) {
   body {
-    padding: 1rem;
+    padding: 2rem;
   }
 }
 
@@ -140,7 +140,7 @@ p:not(:last-child) {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 0.8;
+  line-height: 0.9;
   grid-gap: 1rem;
   font-weight: 900;
 }
