@@ -2,6 +2,7 @@
 
 .btn {
   //   background-color: red;
+  // font-family: inherit;
   position: relative;
   text-decoration: none;
   padding: 7px 15px;
@@ -9,6 +10,8 @@
   height: 3rem;
   min-width: 12rem;
   background-color: transparent;
+  width: fit-content;
+  // font-weight: 400;
 
   &:hover {
     :after {
@@ -31,11 +34,12 @@
     height: 100%;
     border-radius: 12.17857vh;
     border: 1px solid #000;
+    z-index: -1;
   }
 
   ::after {
     content: "MENU";
-    // z-index: 1;
+    z-index: -1;
     display: grid;
     align-content: center;
     color: #000;
@@ -50,5 +54,15 @@
     height: 100%;
     border-radius: 12.17857vh;
     border: 1px solid #000;
+  }
+}
+
+.hamburger {
+  @media screen and (min-width: $bp-sm) {
+    display: none;
+  }
+
+  &__text {
+    color: black;
   }
 }

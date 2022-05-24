@@ -29,7 +29,7 @@ const calcHeight = function() {
 
     const handleHeadingHeight = headingCompStyles.getPropertyValue('height').split('px').join().slice(0, -1);
 
-    img.style.height = `${handleHeadingHeight * 1.3}px`;
+    img.style.height = `${handleHeadingHeight * 1.4}px`;
 }
 
 calcHeight()
