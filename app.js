@@ -11,7 +11,7 @@ hamburger.addEventListener('click', function(e) {
 
     if (hamburgerState === 'false') {
         console.log(navWrapper);
-        navWrapper.style.transform = 'translate(0)';
+        navWrapper.style.transform = 'translateX(0)';
     }
 });
 

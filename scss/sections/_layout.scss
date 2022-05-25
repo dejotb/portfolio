@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.layout {
+  //   background-color: pink;
+  transform: translateX(0);
+  transition: 0.5s transform 0.2s ease-in-out;
+
+  @media screen and (min-width: $bp-sm) {
+    padding: 1rem;
+  }
+
+  &--nav {
+    transform: translateX(40%);
+  }
+}

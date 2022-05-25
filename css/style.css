@@ -192,7 +192,7 @@ p:not(:last-child) {
   transition: 0.5s transform 0.2s ease-in-out;
   height: 100vh;
   inset: 0;
-  transform: translateY(-100%);
+  transform: translateX(-100%);
   z-index: var(--z-index-popup);
 }
 @media screen and (min-width: 45em) {
@@ -200,7 +200,7 @@ p:not(:last-child) {
     height: auto;
     background-color: transparent;
     position: relative;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 @media screen and (min-width: 45em) {
