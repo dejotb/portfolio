@@ -5,17 +5,19 @@
   // font-family: inherit;
   position: relative;
   text-decoration: none;
-  padding: 7px 15px;
+  // padding: 7px 15px;
   border-radius: 2rem;
-  height: 3rem;
+  height: 3.5rem;
   min-width: 12rem;
   background-color: transparent;
   width: fit-content;
+  cursor: pointer;
+
   // font-weight: 400;
 
   &:hover {
     :after {
-      transform: translate3d(4px, 5px, 4px);
+      transform: translate3d(4px, 4px, 4px);
       background-color: #8191e6;
     }
   }
@@ -23,9 +25,9 @@
   ::before {
     content: "";
     background-color: #fff;
-    -webkit-transform: translate(4px, 5px);
-    -o-transform: translate(4px, 5px);
-    transform: translate(4px, 5px);
+    // -webkit-transform: translate(4px, 5px);
+    // -o-transform: translate(4px, 5px);
+    transform: translate(4px, 4px);
     display: block;
     position: absolute;
     top: 0;
@@ -38,10 +40,12 @@
   }
 
   ::after {
-    content: "MENU";
+    // content: "dsds";
+    content: attr(data-title);
     z-index: -1;
     display: grid;
     align-content: center;
+    justify-items: center;
     color: #000;
     background-color: var(--color-yellow);
     padding: inherit;

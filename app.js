@@ -11,7 +11,9 @@ hamburger.addEventListener('click', function(e) {
 
     if (hamburgerState === 'false') {
         console.log(navWrapper);
-        navWrapper.style.transform = 'translateX(0)';
+        // navWrapper.style.transform = 'translateX(0)';
+        navWrapper.style.opacity = '1';
+        navWrapper.style.display = 'grid';
     }
 });
 
@@ -46,3 +48,8 @@ window.addEventListener('resize', calcHeight)
 // Console Information
 
 console.info('Hey! 👋')
+
+
+
+
+

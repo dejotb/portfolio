@@ -176,6 +176,7 @@ p:not(:last-child) {
   width: 100%;
   display: grid;
   grid-auto-flow: column;
+  padding: 0 1rem;
 }
 @media screen and (min-width: 45em) {
   .nav {
@@ -183,24 +184,35 @@ p:not(:last-child) {
   }
 }
 .nav__list--wrapper {
-  position: fixed;
+  position: absolute;
   font-family: var(--ff-display);
   background-color: var(--color-primary);
   display: grid;
   align-content: center;
   justify-items: center;
-  transition: 0.5s transform 0.2s ease-in-out;
+  animation: smooth 0.2s ease-in-out;
   height: 100vh;
   inset: 0;
-  transform: translateX(-100%);
+  opacity: 0;
+  display: none;
   z-index: var(--z-index-popup);
+}
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 45em) {
   .nav__list--wrapper {
+    justify-items: end;
+    display: grid;
+    opacity: 1;
     height: auto;
     background-color: transparent;
     position: relative;
-    transform: translateX(0);
   }
 }
 @media screen and (min-width: 45em) {
@@ -208,6 +220,12 @@ p:not(:last-child) {
     display: flex;
     grid-gap: 2rem;
   }
+}
+.nav__link {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 .nav__logo {
   display: none;
@@ -230,23 +248,21 @@ p:not(:last-child) {
 .btn {
   position: relative;
   text-decoration: none;
-  padding: 7px 15px;
   border-radius: 2rem;
-  height: 3rem;
+  height: 3.5rem;
   min-width: 12rem;
   background-color: transparent;
   width: fit-content;
+  cursor: pointer;
 }
 .btn:hover :after {
-  transform: translate3d(4px, 5px, 4px);
+  transform: translate3d(4px, 4px, 4px);
   background-color: #8191e6;
 }
 .btn ::before {
   content: "";
   background-color: #fff;
-  -webkit-transform: translate(4px, 5px);
-  -o-transform: translate(4px, 5px);
-  transform: translate(4px, 5px);
+  transform: translate(4px, 4px);
   display: block;
   position: absolute;
   top: 0;
@@ -258,10 +274,11 @@ p:not(:last-child) {
   z-index: -1;
 }
 .btn ::after {
-  content: "MENU";
+  content: attr(data-title);
   z-index: -1;
   display: grid;
   align-content: center;
+  justify-items: center;
   color: #000;
   background-color: var(--color-yellow);
   padding: inherit;
