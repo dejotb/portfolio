@@ -215,9 +215,13 @@ p:not(:last-child) {
     position: relative;
   }
 }
+.nav__items {
+  display: grid;
+  grid-gap: 1rem;
+}
 @media screen and (min-width: 45em) {
   .nav__items {
-    display: flex;
+    grid-auto-flow: column;
     grid-gap: 2rem;
   }
 }
@@ -225,7 +229,6 @@ p:not(:last-child) {
   display: grid;
   width: 100%;
   height: 100%;
-  margin: auto;
 }
 .nav__logo {
   display: none;
@@ -250,7 +253,7 @@ p:not(:last-child) {
   text-decoration: none;
   border-radius: 2rem;
   height: 3.5rem;
-  min-width: 12rem;
+  min-width: 10rem;
   background-color: transparent;
   width: fit-content;
   cursor: pointer;
@@ -290,6 +293,17 @@ p:not(:last-child) {
   height: 100%;
   border-radius: 12.17857vh;
   border: 1px solid #000;
+}
+.btn--close {
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+@media screen and (min-width: 45em) {
+  .btn--close {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 45em) {

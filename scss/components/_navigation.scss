@@ -56,9 +56,10 @@
   }
 
   &__items {
+    display: grid;
+    grid-gap: 1rem;
     @media screen and (min-width: $bp-sm) {
-      display: flex;
-      // justify-content: space-around;
+      grid-auto-flow: column;
       grid-gap: 2rem;
     }
   }
@@ -70,7 +71,7 @@
     // justify-content: center;
     width: 100%;
     height: 100%;
-    margin: auto;
+    // margin: auto;
     // transform: translateX(-0.5rem);
   }
 
