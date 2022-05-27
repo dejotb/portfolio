@@ -1,14 +1,18 @@
 @use "../abstracts" as *;
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   align-self: start;
   width: 100%;
   display: grid;
   grid-auto-flow: column;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 
   @media screen and (min-width: $bp-sm) {
     // justify-content: center;
+    padding: 1rem 2rem;
     grid-template-columns: auto 1fr;
   }
 

@@ -52,18 +52,8 @@ body {
   font-size: calc(15px + 0.2vw);
   font-family: var(--ff-primary);
   color: var(--color-white);
-  background-color: #0e141b;
   line-height: 1.6;
   text-rendering: optimizeSpeed;
-  display: grid;
-  align-content: start;
-  min-height: 100vh;
-  padding: 2rem 1rem;
-}
-@media screen and (min-width: 45em) {
-  body {
-    padding: 1rem;
-  }
 }
 
 ::selection {
@@ -110,11 +100,6 @@ a {
   color: inherit;
   text-decoration: none;
   transition: 0.2s all;
-}
-
-html {
-  scrollbar-color: var(--color-blue) #e0e0e0;
-  scrollbar-width: thin;
 }
 
 input,
@@ -171,15 +156,33 @@ p:not(:last-child) {
   height: 100%;
 }
 
+.layout {
+  display: grid;
+  align-content: start;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: var(--color-white);
+  background-color: #0e141b;
+}
+@media screen and (min-width: 45em) {
+  .layout {
+    padding: 1rem;
+  }
+}
+
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   align-self: start;
   width: 100%;
   display: grid;
   grid-auto-flow: column;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 }
 @media screen and (min-width: 45em) {
   .nav {
+    padding: 1rem 2rem;
     grid-template-columns: auto 1fr;
   }
 }
@@ -253,20 +256,17 @@ p:not(:last-child) {
   text-decoration: none;
   border-radius: 2rem;
   height: 3.5rem;
-  min-width: 10rem;
   background-color: transparent;
   width: fit-content;
   cursor: pointer;
+  min-width: 14rem;
 }
 .btn:hover :after {
   transform: translate3d(4px, 4px, 4px);
   background-color: #8191e6;
 }
-.btn ::before {
-  content: "";
-  background-color: #fff;
-  transform: translate(4px, 4px);
-  display: block;
+.btn ::before,
+.btn ::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -276,29 +276,27 @@ p:not(:last-child) {
   border: 1px solid #000;
   z-index: -1;
 }
+.btn ::before {
+  display: block;
+  content: "";
+  background-color: #fff;
+  transform: translate(4px, 4px);
+}
 .btn ::after {
   content: attr(data-title);
-  z-index: -1;
   display: grid;
   align-content: center;
   justify-items: center;
   color: #000;
   background-color: var(--color-yellow);
-  padding: inherit;
   transition: background-color 0.125s linear, transform 0.125s ease-out;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12.17857vh;
-  border: 1px solid #000;
 }
 .btn--close {
   border: none;
   position: absolute;
   top: 1rem;
   right: 1rem;
+  min-width: 4rem;
 }
 @media screen and (min-width: 45em) {
   .btn--close {
