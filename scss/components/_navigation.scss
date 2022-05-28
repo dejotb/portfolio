@@ -7,6 +7,7 @@
   align-self: start;
   width: 100%;
   display: grid;
+  align-items: center;
   grid-auto-flow: column;
   padding: 2rem 1rem 1rem;
   background-color: var(--color-primary);
@@ -14,7 +15,7 @@
   @media screen and (min-width: $bp-sm) {
     // justify-content: center;
     padding: 1rem 2rem;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
   }
 
   &__list--wrapper {
@@ -23,15 +24,16 @@
     background-color: var(--color-primary);
     display: grid;
     // grid-gap: 10rem;
-    align-content: center;
+    align-items: center;
     justify-items: center;
+    // justify-self: center;
     // transition: 0.7s opacity 0.8s linear;
 
     animation: smooth 0.2s ease-in-out;
     height: 100vh;
     inset: 0;
-    opacity: 0;
-    display: none;
+    // opacity: 0;
+    // display: none;
     // transform: translateX(-100%);
 
     z-index: var(--z-index-popup);
@@ -50,9 +52,9 @@
       // grid-auto-flow: column;
       // justify-self: center;
       // align-content: start;
-      justify-items: end;
-      display: grid;
-      opacity: 1;
+      // justify-items: end;
+      // display: grid;
+      // opacity: 1;
       height: auto;
       background-color: transparent;
       position: relative;
@@ -98,6 +100,20 @@
       // justify-self: flex-start;
     }
   }
+
+  &__settings {
+    display: none;
+    position: relative;
+
+    @media screen and (min-width: $bp-sm) {
+      display: block;
+      justify-self: end;
+      transform: translateY(0.5rem);
+      // position: fixed;
+      // top: 3rem;
+      // right: 1rem;
+    }
+  }
 }
 
 .hamburger {
@@ -105,10 +121,28 @@
   transform: translateY(-0.5rem);
 }
 
-// .hamburger__active {
-//   animation: hamburgerTextActive 1s ease-in-out;
-// }
+.settings {
+  &__control {
+    position: absolute;
+    top: -2rem;
+    right: -5rem;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 12vh;
+    background-color: var(--color-primary);
+    // display: flex;
+    // grid-gap: 1rem;
+    // align-items: flex-end;
+    // grid-gap: 1rem;
+    z-index: -1;
 
-// .hamburger__inactive {
-//   animation: hamburgerTextInactive 1s ease-in-out;
-// }
+    & :first-child {
+      transform: translate3d(1rem, 4.4rem, 0);
+    }
+
+    & :nth-child(2) {
+      // width: 1rem;
+      transform: translate3d(6.5rem, 5.8rem, 0);
+    }
+  }
+}
