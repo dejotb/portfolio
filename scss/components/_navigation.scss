@@ -33,7 +33,7 @@
     height: 100vh;
     inset: 0;
     // opacity: 0;
-    // display: none;
+    display: none;
     // transform: translateX(-100%);
 
     z-index: var(--z-index-popup);
@@ -53,7 +53,7 @@
       // justify-self: center;
       // align-content: start;
       // justify-items: end;
-      // display: grid;
+      display: grid;
       // opacity: 1;
       height: auto;
       background-color: transparent;
@@ -136,13 +136,16 @@
     // grid-gap: 1rem;
     z-index: -1;
 
-    & :first-child {
-      transform: translate3d(1rem, 4.4rem, 0);
-    }
+    // & :first-child {
+    //   transform: translate3d(1rem, 4.5rem, 0);
+    // }
 
-    & :nth-child(2) {
-      // width: 1rem;
-      transform: translate3d(6.5rem, 5.8rem, 0);
-    }
+    // & :nth-child(2) {
+    //   transform: translate3d(5.5rem, 6rem, 0);
+    // }
   }
+}
+
+.hidden {
+  opacity: 0;
 }

@@ -197,6 +197,7 @@ p:not(:last-child) {
   animation: smooth 0.2s ease-in-out;
   height: 100vh;
   inset: 0;
+  display: none;
   z-index: var(--z-index-popup);
 }
 @keyframes smooth {
@@ -209,6 +210,7 @@ p:not(:last-child) {
 }
 @media screen and (min-width: 45em) {
   .nav__list--wrapper {
+    display: grid;
     height: auto;
     background-color: transparent;
     position: relative;
@@ -268,11 +270,9 @@ p:not(:last-child) {
   background-color: var(--color-primary);
   z-index: -1;
 }
-.settings__control :first-child {
-  transform: translate3d(1rem, 4.4rem, 0);
-}
-.settings__control :nth-child(2) {
-  transform: translate3d(6.5rem, 5.8rem, 0);
+
+.hidden {
+  opacity: 0;
 }
 
 .btn {

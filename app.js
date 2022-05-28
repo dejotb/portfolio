@@ -29,7 +29,7 @@ const calcHeight = function() {
     const headingCompStyles = window.getComputedStyle(h1);
     const img = document.querySelector('.header__image');
 
-    const handleHeadingHeight = headingCompStyles.getPropertyValue('height').split('px').join().slice(0, -1);
+    const handleHeadingHeight = headingCompStyles.getPropertyValue('height').split('px').at(0);
 
     img.style.height = `${handleHeadingHeight * 1.4}px`;
 }
@@ -49,6 +49,19 @@ window.addEventListener('resize', calcHeight)
 
 console.info('Hey! 👋')
 
+
+
+const btnSettings = document.querySelector('.btn--settings');
+const settingsControlBar = document.querySelector('.settings__control');
+btnSettings.addEventListener('click', function() {
+    if (btnSettings.getAttribute('aria-expanded') === 'false') {
+        settingsControlBar.classList.remove('hidden')
+        btnSettings.setAttribute('aria-expanded', 'true');
+    } else {
+        settingsControlBar.classList.add('hidden')
+        btnSettings.setAttribute('aria-expanded', 'false');
+    }
+})
 
 
 

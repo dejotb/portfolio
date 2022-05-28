@@ -59,9 +59,19 @@
 
   &--control {
     position: absolute;
+    // top: 0;
+    // left: 0;
     border: none;
     width: 3rem;
     height: auto;
+
+    // & img:first-of-type {
+    //   transform: translate3d(1rem, 4.5rem, 0);
+    // }
+
+    // & img:nth-of-type(2) {
+    //   transform: translate3d(5.5rem, 6rem, 0);
+    // }
   }
 
   &--settings {
