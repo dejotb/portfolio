@@ -51,7 +51,6 @@ html {
 body {
   font-size: calc(15px + 0.2vw);
   font-family: var(--ff-primary);
-  color: var(--color-white);
   line-height: 1.6;
   text-rendering: optimizeSpeed;
 }
@@ -158,7 +157,7 @@ p:not(:last-child) {
 
 .layout {
   display: grid;
-  align-content: start;
+  align-content: center;
   min-height: 100vh;
   padding: 2rem 1rem;
   color: var(--color-white);
@@ -178,7 +177,8 @@ p:not(:last-child) {
   width: 100%;
   display: grid;
   grid-auto-flow: column;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem;
+  background-color: var(--color-primary);
 }
 @media screen and (min-width: 45em) {
   .nav {
@@ -242,7 +242,7 @@ p:not(:last-child) {
 @media screen and (min-width: 45em) {
   .nav__logo {
     display: block;
-    width: 4rem;
+    width: 5rem;
   }
 }
 
