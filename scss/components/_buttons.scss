@@ -3,13 +3,16 @@
 .btn {
   position: relative;
   text-decoration: none;
-  border-radius: 2rem;
+  border: none;
+  // border-radius: 2rem;
   height: 3.5rem;
   background-color: transparent;
   width: fit-content;
   cursor: pointer;
   width: 13rem;
+  z-index: var(--z-index-popup);
 
+  // &:focus,
   &:hover {
     :after {
       transform: translate3d(4px, 4px, 4px);
@@ -42,45 +45,40 @@
     align-content: center;
     justify-items: center;
     color: #000;
-    background-color: var(--color-yellow);
+    background-color: var(--color-primary);
     transition: background-color 0.125s linear, transform 0.125s ease-out;
   }
 
   &--close {
-    border: none;
     position: absolute;
     top: 1rem;
     right: 1rem;
     width: 4rem;
+
+    &:hover {
+      :after {
+        background-color: var(--color-red);
+      }
+    }
     @media screen and (min-width: $bp-sm) {
       display: none;
     }
   }
 
+  &--settings,
   &--control {
-    position: absolute;
-    // top: 0;
-    // left: 0;
-    border: none;
-    width: 3rem;
-    height: auto;
+    width: 4rem;
+    font-size: 2rem;
 
-    // & img:first-of-type {
-    //   transform: translate3d(1rem, 4.5rem, 0);
-    // }
-
-    // & img:nth-of-type(2) {
-    //   transform: translate3d(5.5rem, 6rem, 0);
-    // }
+    &:hover {
+      :after {
+        background-color: var(--color-white);
+      }
+    }
   }
 
-  &--settings {
-    // position: relative;
-    width: 4rem;
-    height: auto;
-    background-color: transparent;
-    border: none;
-    // z-index: var(--z-index-popup);
+  &--control {
+    // position: absolute;
   }
 }
 

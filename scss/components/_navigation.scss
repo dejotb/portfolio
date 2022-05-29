@@ -102,13 +102,14 @@
   }
 
   &__settings {
-    display: none;
+    // display: none;
     position: relative;
+    justify-self: end;
+    transform: translateY(-0.5rem);
 
     @media screen and (min-width: $bp-sm) {
-      display: block;
-      justify-self: end;
-      transform: translateY(0.5rem);
+      transform: translateY(0);
+      // transform: translateY(0.5rem);
       // position: fixed;
       // top: 3rem;
       // right: 1rem;
@@ -124,17 +125,36 @@
 .settings {
   &__control {
     position: absolute;
-    top: -2rem;
-    right: -5rem;
-    height: 15rem;
-    width: 15rem;
-    border-radius: 12vh;
+    top: -7rem;
+    left: -8rem;
+    // margin-left: auto;
+    // margin-right: auto;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
     background-color: var(--color-primary);
+    // border: 1px black solid;
     // display: flex;
     // grid-gap: 1rem;
     // align-items: flex-end;
     // grid-gap: 1rem;
     z-index: -1;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: end;
+    justify-items: center;
+    justify-content: center;
+    grid-gap: 4rem;
+
+    & > .btn--control:first-child {
+      // transform: translate3d(3rem, 8rem, 0);
+      transform: translateY(-4.5rem) translateX(-1.5rem);
+    }
+
+    & > .btn--control:nth-child(2) {
+      transform: translateY(-2rem) translateX(-4rem);
+      // transform: translate3d(10rem, 9.5rem, 0);
+    }
 
     // & :first-child {
     //   transform: translate3d(1rem, 4.5rem, 0);

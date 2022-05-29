@@ -15,6 +15,8 @@ ul {
 * {
   &:focus {
     outline-color: var(--color-blue);
+    // border-radius: 12vh;
+    // transform: translate3d(4px, 4px, 4px);
   }
 }
 
