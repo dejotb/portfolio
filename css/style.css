@@ -313,9 +313,8 @@ p:not(:last-child) {
   z-index: -1;
 }
 .btn ::before {
-  display: block;
   content: "";
-  background-color: #fff;
+  background-color: black;
   transform: translate(4px, 4px);
 }
 .btn ::after {
