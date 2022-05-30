@@ -66,3 +66,18 @@ btnSettings.addEventListener('click', function() {
 
 
 
+// Sounds
+
+
+
+const btn = document.querySelectorAll('.btn');
+
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.closest('.btn')) {
+        const audio = new Audio('sound/click3.mp3');
+        const btnClicked = e.target.closest('.btn');
+        audio.play();
+        console.log(btnClicked);
+    }
+})

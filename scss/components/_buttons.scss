@@ -13,10 +13,16 @@
   z-index: var(--z-index-popup);
 
   // &:focus,
-  &:hover {
+  &:active {
     :after {
       transform: translate3d(4px, 4px, 4px);
+    }
+  }
+  &:hover {
+    :after {
       background-color: #8191e6;
+      // transform: translate3d(4px, 4px, 4px);
+      // background-color: var(--color-green);
     }
   }
 
@@ -75,10 +81,6 @@
         background-color: var(--color-white);
       }
     }
-  }
-
-  &--control {
-    // position: absolute;
   }
 }
 

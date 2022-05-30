@@ -297,8 +297,10 @@ p:not(:last-child) {
   width: 13rem;
   z-index: var(--z-index-popup);
 }
-.btn:hover :after {
+.btn:active :after {
   transform: translate3d(4px, 4px, 4px);
+}
+.btn:hover :after {
   background-color: #8191e6;
 }
 .btn ::before,
@@ -347,6 +349,7 @@ p:not(:last-child) {
 .btn--settings:hover :after, .btn--control:hover :after {
   background-color: var(--color-white);
 }
+
 @media screen and (min-width: 45em) {
   .hamburger {
     display: none;
