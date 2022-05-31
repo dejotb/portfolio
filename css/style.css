@@ -194,13 +194,14 @@ p:not(:last-child) {
   display: grid;
   align-items: center;
   justify-items: center;
-  animation: smooth 0.2s ease-in-out;
+  animation: fade-in 0.2s ease-in-out;
   height: 100vh;
   inset: 0;
+  opacity: 0;
   display: none;
   z-index: var(--z-index-popup);
 }
-@keyframes smooth {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -211,6 +212,7 @@ p:not(:last-child) {
 @media screen and (min-width: 45em) {
   .nav__list--wrapper {
     display: grid;
+    opacity: 1;
     height: auto;
     background-color: transparent;
     position: relative;
@@ -275,15 +277,21 @@ p:not(:last-child) {
   justify-content: center;
   grid-gap: 4rem;
 }
-.settings__control > .btn--control:first-child {
+.settings__control > .btn--control-theme:first-child, .settings__control > .btn--control-sound:first-child {
   transform: translateY(-4.5rem) translateX(-1.5rem);
 }
-.settings__control > .btn--control:nth-child(2) {
+.settings__control > .btn--control-theme:nth-child(2), .settings__control > .btn--control-sound:nth-child(2) {
   transform: translateY(-2rem) translateX(-4rem);
 }
 
 .hidden {
   opacity: 0;
+  display: none;
+}
+
+.visible {
+  opacity: 1;
+  display: grid;
 }
 
 .btn {
@@ -342,11 +350,11 @@ p:not(:last-child) {
     display: none;
   }
 }
-.btn--settings, .btn--control {
+.btn--settings, .btn--control-theme, .btn--control-sound {
   width: 4rem;
   font-size: 2rem;
 }
-.btn--settings:hover :after, .btn--control:hover :after {
+.btn--settings:hover :after, .btn--control-theme:hover :after, .btn--control-sound:hover :after {
   background-color: var(--color-white);
 }
 

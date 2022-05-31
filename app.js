@@ -10,18 +10,10 @@ hamburger.addEventListener('click', function(e) {
     const hamburgerState = e.currentTarget.getAttribute('aria-expanded');
 
     if (hamburgerState === 'false') {
-        console.log(navWrapper);
-        // navWrapper.style.transform = 'translateX(0)';
-        navWrapper.style.opacity = '1';
-        navWrapper.style.display = 'grid';
+        navWrapper.classList.add('visible');
+        hamburger.setAttribute('aria-expanded', 'true');
     }
 });
-
-// let hamburger = document.querySelector('.hamburger').getAttribute('aria-expanded');
-
-// console.log(hamburger);
-
-
 
 
 const calcHeight = function() {
@@ -71,13 +63,52 @@ btnSettings.addEventListener('click', function() {
 
 
 const btn = document.querySelectorAll('.btn');
+const nav = document.querySelector('.nav');
+
+const playSound = function(soundName) {
+    const audio = new Audio(`sound/${soundName}.mp3`);
+    audio.play();
+}
+
+const switchControlBtnState = function(e, state1, state2) {
+    let themeState = e.target.querySelector('[data-title]').getAttribute('data-title');
+    if (themeState === `${state2}`) {
+        e.target.querySelector('[data-title]').setAttribute('data-title', `${state1}`);
+    }
+    else {
+        e.target.querySelector('[data-title]').setAttribute('data-title', `${state2}`);
+    }
+}
+
+nav.addEventListener('click', function(e) {
+    if (e.target.closest('.nav__item') || e.target.closest('.hamburger')) {
+        playSound('click9');
+        return
+    }
+
+    if (e.target.closest('.btn--close')) {
+        // setTimeout(() => {
+        // }, 450);
+        hamburger.setAttribute('aria-expanded', 'false');
+        navWrapper.classList.remove('visible');
 
 
-document.body.addEventListener('click', function(e) {
-    if (e.target.closest('.btn')) {
-        const audio = new Audio('sound/click3.mp3');
-        const btnClicked = e.target.closest('.btn');
-        audio.play();
-        console.log(btnClicked);
+        playSound('click9');
+
+        return
+    }
+    if (e.target.closest('.btn--settings')) {
+        playSound('click9');
+        return
+    }
+
+    if (e.target.closest('.btn--control-theme')) {
+        switchControlBtnState(e, 'dark_mode', 'sunny')
+        playSound('click4');
+    }
+
+    if (e.target.closest('.btn--control-sound')) {
+        switchControlBtnState(e, 'volume_off', 'volume_up')
+        playSound('click3');
     }
 })
