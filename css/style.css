@@ -133,7 +133,7 @@ p:not(:last-child) {
 }
 .heading--2 span {
   font-size: calc(var(--fs-500));
-  color: var(--color-primary);
+  color: #8191e6;
   display: block;
 }
 @media screen and (min-width: 55em) {
@@ -158,6 +158,7 @@ p:not(:last-child) {
 }
 
 .header {
+  padding-top: 9rem;
   display: grid;
   grid-gap: 7rem;
   justify-items: center;
@@ -226,7 +227,6 @@ p:not(:last-child) {
   align-items: center;
   grid-auto-flow: column;
   padding: 2rem 1rem 1rem;
-  background-color: var(--color-primary);
 }
 @media screen and (min-width: 45em) {
   .nav {
@@ -371,7 +371,8 @@ p:not(:last-child) {
 }
 .btn ::before {
   content: "";
-  background-color: black;
+  background-color: var(--color-white);
+  background-color: #8191e6;
   transform: translate(4px, 4px);
 }
 .btn ::after {

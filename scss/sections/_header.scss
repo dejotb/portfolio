@@ -4,10 +4,11 @@
   //   background-color: pink;
   // align-self: start;
   // padding: 1rem;
-  // margin-top: 9rem;
+  padding-top: 9rem;
   display: grid;
   grid-gap: 7rem;
   justify-items: center;
+  // align-content: center;
 
   &__title {
     display: flex;
