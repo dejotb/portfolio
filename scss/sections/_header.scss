@@ -1,12 +1,13 @@
 @use "../abstracts/" as *;
 
 .header {
-  //   background-color: pink;
+  // background-color: pink;
   // align-self: start;
   // padding: 1rem;
-  padding-top: 9rem;
+  // padding-top: 9rem;
   display: grid;
-  grid-gap: 7rem;
+  // align-items: start;
+  grid-gap: 3rem;
   justify-items: center;
   // align-content: center;
 
@@ -14,16 +15,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1;
+
     grid-gap: 1rem;
-    font-weight: 900;
 
     & span:first-of-type {
       display: block;
       color: var(--color-primary);
       font-size: calc(var(--fs-500));
+      font-weight: 400;
 
-      @media screen and (min-width: $bp-md) {
+      @media screen and (min-width: $bp-sm) {
         // font-size: calc(var(--fs-600) * 3.5);
       }
     }
@@ -31,7 +32,7 @@
       display: block;
       font-size: calc(var(--fs-600) * 1.4);
 
-      @media screen and (min-width: $bp-md) {
+      @media screen and (min-width: $bp-sm) {
         font-size: calc(var(--fs-600) * 3);
       }
     }
@@ -41,9 +42,13 @@
       font-size: calc(var(--fs-600) * 1.075);
       //   color: var(--color-blue);
 
-      @media screen and (min-width: $bp-md) {
+      @media screen and (min-width: $bp-sm) {
         font-size: calc(var(--fs-600) * 2.04);
       }
+    }
+
+    @media screen and (min-width: $bp-sm) {
+      grid-gap: 2rem;
     }
   }
 
