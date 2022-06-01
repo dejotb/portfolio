@@ -30,9 +30,9 @@
     & span {
       font-size: calc(var(--fs-500));
       color: var(--color-primary);
+      display: block;
 
       @media screen and (min-width: $bp-sm) {
-        display: block;
         // font-size: calc(var(--fs-500) * 2.15);
       }
     }
