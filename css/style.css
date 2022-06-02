@@ -179,7 +179,7 @@ p:not(:last-child) {
 }
 .header__title span:nth-of-type(2) {
   display: block;
-  font-size: calc(var(--fs-600) * 1.6);
+  font-size: calc(var(--fs-600) * 1.5);
 }
 @media screen and (min-width: 45em) {
   .header__title span:nth-of-type(2) {
@@ -188,7 +188,7 @@ p:not(:last-child) {
 }
 .header__title span:nth-of-type(3) {
   display: block;
-  font-size: calc(var(--fs-600) * 1.275);
+  font-size: calc(var(--fs-600) * 1.175);
 }
 @media screen and (min-width: 45em) {
   .header__title span:nth-of-type(3) {
