@@ -18,12 +18,12 @@ hamburger.addEventListener('click', function(e) {
 
 const calcHeight = function() {
     const h1 = document.querySelector('h1')
-    const headingCompStyles = window.getComputedStyle(h1);
+    const headingCompStyle = window.getComputedStyle(h1);
     const img = document.querySelector('.header__image');
 
-    const handleHeadingHeight = headingCompStyles.getPropertyValue('height').split('px').at(0);
+    const handleHeadingHeight = headingCompStyle.getPropertyValue('height');
 
-    img.style.height = `${handleHeadingHeight * 1.4}px`;
+    img.style.height = handleHeadingHeight;
 }
 
 calcHeight()

@@ -9,7 +9,6 @@
   // align-items: start;
   grid-gap: 3rem;
   justify-items: center;
-  // align-content: center;
 
   &__title {
     display: flex;
@@ -43,7 +42,7 @@
       //   color: var(--color-blue);
 
       @media screen and (min-width: $bp-sm) {
-        font-size: calc(var(--fs-600) * 2.04);
+        font-size: calc(var(--fs-600) * 2.0585);
       }
     }
 
@@ -63,6 +62,26 @@
       //   position: absolute;
       //   top: 0;
       height: 100%;
+    }
+
+    .eyebrows,
+    .mouth,
+    .cheeks {
+      transition: transform 0.2s linear;
+    }
+
+    &:hover {
+      .mouth {
+        transform: rotate(-1deg) skewX(0.5deg);
+      }
+
+      .cheeks {
+        transform: rotate(-0.8deg);
+      }
+
+      .eyebrows {
+        transform: translateY(-3%);
+      }
     }
   }
 }
