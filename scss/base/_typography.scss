@@ -26,7 +26,7 @@
     color: grey;
     // text-align: center;
     // padding: 2rem 0;
-    max-width: 28ch;
+    max-width: 30ch;
     line-height: 1.1;
     font-weight: 400;
     // line-height: 0.7;
@@ -43,7 +43,7 @@
     @media screen and (min-width: $bp-sm) {
       font-size: calc(var(--fs-500) * 2.09);
       line-height: 0.8;
-      max-width: 30ch;
+      // max-width: 30ch;
     }
   }
 

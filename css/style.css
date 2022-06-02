@@ -128,7 +128,7 @@ p:not(:last-child) {
 .heading--2 {
   color: #8892b0;
   color: grey;
-  max-width: 28ch;
+  max-width: 30ch;
   line-height: 1.1;
   font-weight: 400;
   font-size: calc(var(--fs-500) * 1.1);
@@ -142,7 +142,6 @@ p:not(:last-child) {
   .heading--2 {
     font-size: calc(var(--fs-500) * 2.09);
     line-height: 0.8;
-    max-width: 30ch;
   }
 }
 .heading--3 {
@@ -180,7 +179,7 @@ p:not(:last-child) {
 }
 .header__title span:nth-of-type(2) {
   display: block;
-  font-size: calc(var(--fs-600) * 1.4);
+  font-size: calc(var(--fs-600) * 1.5);
 }
 @media screen and (min-width: 45em) {
   .header__title span:nth-of-type(2) {
@@ -189,7 +188,7 @@ p:not(:last-child) {
 }
 .header__title span:nth-of-type(3) {
   display: block;
-  font-size: calc(var(--fs-600) * 1.075);
+  font-size: calc(var(--fs-600) * 1.175);
 }
 @media screen and (min-width: 45em) {
   .header__title span:nth-of-type(3) {

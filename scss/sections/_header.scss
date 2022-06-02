@@ -30,7 +30,7 @@
     }
     & span:nth-of-type(2) {
       display: block;
-      font-size: calc(var(--fs-600) * 1.4);
+      font-size: calc(var(--fs-600) * 1.5);
 
       @media screen and (min-width: $bp-sm) {
         font-size: calc(var(--fs-600) * 3);
@@ -39,7 +39,7 @@
 
     & span:nth-of-type(3) {
       display: block;
-      font-size: calc(var(--fs-600) * 1.075);
+      font-size: calc(var(--fs-600) * 1.175);
       //   color: var(--color-blue);
 
       @media screen and (min-width: $bp-sm) {
