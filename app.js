@@ -81,12 +81,12 @@ const switchControlBtnState = function(e, state1, state2) {
 }
 
 nav.addEventListener('click', function(e) {
-    if (e.target.closest('.nav__item') || e.target.closest('.hamburger')) {
+    if (e.target.closest('.hamburger')) {
         playSound('click9');
         return
     }
 
-    if (e.target.closest('.btn--close')) {
+    if (e.target.closest('.btn--close') || e.target.closest('.nav__item')) {
         // setTimeout(() => {
         // }, 450);
         hamburger.setAttribute('aria-expanded', 'false');

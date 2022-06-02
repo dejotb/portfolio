@@ -2,13 +2,15 @@
 
 .header {
   // background-color: pink;
+  width: 100%;
   // align-self: start;
   // padding: 1rem;
   // padding-top: 9rem;
   display: grid;
   // align-items: start;
   grid-gap: 3rem;
-  justify-items: start;
+  justify-items: center;
+  padding: 5rem 1rem;
   // max-width: 80rem;
 
   &__title {
@@ -31,6 +33,7 @@
     & span:nth-of-type(2) {
       display: block;
       font-size: calc(var(--fs-600) * 1.5);
+      // color: var(--color-primary);
 
       @media screen and (min-width: $bp-sm) {
         font-size: calc(var(--fs-600) * 3);
@@ -40,7 +43,8 @@
     & span:nth-of-type(3) {
       display: block;
       font-size: calc(var(--fs-600) * 1.175);
-      //   color: var(--color-blue);
+      // color: #141b1f;
+      // background-color: var(--color-primary);
 
       @media screen and (min-width: $bp-sm) {
         font-size: calc(var(--fs-600) * 2.0585);
