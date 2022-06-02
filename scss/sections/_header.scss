@@ -8,7 +8,8 @@
   display: grid;
   // align-items: start;
   grid-gap: 3rem;
-  justify-items: center;
+  justify-items: start;
+  // max-width: 80rem;
 
   &__title {
     display: flex;
