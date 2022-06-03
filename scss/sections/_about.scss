@@ -5,4 +5,14 @@
   //   background-color: pink;
   min-height: 100vh;
   padding: 5rem 1rem;
+  justify-items: center;
+  align-content: flex-start;
+}
+
+.me {
+  width: 60vw;
+
+  @media screen and (min-width: $bp-md) {
+    width: 25vw;
+  }
 }
