@@ -123,7 +123,12 @@ p:not(:last-child) {
 }
 .heading--1 {
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 1;
+}
+@media screen and (min-width: 45em) {
+  .heading--1 {
+    line-height: 0.9;
+  }
 }
 .heading--2 {
   color: #8892b0;
@@ -162,7 +167,7 @@ p:not(:last-child) {
 .header {
   width: 100%;
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 6rem;
   justify-items: center;
   padding: 0 1rem;
   max-width: 45em;
@@ -252,9 +257,26 @@ p:not(:last-child) {
     grid-gap: 2rem;
   }
 }
-.me {
-  max-width: 25rem;
+.about__content {
+  position: relative;
 }
+.about__image {
+  max-width: 25rem;
+  position: relative;
+}
+.about__image img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.about__image:hover {
+  transform: rotate(-10deg);
+}
+.about__image:hover img:nth-child(2) {
+  display: block;
+}
+
 .nav {
   position: fixed;
   top: 0;

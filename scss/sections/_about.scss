@@ -24,17 +24,30 @@
     // width: 70%;
     // display: grid;
     // justify-content: end;
+    position: relative;
   }
 
   &__image {
-    // width: 70%;
-  }
-}
+    max-width: 25rem;
+    position: relative;
 
-.me {
-  max-width: 25rem;
+    & img:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      // opacity: 1;
+    }
 
-  @media screen and (min-width: $bp-md) {
-    // width: 10vw;
+    &:hover {
+      transform: rotate(-10deg);
+      & img:nth-child(2) {
+        display: block;
+      }
+    }
+
+    // &:hover img:nth-child(2) {
+    //   display: block;
+    // }
   }
 }
