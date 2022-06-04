@@ -10,8 +10,10 @@
   // align-items: start;
   grid-gap: 3rem;
   justify-items: center;
-  padding: 5rem 1rem;
+  padding: 0 1rem;
+  max-width: $bp-md;
   // max-width: 80rem;
+  // min-height: 80vh;
 
   &__title {
     display: flex;

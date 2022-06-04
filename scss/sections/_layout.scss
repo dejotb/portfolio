@@ -1,12 +1,13 @@
 @use "../abstracts" as *;
 
 .layout {
-  // display: grid;
+  display: grid;
   // align-content: start;
   align-items: center;
-  // justify-items: center;
-  min-height: 100vh;
-  padding: 11rem 0 2rem;
+  grid-gap: 10rem;
+  justify-items: center;
+  // min-height: 100vh;
+  padding: 23rem 0 2rem;
   // padding: 2rem;
   color: var(--color-white);
   // background-color: #8191e6;

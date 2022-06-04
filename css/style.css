@@ -119,45 +119,44 @@ p:not(:last-child) {
 
 .heading--1, .heading--2, .heading--3 {
   font-family: var(--ff-primary);
-  max-width: 70ch;
+  max-width: 30ch;
 }
 .heading--1 {
   font-weight: 900;
-  line-height: 1;
+  line-height: 0.9;
 }
 .heading--2 {
   color: #8892b0;
-  color: grey;
+  color: var(--color-white);
   max-width: 30ch;
   line-height: 1.1;
-  font-weight: 400;
+  font-weight: 300;
   font-size: calc(var(--fs-500) * 1.1);
-}
-.heading--2 span {
-  font-size: calc(var(--fs-500));
-  color: #8191e6;
-  color: var(--color-primary);
 }
 @media screen and (min-width: 45em) {
   .heading--2 {
     font-size: calc(var(--fs-500) * 2.09);
-    line-height: 0.8;
   }
 }
 .heading--3 {
-  text-align: center;
-  color: var(--color-red);
-  text-shadow: 3px 3px 0px var(--color-white);
+  color: grey;
+  font-size: calc(var(--fs-500) * 1);
+  font-weight: 400;
+}
+@media screen and (min-width: 45em) {
+  .heading--3 {
+    font-size: calc(var(--fs-500) * 1.8);
+  }
 }
 .heading--3 span {
-  color: var(--color-font);
+  font-size: calc(var(--fs-500));
+  color: #8191e6;
+  color: var(--color-primary);
 }
 
-.text-width {
-  max-width: 70ch;
-}
-.text-width:not(:last-child) {
-  margin-bottom: 1rem;
+.main {
+  margin: 0 auto;
+  max-width: 45em;
 }
 
 .header {
@@ -165,7 +164,8 @@ p:not(:last-child) {
   display: grid;
   grid-gap: 3rem;
   justify-items: center;
-  padding: 5rem 1rem;
+  padding: 0 1rem;
+  max-width: 45em;
 }
 .header__title {
   display: flex;
@@ -226,9 +226,11 @@ p:not(:last-child) {
 }
 
 .layout {
+  display: grid;
   align-items: center;
-  min-height: 100vh;
-  padding: 11rem 0 2rem;
+  grid-gap: 10rem;
+  justify-items: center;
+  padding: 23rem 0 2rem;
   color: var(--color-white);
   background-color: #141b1f;
 }
@@ -238,17 +240,21 @@ p:not(:last-child) {
   padding: 5rem 1rem;
   justify-items: center;
   align-content: flex-start;
+  max-width: 45em;
 }
-
-.me {
-  width: 60vw;
+.about__layout {
+  display: grid;
+  justify-items: center;
 }
-@media screen and (min-width: 55em) {
-  .me {
-    width: 25vw;
+@media screen and (min-width: 50em) {
+  .about__layout {
+    grid-auto-flow: column;
+    grid-gap: 2rem;
   }
 }
-
+.me {
+  max-width: 25rem;
+}
 .nav {
   position: fixed;
   top: 0;
