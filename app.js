@@ -3,7 +3,7 @@
 
 const hamburger = document.querySelector('.hamburger');
 const navWrapper = document.querySelector('.nav__list--wrapper');
-
+const header = document.querySelector('.header');
 
 hamburger.addEventListener('click', function(e) {
 
@@ -81,6 +81,7 @@ const switchControlBtnState = function(e, state1, state2) {
 }
 
 nav.addEventListener('click', function(e) {
+
     if (e.target.closest('.hamburger')) {
         playSound('click9');
         return
@@ -111,4 +112,14 @@ nav.addEventListener('click', function(e) {
         switchControlBtnState(e, 'volume_off', 'volume_up')
         playSound('click3');
     }
+
+
 })
+
+
+header.addEventListener('click', function(e) {
+    if (e.target.closest('.header__image')) {
+        playSound('hello');
+    }
+})
+

@@ -237,8 +237,11 @@ p:not(:last-child) {
   justify-items: center;
   padding: 23rem 0 2rem;
   color: var(--color-white);
-  background-color: #141b1f;
+  background-color: #8191e6;
+  background-color: #00ce7c;
   background-color: #0b0b0f;
+  background-color: #181818;
+  background-color: #141b1f;
 }
 .about {
   display: grid;
