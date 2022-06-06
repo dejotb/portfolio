@@ -11,16 +11,15 @@
   // padding: 2rem;
   // background-color: #3b3c36;
   // background-color: #0e141b;
-  color: var(--color-white);
+  color: var(--color-font);
   background-color: #8191e6;
   background-color: #00ce7c;
   // background-color: #0d314a;
   background-color: #0b0b0f;
   background-color: #181818;
   background-color: #141b1f;
-
+  background-color: var(--color-secondary);
   // background-color: var(--color-primary);
-
   @media screen and (min-width: $bp-sm) {
     // padding: 1rem;
     // align-content: center;

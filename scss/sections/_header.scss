@@ -8,7 +8,7 @@
   // padding-top: 9rem;
   display: grid;
   // align-items: start;
-  grid-gap: 6rem;
+  grid-gap: 3rem;
   justify-items: center;
   padding: 0 1rem;
   max-width: $bp-md;
@@ -16,7 +16,7 @@
   // min-height: 80vh;
 
   &__title {
-    position: relative;
+    // position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@
 
     & span:first-of-type {
       display: block;
-      color: var(--color-primary);
+      color: var(--color-tertiary);
       font-size: calc(var(--fs-500));
       font-weight: 400;
 
@@ -36,7 +36,6 @@
     & span:nth-of-type(2) {
       display: block;
       font-size: calc(var(--fs-600) * 1.5);
-      // color: var(--color-primary);
 
       @media screen and (min-width: $bp-sm) {
         font-size: calc(var(--fs-600) * 3);
@@ -47,7 +46,6 @@
       display: block;
       font-size: calc(var(--fs-600) * 1.175);
       // color: #141b1f;
-      // background-color: var(--color-primary);
 
       @media screen and (min-width: $bp-sm) {
         font-size: calc(var(--fs-600) * 2.0585);
@@ -60,11 +58,11 @@
   }
 
   &__image {
-    position: relative;
     background-color: transparent;
     border: none;
     display: none;
     width: auto;
+    // z-index: 0;
 
     @media screen and (min-width: $bp-min) {
       display: block;
