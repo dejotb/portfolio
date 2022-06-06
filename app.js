@@ -119,6 +119,12 @@ nav.addEventListener('click', function(e) {
 
 header.addEventListener('click', function(e) {
     if (e.target.closest('.header__image')) {
+        const headerImageText = document.querySelector('.header__image--text');
+        headerImageText.classList.remove('hidden');
+
+        setTimeout(() => {
+            headerImageText.classList.add('hidden')
+        }, 650);
         playSound('hello');
     }
 })

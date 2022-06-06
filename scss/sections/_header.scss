@@ -16,6 +16,7 @@
   // min-height: 80vh;
 
   &__title {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,11 +60,15 @@
   }
 
   &__image {
-    // position: relative;
+    position: relative;
     background-color: transparent;
     border: none;
-    // height: 100%;
+    display: none;
     width: auto;
+
+    @media screen and (min-width: $bp-min) {
+      display: block;
+    }
 
     & img {
       //   position: absolute;
@@ -88,6 +93,19 @@
 
       .eyebrows {
         transform: translateY(-3%);
+      }
+    }
+
+    &--text {
+      position: absolute;
+      bottom: -5rem;
+      left: 2rem;
+      width: 15rem;
+
+      @media screen and (min-width: $bp-sm) {
+        bottom: -9rem;
+        left: 4rem;
+        width: 25rem;
       }
     }
   }

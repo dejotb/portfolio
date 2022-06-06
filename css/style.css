@@ -173,6 +173,7 @@ p:not(:last-child) {
   max-width: 45em;
 }
 .header__title {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,9 +209,16 @@ p:not(:last-child) {
   }
 }
 .header__image {
+  position: relative;
   background-color: transparent;
   border: none;
+  display: none;
   width: auto;
+}
+@media screen and (min-width: 22em) {
+  .header__image {
+    display: block;
+  }
 }
 .header__image img {
   height: 100%;
@@ -228,6 +236,19 @@ p:not(:last-child) {
 }
 .header__image:hover .eyebrows {
   transform: translateY(-3%);
+}
+.header__image--text {
+  position: absolute;
+  bottom: -5rem;
+  left: 2rem;
+  width: 15rem;
+}
+@media screen and (min-width: 45em) {
+  .header__image--text {
+    bottom: -9rem;
+    left: 4rem;
+    width: 25rem;
+  }
 }
 
 .layout {
