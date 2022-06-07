@@ -4,6 +4,9 @@
 const hamburger = document.querySelector('.hamburger');
 const navWrapper = document.querySelector('.nav__list--wrapper');
 const header = document.querySelector('.header');
+const layout = document.querySelector('.layout');
+const settingsControlPanel = document.querySelector('.settings__control');
+const btnTheme = document.querySelector('.btn--control-theme');
 
 hamburger.addEventListener('click', function(e) {
 
@@ -80,6 +83,7 @@ const switchControlBtnState = function(e, state1, state2) {
     }
 }
 
+
 nav.addEventListener('click', function(e) {
 
     if (e.target.closest('.hamburger')) {
@@ -134,35 +138,49 @@ header.addEventListener('click', function(e) {
 })
 
 
-const settingsControlPanel = document.querySelector('.settings__control');
 
 
-settingsControlPanel.addEventListener('click', function(e) {
-    const activeColor = getComputedStyle(document.documentElement).getPropertyValue('--color-font');
-    console.log(activeColor);
-    if (e.target.classList.contains('btn--control-theme')) {
 
-        if (activeColor === '#f5f5f5') {
-            document.documentElement.style.setProperty(
-                '--color-font', '#171717'
-              );
-              document.documentElement.style.setProperty(
-                '--color-secondary', '#fffcec'
-              );
-              document.documentElement.style.setProperty(
-                '--color-tertiary', '#171717'
-              );
+const handleTheme = function() {
+    let lightMode = localStorage.getItem('lightMode');
+
+    const enableLightMode = () => {
+        // add the class lightMode to the layout container
+        layout.classList.add('lightMode');
+
+        // update lightMode in the localStorage
+        localStorage.setItem('lightMode', 'enabled');
+    }
+
+    const disableLightMode = () => {
+        // add the class lightMode to the layout container
+        layout.classList.remove('lightMode');
+
+        // update lightMode in the localStorage
+        localStorage.setItem('lightMode', null);
+    }
+
+    if (lightMode === 'enabled') {
+        enableLightMode();
+    }
+
+    btnTheme.addEventListener('click', (e) => {
+        lightMode = localStorage.getItem('lightMode');
+
+        if (lightMode !== 'enabled') {
+            enableLightMode();
         } else {
-            document.documentElement.style.setProperty(
-                '--color-font', '#f5f5f5'
-              );
-              document.documentElement.style.setProperty(
-                '--color-secondary', '#171717'
-              );
-              document.documentElement.style.setProperty(
-                '--color-tertiary', '#ffc600'
-              );
+            disableLightMode()
         }
 
-    }
-})
+    })
+}
+
+handleTheme()
+
+
+let soundMute = localStorage.getItem('soundMute');
+
+const disableSound = () => {
+
+}

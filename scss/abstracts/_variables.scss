@@ -26,11 +26,13 @@ $bp-min: 22em;
   }
 
   // colors
-  --color-font: #f5f5f5;
+  --color-light: #f5f5f5;
+  --color-dark: #171717;
   --color-primary: #ffc600;
-  --color-secondary: #171717;
-  --color-tertiary: #ffc600;
+  --color-accent: #ffc600;
 
+  --color-foreground: var(--color-light);
+  --color-background: var(--color-dark);
   --color-green: #00ce7c;
   --color-yellow: #fdd01b;
   --color-blue: #275fac;

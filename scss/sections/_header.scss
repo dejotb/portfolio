@@ -24,10 +24,12 @@
     grid-gap: 1rem;
 
     & span:first-of-type {
-      display: block;
-      color: var(--color-tertiary);
+      // display: inline;
+      color: var(--color-accent);
       font-size: calc(var(--fs-500));
       font-weight: 400;
+      // padding: 0.5rem;
+      // background-color: var(--color-primary);
 
       @media screen and (min-width: $bp-sm) {
         // font-size: calc(var(--fs-600) * 3.5);
