@@ -6,6 +6,7 @@
   --fs-500: 2rem;
   --fs-400: 1.8rem;
   --color-light: #f5f5f5;
+  --color-light: #fff8dc;
   --color-dark: #171717;
   --color-primary: #ffc600;
   --color-accent: #ffc600;
@@ -136,7 +137,7 @@ p:not(:last-child) {
   }
 }
 .heading--2 {
-  max-width: 30ch;
+  max-width: 35ch;
   line-height: 1.1;
   font-weight: 300;
   font-size: calc(var(--fs-500) * 1.1);
