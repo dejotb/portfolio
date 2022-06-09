@@ -40,7 +40,7 @@ calcHeight()
 
 
 
-window.addEventListener('resize', calcHeight)
+// window.addEventListener('resize', calcHeight);
 
 
 
@@ -131,11 +131,11 @@ const handleTheme = function() {
 
         if (lightMode !== 'enabled') {
             enableLightMode();
-            playSound('click4');
+            playSound('theme-light-on-sound');
             switchControlBtnIconState(btnTheme, 'dark_mode', 'sunny');
         } else {
             disableLightMode()
-            playSound('click1');
+            playSound('theme-light-off-sound');
             switchControlBtnIconState(btnTheme, 'dark_mode', 'sunny');
 
         }

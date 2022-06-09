@@ -7,11 +7,13 @@
   padding: 5rem 1rem;
   justify-items: center;
   align-content: flex-start;
+
   max-width: $bp-md;
 
   &__layout {
     display: grid;
     justify-items: center;
+    align-items: center;
 
     @media screen and (min-width: $bp-lg) {
       grid-auto-flow: column;

@@ -64,10 +64,14 @@
     border: none;
     display: none;
     width: auto;
+    max-height: 12rem;
     // z-index: 0;
 
     @media screen and (min-width: $bp-min) {
       display: block;
+    }
+    @media screen and (min-width: $bp-md) {
+      max-height: 22rem;
     }
 
     & img {
