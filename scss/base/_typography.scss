@@ -6,7 +6,7 @@
   &--3 {
     font-family: var(--ff-primary);
     // max-width: 70ch;
-    max-width: 30ch;
+    max-width: 33ch;
     // font-weight: 700;
     // font-weight: 900;
     color: var(--color-foreground);
@@ -44,60 +44,11 @@
   }
 
   &--3 {
-    // color: grey;
-    // color: #757575;
     font-size: calc(var(--fs-500) * 1);
-
     font-weight: 300;
 
     @media screen and (min-width: $bp-sm) {
       font-size: calc(var(--fs-500) * 1.8);
-      // line-height: 1;
-      // max-width: 30ch;
     }
-
-    & span {
-      font-size: calc(var(--fs-500));
-      // color: #5068dc;
-      font-weight: 400;
-      color: var(--color-accent);
-      // display: block;
-      // padding: 0.5rem 0rem 0.5rem 0.5rem;
-      // background-color: var(--color-primary);
-    }
-  }
-}
-
-// .text-width {
-//   max-width: 70ch;
-
-//   &:not(:last-child) {
-//     margin-bottom: 1rem;
-//   }
-// }
-
-.highlight {
-  color: var(--color-accent);
-  font-weight: 900;
-}
-.highlight--light {
-  color: var(--color-accent);
-  font-weight: 400;
-}
-
-.highlight--line {
-  position: relative;
-  &::before {
-    transition: all 0.3s ease-in-out;
-    position: absolute;
-    content: "";
-    width: 3rem;
-    height: 0.3rem;
-    bottom: -0.1rem;
-    left: 0;
-    background-color: var(--color-accent);
-  }
-  &:hover:before {
-    width: 5rem;
   }
 }

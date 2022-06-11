@@ -13,6 +13,7 @@ ul {
 }
 
 * {
+  scroll-margin-top: 4rem;
   &:focus {
     outline-color: var(--color-blue);
     // border-radius: 12vh;
