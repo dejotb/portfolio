@@ -2,6 +2,7 @@
 // Navigation
 
 const hamburger = document.querySelector('.hamburger');
+const btnSettings = document.querySelector('.btn--settings');
 const navWrapper = document.querySelector('.nav__list--wrapper');
 const header = document.querySelector('.header');
 const layout = document.querySelector('.layout');
@@ -20,6 +21,13 @@ hamburger.addEventListener('click', function(e) {
     if (hamburgerState === 'false') {
         navWrapper.classList.add('visible');
         hamburger.setAttribute('aria-expanded', 'true');
+        // document.body.style.overflowY = 'hidden'
+        // nav.style.opacity = '0';
+        hamburger.classList.add('hidden')
+        btnSettings.classList.add('hidden')
+        settingsControlBar.classList.add('hidden')
+        btnSettings.setAttribute('aria-expanded', 'false');
+
     }
 });
 
@@ -40,7 +48,7 @@ calcHeight()
 
 
 
-// window.addEventListener('resize', calcHeight);
+window.addEventListener('resize', calcHeight);
 
 
 
@@ -51,7 +59,6 @@ console.info('Hey! 👋')
 
 
 
-const btnSettings = document.querySelector('.btn--settings');
 const settingsControlBar = document.querySelector('.settings__control');
 btnSettings.addEventListener('click', function() {
     if (btnSettings.getAttribute('aria-expanded') === 'false') {
@@ -168,10 +175,10 @@ nav.addEventListener('click', function(e) {
     }
 
     if (e.target.closest('.btn--close') || e.target.closest('.nav__item')) {
-        // setTimeout(() => {
-        // }, 450);
         hamburger.setAttribute('aria-expanded', 'false');
         navWrapper.classList.remove('visible');
+        hamburger.classList.remove('hidden')
+        btnSettings.classList.remove('hidden')
 
 
         playSound('click9');
@@ -211,3 +218,6 @@ header.addEventListener('click', function(e) {
         playSound('hello');
     }
 })
+
+
+

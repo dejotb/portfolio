@@ -9,7 +9,6 @@
   padding: 5rem 1rem;
   justify-items: center;
   align-content: flex-start;
-
   max-width: $bp-md;
 
   &__layout {
@@ -32,6 +31,7 @@
     // width: 70%;
     // display: grid;
     // justify-content: end;
+    // z-index: 1;
   }
 
   &__image {

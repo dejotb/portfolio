@@ -52,3 +52,38 @@
     }
   }
 }
+
+.highlight--bold {
+  color: var(--color-accent);
+  font-weight: 900;
+}
+
+.highlight--line {
+  position: relative;
+  // z-index: 20;
+
+  &::before {
+    transition: all 0.3s ease-in-out;
+    display: block;
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 0.3rem;
+    bottom: -0.1rem;
+    left: 0;
+    background-color: var(--color-accent);
+  }
+  &:hover:before {
+    width: 100%;
+  }
+}
+
+.highlight--text {
+  font-size: calc(var(--fs-500));
+  // color: #5068dc;
+  font-weight: 400;
+  color: var(--color-accent);
+  // display: block;
+  // padding: 0.5rem 0rem 0.5rem 0.5rem;
+  // background-color: var(--color-primary);
+}

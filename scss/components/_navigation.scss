@@ -12,6 +12,7 @@
   grid-auto-flow: column;
   padding: 2rem 1rem 1rem;
   background-color: var(--color-background);
+  z-index: var(--z-index-popup);
 
   @media screen and (min-width: $bp-sm) {
     // justify-content: center;
@@ -35,9 +36,8 @@
     inset: 0;
     opacity: 0;
     display: none;
+    // position: fixed;
     // transform: translateX(-100%);
-
-    z-index: var(--z-index-popup);
 
     @media screen and (min-width: $bp-sm) {
       display: grid;
