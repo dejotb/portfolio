@@ -1,14 +1,24 @@
+@use "../abstracts" as *;
+
 .total-surf {
-  width: 80vw;
+  width: 70vmin;
+  //   align-self: start;
   //   z-index: 100;
-  background-color: #87ceeb;
-  transform: rotate(-2deg);
+  //   background-image: linear-gradient(var(--color-white) 60%, #87ceeb);
+  transform: rotate(3deg);
+  display: inline-block;
+
+  @media screen and (min-width: $bp-lg) {
+    grid-column: span 2;
+  }
+
+  //   background-color: pink;
 }
 
 @media (min-width: 768px) {
   .total-surf {
-    max-width: 25vw;
-    margin: 0 auto;
+    max-width: 30vmin;
+    // margin: 0 auto;
   }
 }
 
@@ -69,7 +79,7 @@
 }
 
 #board-legs {
-  animation: board-legs 0.4s ease-in-out infinite alternate;
+  animation: board-legs 0.5s ease-in-out infinite alternate;
   //   transform-origin: center;
   transform-box: fill-box;
 }
@@ -79,7 +89,7 @@
     transform: translateY(0%);
   }
   to {
-    transform: translateY(-4%);
+    transform: translateY(-1.5%);
   }
 }
 
@@ -195,7 +205,7 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(15deg);
+    transform: rotate(10deg);
   }
 }
 

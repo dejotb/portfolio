@@ -12,6 +12,10 @@
   grid-auto-flow: column;
   padding: 2rem 1rem 1rem;
   background-color: var(--color-background);
+  // background-image: linear-gradient(
+  //   var(--color-background) 75%,
+  //   transparent 98%
+  // );
   z-index: var(--z-index-popup);
 
   @media screen and (min-width: $bp-sm) {

@@ -383,7 +383,6 @@ p:not(:last-child) {
 .about__item:hover {
   color: var(--color-accent-primary);
 }
-
 .nav {
   position: fixed;
   top: 0;
@@ -576,15 +575,19 @@ p:not(:last-child) {
 }
 
 .total-surf {
-  width: 80vw;
-  background-color: #87ceeb;
-  transform: rotate(-2deg);
+  width: 70vmin;
+  transform: rotate(3deg);
+  display: inline-block;
+}
+@media screen and (min-width: 50em) {
+  .total-surf {
+    grid-column: span 2;
+  }
 }
 
 @media (min-width: 768px) {
   .total-surf {
-    max-width: 25vw;
-    margin: 0 auto;
+    max-width: 30vmin;
   }
 }
 /*  ANIAMTE SUN */
@@ -634,7 +637,7 @@ p:not(:last-child) {
   }
 }
 #board-legs {
-  animation: board-legs 0.4s ease-in-out infinite alternate;
+  animation: board-legs 0.5s ease-in-out infinite alternate;
   transform-box: fill-box;
 }
 
@@ -643,7 +646,7 @@ p:not(:last-child) {
     transform: translateY(0%);
   }
   to {
-    transform: translateY(-4%);
+    transform: translateY(-1.5%);
   }
 }
 #face-total {
@@ -741,7 +744,7 @@ p:not(:last-child) {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(15deg);
+    transform: rotate(10deg);
   }
 }
 #hand-right {
