@@ -65,7 +65,7 @@
 }
 
 .highlight--bold {
-  color: var(--color-accent);
+  color: var(--color-accent-primary);
   font-weight: 900;
 }
 
@@ -82,7 +82,7 @@
     height: 0.3rem;
     bottom: -0.1rem;
     left: 0;
-    background-color: var(--color-accent);
+    background-color: var(--color-accent-primary);
   }
   &:hover:before {
     width: 100%;
@@ -93,7 +93,7 @@
   font-size: calc(var(--fs-500));
   // color: #5068dc;
   font-weight: 400;
-  color: var(--color-accent);
+  color: var(--color-accent-primary);
   // display: block;
   // padding: 0.5rem 0rem 0.5rem 0.5rem;
   // background-color: var(--color-primary);

@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes eyebrow {
+@keyframes eyebrowHead {
   5% {
     transform: translateY(-3%);
   }
@@ -24,7 +24,7 @@
   }
 }
 
-@keyframes cheeks {
+@keyframes cheeksHead {
   5% {
     transform: rotate(-1deg);
   }
@@ -38,7 +38,7 @@
   }
 }
 
-@keyframes mouth {
+@keyframes mouthHead {
   5% {
     transform: rotate(-0.7deg) skewX(0.5deg);
   }

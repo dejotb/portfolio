@@ -76,32 +76,32 @@
       height: 100%;
     }
 
-    .mouth {
-      animation: 5s mouth 1s ease-in-out;
+    .header__mouth {
+      animation: 5s mouthHead 1s ease-in-out;
     }
-    .cheeks {
-      animation: 5s cheeks 1s ease-in-out;
+    .header__cheeks {
+      animation: 5s cheeksHead 1s ease-in-out;
     }
-    .eyebrows {
-      animation: 5s eyebrow 1s ease-in-out;
+    .header__eyebrows {
+      animation: 5s eyebrowHead 1s ease-in-out;
     }
 
-    .eyebrows,
-    .mouth,
-    .cheeks {
+    .header__eyebrows,
+    .header__mouth,
+    .header__cheeks {
       transition: transform 0.2s linear;
     }
 
     &:hover {
-      .mouth {
+      .header__mouth {
         transform: rotate(-1deg) skewX(0.5deg);
       }
 
-      .cheeks {
+      .header__cheeks {
         transform: rotate(-0.8deg);
       }
 
-      .eyebrows {
+      .header__eyebrows {
         transform: translateY(-3%);
       }
     }

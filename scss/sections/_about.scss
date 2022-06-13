@@ -80,7 +80,7 @@
     flex-wrap: wrap;
     grid-gap: 2rem;
     // font-weight: 100;
-    color: #a6a6a6;
+    color: var(--color-accent-secondary);
   }
   &__item {
     font-size: 4rem;
@@ -96,7 +96,7 @@
     }
 
     &:hover {
-      color: var(--color-accent);
+      color: var(--color-accent-primary);
     }
   }
 }
