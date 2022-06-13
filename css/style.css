@@ -576,7 +576,7 @@ p:not(:last-child) {
 }
 
 .total-surf {
-  width: 50vw;
+  width: 80vw;
   background-color: #87ceeb;
   transform: rotate(-2deg);
 }
