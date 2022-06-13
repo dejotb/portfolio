@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  font-size: calc(15px + 0.2vw);
+  font-size: var(--fs-base);
   font-family: var(--ff-primary);
 
   // font-weight: 300;

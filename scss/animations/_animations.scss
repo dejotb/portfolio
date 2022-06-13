@@ -11,59 +11,43 @@
 }
 
 @keyframes eyebrow {
-  from {
-    transform: translateY(0%);
-  }
-
-  //   10% {
-  //     transform: translateY(-1%);
-  //   }
-
-  to {
+  5% {
     transform: translateY(-3%);
   }
 
-  //   70% {
-  //     transform: translateY(-1%);
-  //   }
+  80% {
+    transform: translateY(-3%);
+  }
 
-  //   100% {
-  //     transform: translateY(0%);
-  //   }
+  90% {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes cheeks {
-  10% {
-    transform: rotate(-0.2deg);
+  5% {
+    transform: rotate(-1deg);
   }
 
-  50% {
+  80% {
+    transform: rotate(-1deg);
+  }
+
+  90% {
     transform: rotate(0deg);
-  }
-
-  70% {
-    transform: rotate(-0.2deg);
-  }
-
-  100% {
-    transform: rotate(-0.2deg);
   }
 }
 
 @keyframes mouth {
-  10% {
-    transform: rotate(-0.3deg) scale(1.05);
-  }
-
-  50% {
-    transform: rotate(0deg) scale(1);
+  5% {
+    transform: rotate(-0.7deg) skewX(0.5deg);
   }
 
   70% {
-    transform: rotate(-0.3deg) scale(1.05);
+    transform: rotate(-0.7deg) skewX(0.5deg);
   }
 
   100% {
-    transform: rotate(-0.3deg) scale(1.05);
+    transform: rotate(0deg) skewX(0);
   }
 }

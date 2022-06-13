@@ -3,7 +3,8 @@
 .heading {
   &--1,
   &--2,
-  &--3 {
+  &--3,
+  &--4 {
     font-family: var(--ff-primary);
     // max-width: 70ch;
     max-width: 33ch;
@@ -49,6 +50,16 @@
 
     @media screen and (min-width: $bp-sm) {
       font-size: calc(var(--fs-500) * 1.8);
+    }
+  }
+
+  &--4 {
+    font-size: var(--fs-base);
+
+    font-weight: 400;
+
+    @media screen and (min-width: $bp-sm) {
+      // font-size: calc(var(--fs-500) * 1.8);
     }
   }
 }
