@@ -13,6 +13,7 @@ const headerImage = document.querySelector('.header__image');
 const headerImageText = document.querySelector('.header__image--text');
 const btn = document.querySelectorAll('.btn');
 const nav = document.querySelector('.nav');
+const surfer = document.querySelector('.surfer-total');
 
 hamburger.addEventListener('click', function(e) {
 
@@ -221,3 +222,8 @@ header.addEventListener('click', function(e) {
 
 
 
+// Animarion of surfer on click
+
+surfer.addEventListener('click', () => {
+    playSound('happy')
+})

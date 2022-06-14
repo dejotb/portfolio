@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 
+// header image animations
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -49,5 +51,167 @@
 
   100% {
     transform: rotate(0deg) skewX(0);
+  }
+}
+
+// surfer animations
+
+/* BODY ANIMATE */
+
+@keyframes surfer-total {
+  0%,
+  100% {
+    transform: translate(0%, 5%);
+  }
+  50% {
+    transform: translate(-5%, 5%);
+  }
+
+  85% {
+    transform: translate(6%, 3%);
+  }
+}
+
+@keyframes board-legs {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-1.5%);
+  }
+}
+
+@keyframes face-total {
+  0% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.05) rotate(-10deg);
+  }
+
+  70% {
+    transform: scale(1.05) rotate(2deg);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes eyebrow {
+  0% {
+    transform: translateY(0%);
+  }
+
+  10% {
+    transform: translateY(-1%);
+  }
+
+  50% {
+    transform: translateY(0%);
+  }
+
+  70% {
+    transform: translateY(-1%);
+  }
+
+  100% {
+    transform: translateY(-1%);
+  }
+}
+
+@keyframes cheeks {
+  10% {
+    transform: rotate(-0.2deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(-0.2deg);
+  }
+
+  100% {
+    transform: rotate(-0.2deg);
+  }
+}
+
+@keyframes mouth {
+  10% {
+    transform: rotate(-0.3deg) scale(1.05);
+  }
+
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  70% {
+    transform: rotate(-0.3deg) scale(1.05);
+  }
+
+  100% {
+    transform: rotate(-0.3deg) scale(1.05);
+  }
+}
+
+@keyframes hand-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes hand-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-29deg);
+  }
+}
+
+/* WAVE ANIMATE */
+
+@keyframes whitewater {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(0%, 10%) skewY(20deg) scale(1.2);
+  }
+}
+
+@keyframes waves {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(17deg);
+  }
+}
+
+/*  ANIAMTE SUN */
+
+@keyframes sunMiddle {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes sunOuter {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
   }
 }
