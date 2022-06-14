@@ -5,8 +5,8 @@
   grid-gap: 2rem;
   // background-color: pink;
   // justify-content: start;
-  min-height: 100vh;
-  padding: 5rem 0;
+  // min-height: 100vh;
+  padding: 5rem 0 0;
   justify-items: center;
   align-content: flex-start;
   max-width: $bp-md;
@@ -14,7 +14,7 @@
   &__layout {
     display: grid;
     column-gap: 2rem;
-    row-gap: 6rem;
+    row-gap: 4rem;
     justify-items: center;
     align-items: center;
     // grid-template-columns: 1fr;
@@ -39,7 +39,7 @@
   }
 
   &__image {
-    max-width: 15rem;
+    max-width: 17rem;
     // position: relative;
 
     @media screen and (min-width: $bp-lg) {
@@ -70,8 +70,9 @@
   &__skills {
     display: grid;
 
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     justify-self: start;
+    // grid-column: span 2;
 
     // background-color: pink;
 
@@ -88,11 +89,13 @@
     color: var(--color-accent-secondary);
   }
   &__item {
+    display: grid;
+    align-items: end;
     font-size: 4rem;
     text-align: center;
 
     & span {
-      padding-top: 0.5rem;
+      // padding-top: 0.5rem;
       font-size: calc(var(--fs-base) - 0.7rem);
       display: block;
       font-family: var(--ff-primary);
@@ -116,6 +119,21 @@
   }
 
   &__surfer {
-    // display: flex;
+    display: grid;
+    // align-items: start;
+    // justify-items: space-around;
+    // grid-column: span 2;
+    // justify-self: start;
+    @media screen and (min-width: $bp-md) {
+      grid-auto-flow: column;
+      grid-column: span 2;
+    }
+  }
+
+  &__quote {
+    float: right;
+    font-size: 3rem;
+    // grid-column: span 2;
+    // background-color: pink;
   }
 }

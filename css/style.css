@@ -178,6 +178,7 @@ p:not(:last-child) {
   bottom: -0.1rem;
   left: 0;
   background-color: var(--color-accent-primary);
+  background-color: var(--color-accent-secondary);
 }
 .highlight--line:hover:before {
   width: 100%;
@@ -190,6 +191,8 @@ p:not(:last-child) {
 }
 
 .main {
+  display: grid;
+  row-gap: 10rem;
   margin: 0 auto;
   max-width: 45em;
 }
@@ -311,8 +314,7 @@ p:not(:last-child) {
 .about {
   display: grid;
   grid-gap: 2rem;
-  min-height: 100vh;
-  padding: 5rem 0;
+  padding: 5rem 0 0;
   justify-items: center;
   align-content: flex-start;
   max-width: 45em;
@@ -320,7 +322,7 @@ p:not(:last-child) {
 .about__layout {
   display: grid;
   column-gap: 2rem;
-  row-gap: 6rem;
+  row-gap: 4rem;
   justify-items: center;
   align-items: center;
 }
@@ -334,7 +336,7 @@ p:not(:last-child) {
   justify-self: start;
 }
 .about__image {
-  max-width: 15rem;
+  max-width: 17rem;
 }
 @media screen and (min-width: 50em) {
   .about__image {
@@ -355,7 +357,7 @@ p:not(:last-child) {
 }
 .about__skills {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   justify-self: start;
 }
 @media screen and (min-width: 45em) {
@@ -370,11 +372,12 @@ p:not(:last-child) {
   color: var(--color-accent-secondary);
 }
 .about__item {
+  display: grid;
+  align-items: end;
   font-size: 4rem;
   text-align: center;
 }
 .about__item span {
-  padding-top: 0.5rem;
   font-size: calc(var(--fs-base) - 0.7rem);
   display: block;
   font-family: var(--ff-primary);
@@ -392,6 +395,25 @@ p:not(:last-child) {
   height: 4rem;
   width: auto;
 }
+.about__surfer {
+  display: grid;
+}
+@media screen and (min-width: 45em) {
+  .about__surfer {
+    grid-auto-flow: column;
+    grid-column: span 2;
+  }
+}
+.about__quote {
+  float: right;
+  font-size: 3rem;
+}
+
+.projects {
+  padding: 5rem 0 0;
+  min-height: 100vh;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -584,7 +606,7 @@ p:not(:last-child) {
 }
 
 .surfer {
-  width: 40vmin;
+  max-width: 25rem;
   transform: rotate(3deg);
   display: inline-block;
 }
@@ -648,7 +670,7 @@ p:not(:last-child) {
 }
 
 .waves {
-  animation: waves 2s ease-in-out infinite alternate;
+  animation: waves 1s ease-in-out infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -795,7 +817,7 @@ p:not(:last-child) {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(10deg);
+    transform: rotate(8deg);
   }
 }
 @keyframes hand-right {
