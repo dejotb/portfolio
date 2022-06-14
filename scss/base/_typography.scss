@@ -21,7 +21,7 @@
     font-weight: 900;
     line-height: 1;
     @media screen and (min-width: $bp-sm) {
-      line-height: 0.9;
+      // line-height: 0.9;
     }
   }
 
@@ -47,9 +47,10 @@
   &--3 {
     font-size: calc(var(--fs-500) * 1);
     font-weight: 300;
+    max-width: 36ch;
 
     @media screen and (min-width: $bp-sm) {
-      font-size: calc(var(--fs-500) * 1.8);
+      font-size: calc(var(--fs-500) * 1.7);
     }
   }
 

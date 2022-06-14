@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .total-surf {
-  width: 70vmin;
+  width: 40vmin;
   //   align-self: start;
   //   z-index: 100;
   //   background-image: linear-gradient(var(--color-white) 60%, #87ceeb);
@@ -15,12 +15,12 @@
   //   background-color: pink;
 }
 
-@media (min-width: 768px) {
-  .total-surf {
-    max-width: 30vmin;
-    // margin: 0 auto;
-  }
-}
+// @media (min-width: 768px) {
+//   .total-surf {
+//     max-width: 10vmin;
+//     // margin: 0 auto;
+//   }
+// }
 
 /*  ANIAMTE SUN */
 
@@ -70,11 +70,11 @@
     transform: translate(0%, 5%);
   }
   50% {
-    transform: translate(-10%, 5%);
+    transform: translate(-5%, 5%);
   }
 
   85% {
-    transform: translate(3%, 4%);
+    transform: translate(6%, 5%);
   }
 }
 
@@ -228,7 +228,7 @@
 
 /* WAVE ANIMATE */
 
-#whitewater circle {
+#whitewater g {
   animation: whitewater 0.0076s ease-in infinite alternate;
   transform-origin: bottom right;
   transform-box: fill-box;
@@ -245,7 +245,7 @@
 }
 
 .wave-under {
-  animation: wave-under 1s ease-in-out infinite alternate;
+  // animation: wave-under 1s ease-in-out infinite alternate;
 }
 
 @keyframes wave-under {
@@ -258,22 +258,24 @@
 }
 
 #waves {
-  animation: waves 1.5s ease-in-out infinite alternate;
-  transform-origin: bottom left;
+  animation: waves 2s ease-in-out infinite alternate;
+  transform-origin: center;
   transform-box: fill-box;
 }
 
 @keyframes waves {
   from {
-    transform: translateY(0%);
+    // transform: translateY(0%);
+    transform: rotate(5deg);
   }
   to {
-    transform: translateY(2%) rotateX(15deg);
+    transform: rotate(20deg);
+    // transform: translateY(2%) rotateX(15deg);
   }
 }
 
 .waves-secondary {
-  animation: waves-secondary 1.5s ease-in-out 0.2s infinite alternate;
+  // animation: waves-secondary 1.5s ease-in-out 0.2s infinite alternate;
 }
 
 @keyframes waves-secondary {

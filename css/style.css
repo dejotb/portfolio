@@ -135,11 +135,6 @@ p:not(:last-child) {
   font-weight: 900;
   line-height: 1;
 }
-@media screen and (min-width: 45em) {
-  .heading--1 {
-    line-height: 0.9;
-  }
-}
 .heading--2 {
   max-width: 35ch;
   line-height: 1.1;
@@ -154,10 +149,11 @@ p:not(:last-child) {
 .heading--3 {
   font-size: calc(var(--fs-500) * 1);
   font-weight: 300;
+  max-width: 36ch;
 }
 @media screen and (min-width: 45em) {
   .heading--3 {
-    font-size: calc(var(--fs-500) * 1.8);
+    font-size: calc(var(--fs-500) * 1.7);
   }
 }
 .heading--4 {
@@ -255,13 +251,13 @@ p:not(:last-child) {
   height: 100%;
 }
 .header__image .header__mouth {
-  animation: 5s mouthHead 1s ease-in-out;
+  animation: 4s mouthHead 1s ease-in-out;
 }
 .header__image .header__cheeks {
-  animation: 5s cheeksHead 1s ease-in-out;
+  animation: 4s cheeksHead 1s ease-in-out;
 }
 .header__image .header__eyebrows {
-  animation: 5s eyebrowHead 1s ease-in-out;
+  animation: 4s eyebrowHead 1s ease-in-out;
 }
 .header__image .header__eyebrows,
 .header__image .header__mouth,
@@ -297,7 +293,7 @@ p:not(:last-child) {
   grid-gap: 10rem;
   justify-items: center;
   color: var(--color-foreground);
-  padding: 23rem 1.5rem 2rem;
+  padding: 23rem 1.2rem 2rem;
   background-color: #8191e6;
   background-color: #00ce7c;
   background-color: #0b0b0f;
@@ -328,7 +324,7 @@ p:not(:last-child) {
   justify-items: center;
   align-items: center;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 45em) {
   .about__layout {
     grid-template-columns: 2fr 1fr;
     grid-auto-columns: 1fr;
@@ -338,7 +334,12 @@ p:not(:last-child) {
   justify-self: start;
 }
 .about__image {
-  max-width: 25rem;
+  max-width: 15rem;
+}
+@media screen and (min-width: 50em) {
+  .about__image {
+    max-width: 25rem;
+  }
 }
 .about__image img:nth-child(2) {
   position: absolute;
@@ -357,7 +358,7 @@ p:not(:last-child) {
   grid-gap: 2rem;
   justify-self: start;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 45em) {
   .about__skills {
     grid-column: span 2;
   }
@@ -382,6 +383,14 @@ p:not(:last-child) {
 }
 .about__item:hover {
   color: var(--color-accent-primary);
+}
+.about__item:hover .about__item--icon {
+  fill: var(--color-accent-primary);
+}
+.about__item--icon {
+  fill: var(--color-accent-secondary);
+  height: 4rem;
+  width: auto;
 }
 .nav {
   position: fixed;
@@ -575,7 +584,7 @@ p:not(:last-child) {
 }
 
 .total-surf {
-  width: 70vmin;
+  width: 40vmin;
   transform: rotate(3deg);
   display: inline-block;
 }
@@ -585,11 +594,6 @@ p:not(:last-child) {
   }
 }
 
-@media (min-width: 768px) {
-  .total-surf {
-    max-width: 30vmin;
-  }
-}
 /*  ANIAMTE SUN */
 #sun-middle {
   animation: sun-middle 50s infinite linear alternate;
@@ -630,10 +634,10 @@ p:not(:last-child) {
     transform: translate(0%, 5%);
   }
   50% {
-    transform: translate(-10%, 5%);
+    transform: translate(-5%, 5%);
   }
   85% {
-    transform: translate(3%, 4%);
+    transform: translate(6%, 5%);
   }
 }
 #board-legs {
@@ -763,7 +767,7 @@ p:not(:last-child) {
 }
 /* / BODY ANIMATE */
 /* WAVE ANIMATE */
-#whitewater circle {
+#whitewater g {
   animation: whitewater 0.0076s ease-in infinite alternate;
   transform-origin: bottom right;
   transform-box: fill-box;
@@ -777,10 +781,6 @@ p:not(:last-child) {
     transform: translate(0%, 10%) skewY(20deg) scale(1.2);
   }
 }
-.wave-under {
-  animation: wave-under 1s ease-in-out infinite alternate;
-}
-
 @keyframes wave-under {
   from {
     transform: translateY(0%);
@@ -790,23 +790,19 @@ p:not(:last-child) {
   }
 }
 #waves {
-  animation: waves 1.5s ease-in-out infinite alternate;
-  transform-origin: bottom left;
+  animation: waves 2s ease-in-out infinite alternate;
+  transform-origin: center;
   transform-box: fill-box;
 }
 
 @keyframes waves {
   from {
-    transform: translateY(0%);
+    transform: rotate(5deg);
   }
   to {
-    transform: translateY(2%) rotateX(15deg);
+    transform: rotate(20deg);
   }
 }
-.waves-secondary {
-  animation: waves-secondary 1.5s ease-in-out 0.2s infinite alternate;
-}
-
 @keyframes waves-secondary {
   from {
     transform: translateY(0%);
