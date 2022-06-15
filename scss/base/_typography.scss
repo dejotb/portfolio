@@ -91,7 +91,7 @@
   }
 }
 
-.highlight--text {
+.highlight--text-primary {
   font-size: calc(var(--fs-500));
   // color: #5068dc;
   font-weight: 400;
@@ -99,4 +99,12 @@
   // display: block;
   // padding: 0.5rem 0rem 0.5rem 0.5rem;
   // background-color: var(--color-primary);
+}
+
+.highlight--text-secondary {
+  font-size: calc(var(--fs-500));
+  font-family: var(--ff-primary);
+  display: block;
+  font-weight: 400;
+  color: var(--color-accent-secondary);
 }

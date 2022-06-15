@@ -1,6 +1,6 @@
 :root {
   --ff-primary: "Inter", sans-serif;
-  --ff-display: "Neuton", serif;
+  --ff-display: "Original Surfer", cursive;
   --fs-base: calc(15px + 0.2vw);
   --fs-xl: clamp(3.5rem, 6vw + 1rem, 5rem);
   --fs-600: clamp(3.25rem, 6vw + 1rem, 4rem);
@@ -184,10 +184,18 @@ p:not(:last-child) {
   width: 100%;
 }
 
-.highlight--text {
+.highlight--text-primary {
   font-size: calc(var(--fs-500));
   font-weight: 400;
   color: var(--color-accent-primary);
+}
+
+.highlight--text-secondary {
+  font-size: calc(var(--fs-500));
+  font-family: var(--ff-primary);
+  display: block;
+  font-weight: 400;
+  color: var(--color-accent-secondary);
 }
 
 .main {
@@ -341,6 +349,7 @@ p:not(:last-child) {
 @media screen and (min-width: 50em) {
   .about__image {
     max-width: 25rem;
+    justify-self: end;
   }
 }
 .about__image img:nth-child(2) {
@@ -397,6 +406,9 @@ p:not(:last-child) {
 }
 .about__surfer {
   display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 2rem;
 }
 @media screen and (min-width: 45em) {
   .about__surfer {
@@ -405,8 +417,7 @@ p:not(:last-child) {
   }
 }
 .about__quote {
-  float: right;
-  font-size: 3rem;
+  font-style: italic;
 }
 
 .projects {
@@ -435,7 +446,6 @@ p:not(:last-child) {
 }
 .nav__list--wrapper {
   position: absolute;
-  font-family: var(--ff-display);
   background-color: var(--color-primary);
   display: grid;
   align-items: center;
@@ -606,7 +616,7 @@ p:not(:last-child) {
 }
 
 .surfer {
-  max-width: 25rem;
+  max-width: 23rem;
   transform: rotate(3deg);
   display: inline-block;
 }

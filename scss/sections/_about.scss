@@ -44,6 +44,7 @@
 
     @media screen and (min-width: $bp-lg) {
       max-width: 25rem;
+      justify-self: end;
     }
 
     & img:nth-child(2) {
@@ -120,7 +121,9 @@
 
   &__surfer {
     display: grid;
-    // align-items: start;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
     // justify-items: space-around;
     // grid-column: span 2;
     // justify-self: start;
@@ -131,9 +134,6 @@
   }
 
   &__quote {
-    float: right;
-    font-size: 3rem;
-    // grid-column: span 2;
-    // background-color: pink;
+    font-style: italic;
   }
 }
