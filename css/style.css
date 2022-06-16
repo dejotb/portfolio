@@ -191,7 +191,6 @@ p:not(:last-child) {
 }
 
 .highlight--text-secondary {
-  font-size: calc(var(--fs-500));
   font-family: var(--ff-primary);
   display: block;
   font-weight: 400;
@@ -404,19 +403,23 @@ p:not(:last-child) {
   height: 4rem;
   width: auto;
 }
-.about__surfer {
+.about__quote {
+  font-style: italic;
+}
+
+.quote__layout {
   display: grid;
   align-items: center;
   justify-items: center;
   grid-gap: 2rem;
 }
 @media screen and (min-width: 45em) {
-  .about__surfer {
+  .quote__layout {
     grid-auto-flow: column;
     grid-column: span 2;
   }
 }
-.about__quote {
+.quote__text {
   font-style: italic;
 }
 
