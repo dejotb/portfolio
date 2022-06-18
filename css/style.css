@@ -403,10 +403,6 @@ p:not(:last-child) {
   height: 4rem;
   width: auto;
 }
-.about__quote {
-  font-style: italic;
-}
-
 .quote__layout {
   display: grid;
   align-items: center;
