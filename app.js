@@ -235,3 +235,6 @@ surfer.addEventListener('click', () => {
 
 // Send email
 
+contactForm.addEventListener('submit', () => {
+    console.log('thank you');
+});
