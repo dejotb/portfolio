@@ -233,8 +233,24 @@ surfer.addEventListener('click', () => {
 
 
 
+
+
+
 // Send email
 
 contactForm.addEventListener('submit', () => {
-    console.log('thank you');
+    fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        name: "FormSubmit",
+        message: "I'm from Devro LABS"
+    })
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
 });
