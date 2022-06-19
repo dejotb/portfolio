@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+input[type="email"],
+input[type="text"],
+textarea {
+  padding: 1rem;
+  border: 2px solid var(--color-accent-secondary);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  outline: none;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  border: 2px solid var(--color-accent-primary);
+}
+
+input[type="email"],
+input[type="text"] {
+  max-width: $bp-md;
+}
+
+textarea {
+  font-size: calc(var(--fs-400) / 1.2);
+}

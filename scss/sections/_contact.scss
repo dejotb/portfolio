@@ -1,1 +1,29 @@
 @use "../abstracts/" as *;
+
+.contact {
+  //   max-width: $bp-md;
+
+  &__wrapper {
+    // height: 25rem;
+    // background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__form {
+    width: 92vw;
+    margin: 2rem 0;
+    display: grid;
+    grid-gap: 2rem;
+
+    @media screen and (min-width: $bp-md) {
+      width: $bp-md;
+    }
+  }
+
+  &__form--field {
+    display: grid;
+    // background-color: pink;
+  }
+}

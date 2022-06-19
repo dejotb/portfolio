@@ -1026,7 +1026,34 @@
         </section>
         <section id="contact" class="contact">
           <div class="contact__title">
-            <h2 class="highlight--text-primary">Contact me</h2>
+            <h2 class="highlight--text-primary">Get in touch</h2>
+            <div class="contact__wrapper">
+              <form class="contact__form" action='https://formsubmit.co/dejotb1@gmail.com' method="POST" >
+                <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+                <input type="hidden" name="_subject" value="New email for Portfolio!">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="contact__form--field">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" required ='true' />
+                </div>
+                <div class="contact__form--field">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required ='true'></input>
+                </div>
+                <div class="contact__form--field">
+                  <label for="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required ='true'
+                    ></textarea>
+                </div>
+                <button class="btn btn--form-submit" type="submit">
+                  <span  data-title='Send'></span>
+                </button>
+              </form>
+            </div>
           </div>
         </section>
       </main>

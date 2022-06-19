@@ -14,6 +14,7 @@ const headerImageText = document.querySelector('.header__image--text');
 const btn = document.querySelectorAll('.btn');
 const nav = document.querySelector('.nav');
 const surfer = document.querySelector('.surfer-total');
+const contactForm = document.querySelector('.contact__form');
 
 hamburger.addEventListener('click', function(e) {
 
@@ -191,6 +192,7 @@ nav.addEventListener('click', function(e) {
         return
     }
 
+
     if (e.target.closest('.btn--control-theme')) {
         // switchControlBtnState(e, 'dark_mode', 'sunny')
         // playSound('click4');
@@ -227,3 +229,9 @@ header.addEventListener('click', function(e) {
 surfer.addEventListener('click', () => {
     playSound('happy')
 })
+
+
+
+
+// Send email
+

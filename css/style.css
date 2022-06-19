@@ -424,6 +424,26 @@ p:not(:last-child) {
   min-height: 100vh;
 }
 
+.contact__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__form {
+  width: 92vw;
+  margin: 2rem 0;
+  display: grid;
+  grid-gap: 2rem;
+}
+@media screen and (min-width: 45em) {
+  .contact__form {
+    width: 45em;
+  }
+}
+.contact__form--field {
+  display: grid;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -699,6 +719,31 @@ p:not(:last-child) {
   animation: sunOuter 70s infinite linear alternate;
   transform-origin: center;
   transform-box: fill-box;
+}
+
+input[type=email],
+input[type=text],
+textarea {
+  padding: 1rem;
+  border: 2px solid var(--color-accent-secondary);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  outline: none;
+}
+
+input[type=email]:focus,
+input[type=text]:focus,
+textarea:focus {
+  border: 2px solid var(--color-accent-primary);
+}
+
+input[type=email],
+input[type=text] {
+  max-width: 45em;
+}
+
+textarea {
+  font-size: calc(var(--fs-400) / 1.2);
 }
 
 @keyframes fade-in {
