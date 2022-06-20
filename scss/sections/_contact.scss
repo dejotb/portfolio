@@ -6,6 +6,7 @@
   &__wrapper {
     // height: 25rem;
     // background-color: pink;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,5 +26,15 @@
   &__form--field {
     display: grid;
     // background-color: pink;
+  }
+
+  &__alert {
+    position: absolute;
+    top: -3rem;
+    transform: translateX(50%, 50%);
+    border: 2px solid var(--color-accent-secondary);
+    padding: 1rem;
+    // background: var(--color-foreground);
+    // color: var(--color-background);
   }
 }

@@ -15,6 +15,7 @@ const btn = document.querySelectorAll('.btn');
 const nav = document.querySelector('.nav');
 const surfer = document.querySelector('.surfer-total');
 const contactForm = document.querySelector('.contact__form');
+const btnFormSubmit = document.querySelector('.btn--form-submit');
 
 hamburger.addEventListener('click', function(e) {
 
@@ -90,7 +91,6 @@ const playSound = function(soundName) {
     const audio = new Audio(`sound/${soundName}.mp3`);
     audio.play();
 }
-
 
 
 // Settings control
@@ -203,9 +203,9 @@ nav.addEventListener('click', function(e) {
         switchControlBtnIconState(btnSound, 'volume_off', 'volume_up');
         playSound('click3');
     }
-
-
 })
+
+
 
 
 // Animation of header image text on click
@@ -223,7 +223,6 @@ header.addEventListener('click', function(e) {
 })
 
 
-
 // Animarion of surfer on click
 
 surfer.addEventListener('click', () => {
@@ -236,33 +235,47 @@ surfer.addEventListener('click', () => {
 
 // send email
 
+const contactAlert = document.querySelector('.contact__alert');
+const contactAlertText = document.querySelector('.contact__alert--text');
 
-// console.log(formEmail);
-// console.log(formMessage);
+const handleFormSubmitPopup = function (text) {
+    contactAlertText.textContent = text;
+    contactAlert.classList.remove('hidden');
 
-const sendEmail = function() {
-    const formEmail = document.querySelector('#email').value;
-    const formName = document.querySelector('#name').value;
-    const formMessage = document.querySelector('#message').value;
+    setTimeout( () => {
+        contactAlert.classList.add('hidden');
+    }, 5000);
 
-    // console.log(formEmail);
-    // console.log(formMessage);
-
-    fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
-    method: "POST",
-    headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify({
-        eMail: `${formEmail}`,
-        name: `${formName}`,
-        message: `${formMessage}`,
-    })
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
 }
 
-// contactForm.addEventListener('submit', sendEmail);
+const sendEmail = async function() {
+   try {
+        const formEmail = document.querySelector('#email').value;
+        const formName = document.querySelector('#name').value;
+        const formMessage = document.querySelector('#message').value;
+
+        const resForm = await fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            eMail: `${formEmail}`,
+            name: `${formName}`,
+            message: `${formMessage}`,
+        })
+    });
+
+        const responseForm = await resForm.json();
+        if (responseForm.success !== 'true') {
+            handleFormSubmitPopup(`Something went wrong! Your message wasn't sent! 🔥🔥`);
+            throw new Error(responseForm.message);
+        }
+        handleFormSubmitPopup('Message sent! 🚀 Thanks!');
+
+   } catch(error) {
+    handleFormSubmitPopup('Looks like you lost the internet connection 🚫🚫');
+    console.log(error);
+   }
+}

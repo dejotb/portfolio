@@ -5,9 +5,10 @@ input[type="text"],
 textarea {
   padding: 1rem;
   border: 2px solid var(--color-accent-secondary);
-  background: var(--color-background);
+  background: inherit;
   color: var(--color-foreground);
   outline: none;
+  border-radius: 1vh;
 }
 
 input[type="email"]:focus,
