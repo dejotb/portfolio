@@ -269,13 +269,13 @@ const sendEmail = async function() {
 
         const responseForm = await resForm.json();
         if (responseForm.success !== 'true') {
-            handleFormSubmitPopup(`Something went wrong! Your message wasn't sent! 🔥🔥`);
+            handleFormSubmitPopup(`Something went wrong! 🚫 Your message wasn't sent!`);
             throw new Error(responseForm.message);
         }
-        handleFormSubmitPopup('Message sent! 🚀 Thanks!');
+        handleFormSubmitPopup('Message sent! 🤙 Thanks!');
+        playSound('happy')
 
    } catch(error) {
-    handleFormSubmitPopup('Looks like you lost the internet connection 🚫🚫');
-    console.log(error);
+    alert(error);
    }
 }
