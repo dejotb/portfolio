@@ -236,13 +236,17 @@ surfer.addEventListener('click', () => {
 
 // send email
 
-const formEmail = document.querySelector('#email').value;
-const formName = document.querySelector('#name').value;
-const formMessage = document.querySelector('#message').value;
+
 // console.log(formEmail);
 // console.log(formMessage);
 
 const sendEmail = function() {
+    const formEmail = document.querySelector('#email').value;
+    const formName = document.querySelector('#name').value;
+    const formMessage = document.querySelector('#message').value;
+
+    console.log(formEmail);
+    console.log(formMessage);
 
     fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
     method: "POST",
