@@ -236,7 +236,7 @@ surfer.addEventListener('click', () => {
 
 // send email
 
-// const sendEmail = function(e) {
+const sendEmail = function() {
 
     fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
     method: "POST",
@@ -252,6 +252,6 @@ surfer.addEventListener('click', () => {
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error));
-// }
+}
 
 // contactForm.addEventListener('submit', sendEmail);
