@@ -241,9 +241,9 @@ surfer.addEventListener('click', () => {
 // console.log(formMessage);
 
 const sendEmail = function() {
-    // const formEmail = document.querySelector('#email').value;
-    // const formName = document.querySelector('#name').value;
-    // const formMessage = document.querySelector('#message').value;
+    const formEmail = document.querySelector('#email').value;
+    const formName = document.querySelector('#name').value;
+    const formMessage = document.querySelector('#message').value;
 
     // console.log(formEmail);
     // console.log(formMessage);
@@ -255,9 +255,9 @@ const sendEmail = function() {
         'Accept': 'application/json'
     },
     body: JSON.stringify({
-        eMail: document.querySelector('#email').value,
-        name: document.querySelector('#name').value,
-        message: document.querySelector('#message').value,
+        eMail: `${formEmail}`,
+        name: `${formName}`,
+        message: `${formMessage}`,
     })
 })
     .then(response => response.json())
