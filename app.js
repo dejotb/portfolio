@@ -241,12 +241,12 @@ surfer.addEventListener('click', () => {
 // console.log(formMessage);
 
 const sendEmail = function() {
-    const formEmail = document.querySelector('#email').value;
-    const formName = document.querySelector('#name').value;
-    const formMessage = document.querySelector('#message').value;
+    // const formEmail = document.querySelector('#email').value;
+    // const formName = document.querySelector('#name').value;
+    // const formMessage = document.querySelector('#message').value;
 
-    console.log(formEmail);
-    console.log(formMessage);
+    // console.log(formEmail);
+    // console.log(formMessage);
 
     fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
     method: "POST",
@@ -255,9 +255,9 @@ const sendEmail = function() {
         'Accept': 'application/json'
     },
     body: JSON.stringify({
-        eMail: formEmail,
-        name: formName,
-        message: formMessage,
+        eMail: document.querySelector('#email').value,
+        name: document.querySelector('#name').value,
+        message: document.querySelector('#message').value,
     })
 })
     .then(response => response.json())
