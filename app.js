@@ -241,7 +241,8 @@ surfer.addEventListener('click', () => {
 // console.log(formMessage);
 
 const sendEmail = function() {
-    const formEmail = document.querySelector('#email').value;
+    // const formEmail = document.querySelector('#email').value;
+    const formEmail = 'yolo';
     const formName = document.querySelector('#name').value;
     const formMessage = document.querySelector('#message').value;
 
