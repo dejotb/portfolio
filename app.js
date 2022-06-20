@@ -236,6 +236,12 @@ surfer.addEventListener('click', () => {
 
 // send email
 
+const formEmail = document.querySelector('#email').value;
+const formName = document.querySelector('#name').value;
+const formMessage = document.querySelector('#message').value;
+// console.log(formEmail);
+// console.log(formMessage);
+
 const sendEmail = function() {
 
     fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
@@ -245,8 +251,9 @@ const sendEmail = function() {
         'Accept': 'application/json'
     },
     body: JSON.stringify({
-        name: "FormSubmit",
-        message: "I'm from Devro LABS"
+        eMail: formEmail,
+        name: formName,
+        message: formMessage,
     })
 })
     .then(response => response.json())
