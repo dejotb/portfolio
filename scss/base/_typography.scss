@@ -72,7 +72,7 @@
 
 .highlight--line {
   position: relative;
-  // z-index: 20;
+  z-index: 1;
 
   &::before {
     transition: all 0.3s ease-in-out;
@@ -84,6 +84,7 @@
     bottom: -0.1rem;
     left: 0;
     background-color: var(--color-accent-secondary);
+    z-index: -1;
   }
   &:hover:before {
     width: 100%;

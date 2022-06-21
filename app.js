@@ -279,3 +279,14 @@ const sendEmail = async function() {
     alert(error);
    }
 }
+
+
+// copy mail to clippboard
+
+const coppiedText = document.querySelector('#copyText');
+
+const copyToClipboard = () => navigator.clipboard.writeText(coppiedText.textContent)
+
+
+coppiedText.addEventListener('click', copyToClipboard)
+

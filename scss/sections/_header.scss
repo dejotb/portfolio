@@ -1,36 +1,19 @@
 @use "../abstracts/" as *;
 
 .header {
-  // background-color: pink;
   width: 100%;
-  // align-self: start;
-  // padding: 1rem;
-  // padding-top: 9rem;
   display: grid;
-  // align-items: start;
   grid-gap: 3rem;
   justify-items: center;
-  // padding: 0;
   max-width: $bp-md;
-  // max-width: 80rem;
-  // min-height: 80vh;
 
   &__title {
-    // position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
     grid-gap: 1rem;
 
-    & span:first-of-type {
-      // display: inline;
-      // color: var(--color-accent);
-      // font-size: calc(var(--fs-500));
-      // font-weight: 400;
-      // padding: 0.5rem;
-      // background-color: var(--color-primary);
-    }
     & span:nth-of-type(2) {
       display: block;
       font-size: calc(var(--fs-600) * 1.5);

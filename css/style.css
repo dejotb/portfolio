@@ -167,6 +167,7 @@ p:not(:last-child) {
 
 .highlight--line {
   position: relative;
+  z-index: 1;
 }
 .highlight--line::before {
   transition: all 0.3s ease-in-out;
@@ -178,6 +179,7 @@ p:not(:last-child) {
   bottom: -0.1rem;
   left: 0;
   background-color: var(--color-accent-secondary);
+  z-index: -1;
 }
 .highlight--line:hover:before {
   width: 100%;
@@ -424,6 +426,10 @@ p:not(:last-child) {
   min-height: 100vh;
 }
 
+.contact {
+  display: grid;
+  grid-gap: 2rem;
+}
 .contact__wrapper {
   position: relative;
   display: flex;
@@ -450,6 +456,9 @@ p:not(:last-child) {
   transform: translateX(50%, 50%);
   border: 2px solid var(--color-accent-secondary);
   padding: 1rem;
+}
+.contact__text .highlight--line {
+  cursor: pointer;
 }
 
 .nav {

@@ -2,6 +2,8 @@
 
 .contact {
   //   max-width: $bp-md;
+  display: grid;
+  grid-gap: 2rem;
 
   &__wrapper {
     // height: 25rem;
@@ -36,5 +38,11 @@
     padding: 1rem;
     // background: var(--color-foreground);
     // color: var(--color-background);
+  }
+
+  &__text {
+    & .highlight--line {
+      cursor: pointer;
+    }
   }
 }
