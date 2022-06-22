@@ -235,16 +235,18 @@ surfer.addEventListener('click', () => {
 
 // send email
 
-const contactAlert = document.querySelector('.contact__alert');
-const contactAlertText = document.querySelector('.contact__alert--text');
+const contactEmail = document.querySelector('.contact__email');
+const contactAlertForm = document.querySelector('.contact__alert--form');
+const contactAlertEmail = document.querySelector('.contact__alert--email');
+// const contactAlertText = document.querySelector('.contact__alert--text');
 
-const handleFormSubmitPopup = function (text) {
-    contactAlertText.textContent = text;
+const handlePopup = function (contactAlert, text) {
+    contactAlert.textContent = text;
     contactAlert.classList.remove('hidden');
 
     setTimeout( () => {
         contactAlert.classList.add('hidden');
-    }, 5000);
+    }, 4000);
 
 }
 
@@ -269,14 +271,15 @@ const sendEmail = async function() {
 
         const responseForm = await resForm.json();
         if (responseForm.success !== 'true') {
-            handleFormSubmitPopup(`Something went wrong! 🚫 Your message wasn't sent!`);
+            handlePopup(contactAlertForm, `Something went wrong! 🚫 Your message wasn't sent!`);
             throw new Error(responseForm.message);
         }
-        handleFormSubmitPopup('Message sent! 🤙 Thanks!');
+        handlePopup(contactAlertForm, 'Message sent! 🤙 Thanks!');
         playSound('happy')
 
    } catch(error) {
-    alert(error);
+    handlePopup(contactAlertForm, `Something went wrong! 🚫 Your message wasn't sent!`);
+    console.log(error);
    }
 }
 
@@ -285,8 +288,15 @@ const sendEmail = async function() {
 
 const coppiedText = document.querySelector('#copyText');
 
-const copyToClipboard = () => navigator.clipboard.writeText(coppiedText.textContent)
+const copyToClipboard = () => {
+console.log(coppiedText.textContent.split('\n')[0]);
+    navigator.clipboard.writeText(coppiedText.textContent.split('\n')[0])
+}
 
 
 coppiedText.addEventListener('click', copyToClipboard)
 
+
+contactEmail.addEventListener('click', function() {
+    handlePopup(contactAlertEmail, 'Copied!')
+})

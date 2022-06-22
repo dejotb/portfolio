@@ -32,17 +32,41 @@
 
   &__alert {
     position: absolute;
-    top: -3rem;
     transform: translateX(50%, 50%);
     border: 2px solid var(--color-accent-secondary);
-    padding: 1rem;
-    // background: var(--color-foreground);
-    // color: var(--color-background);
+    padding: 0.5rem 1rem;
+    background: var(--color-accent-primary);
+    color: var(--color-background);
+    text-align: center;
+    font-size: var(--fs-400);
+
+    &--form {
+      top: -1.5rem;
+    }
+
+    &--email {
+      top: -5rem;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 10rem;
+    }
+  }
+
+  &__email {
+    position: relative;
+    display: inline;
   }
 
   &__text {
+    // position: relative;
+
     & .highlight--line {
       cursor: pointer;
+
+      // color: var(--color-accent-primary);
+      // font-weight: 900;
     }
   }
 }
