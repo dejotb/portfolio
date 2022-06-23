@@ -659,6 +659,9 @@ p:not(:last-child) {
 .btn--settings:hover :after, .btn--control-theme:hover :after, .btn--control-sound:hover :after {
   background-color: var(--color-white);
 }
+.btn--form-submit {
+  z-index: 0;
+}
 
 @media screen and (min-width: 45em) {
   .hamburger {

@@ -16,6 +16,7 @@ const nav = document.querySelector('.nav');
 const surfer = document.querySelector('.surfer-total');
 const contactForm = document.querySelector('.contact__form');
 const btnFormSubmit = document.querySelector('.btn--form-submit');
+const settingsControlBar = document.querySelector('.settings__control');
 
 hamburger.addEventListener('click', function(e) {
 
@@ -47,13 +48,7 @@ const calcHeight = function() {
 
 calcHeight()
 
-
-
-
-
 window.addEventListener('resize', calcHeight);
-
-
 
 
 // Console Information
@@ -62,7 +57,7 @@ console.info('Hey! 👋')
 
 
 
-const settingsControlBar = document.querySelector('.settings__control');
+
 btnSettings.addEventListener('click', function() {
     if (btnSettings.getAttribute('aria-expanded') === 'false') {
         settingsControlBar.classList.remove('hidden')
@@ -78,16 +73,39 @@ btnSettings.addEventListener('click', function() {
 
 // Sounds
 
-const handleSound = function() {
-
-    const enableSound = () => {
-
-    }
+const switchSoundState = () => {
+    let state = btnSound.getAttribute('data-sound');
+    state === 'true' ? btnSound.setAttribute('data-sound', 'false') : btnSound.setAttribute('data-sound', 'true');
 }
+
+// ??  ustawić local storage i data-sound atrybut
+
+// const handleSound = function() {
+//     let soundMute = localStorage.getItem('soundMute');
+
+//     const turnSoundOff = () => {
+//         localStorage.setItem('SoundMute', 'true')
+//     }
+
+//     const turnSoundOn = () => {
+//         localStorage.setItem('SoundMute', 'false')
+//     }
+
+//     if (soundMute === 'true') {
+//         turnSoundOn();
+//     } else {
+//         turnSoundOff();
+//     }
+// }
+
+// handleSound()
 
 
 
 const playSound = function(soundName) {
+    if (btnSound.getAttribute('data-sound') === 'false') {
+        return
+    }
     const audio = new Audio(`sound/${soundName}.mp3`);
     audio.play();
 }
@@ -105,6 +123,9 @@ const switchControlBtnIconState = function(btnType, state1, state2) {
         btnType.querySelector('[data-title]').setAttribute('data-title', `${state2}`);
     }
 }
+
+
+
 
 
 const handleTheme = function() {
@@ -199,7 +220,8 @@ nav.addEventListener('click', function(e) {
     }
 
     if (e.target.closest('.btn--control-sound')) {
-        // switchControlBtnState(e, 'volume_off', 'volume_up')
+
+        switchSoundState()
         switchControlBtnIconState(btnSound, 'volume_off', 'volume_up');
         playSound('click3');
     }
