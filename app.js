@@ -1,7 +1,7 @@
 
 // Navigation
 
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.btn--hamburger');
 const btnSettings = document.querySelector('.btn--settings');
 const navWrapper = document.querySelector('.nav__list--wrapper');
 const header = document.querySelector('.header');

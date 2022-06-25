@@ -573,11 +573,6 @@ p:not(:last-child) {
   }
 }
 
-.hamburger {
-  border: none;
-  transform: translateY(-0.5rem);
-}
-
 .settings__control {
   position: absolute;
   top: -7rem;
@@ -617,7 +612,6 @@ p:not(:last-child) {
   border: none;
   height: 3.5rem;
   background-color: transparent;
-  width: fit-content;
   cursor: pointer;
   width: 13rem;
   z-index: var(--z-index-popup);
@@ -654,11 +648,21 @@ p:not(:last-child) {
   background-color: var(--color-primary);
   transition: background-color 0.125s linear, transform 0.125s ease-out;
 }
+.btn--hamburger, .btn--close {
+  width: 4rem;
+}
+.btn--hamburger {
+  transform: translateY(-0.5rem);
+}
+@media screen and (min-width: 45em) {
+  .btn--hamburger {
+    display: none;
+  }
+}
 .btn--close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 4rem;
 }
 .btn--close:hover :after {
   background-color: var(--color-red);
