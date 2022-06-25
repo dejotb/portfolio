@@ -455,7 +455,7 @@ p:not(:last-child) {
   transform: translateX(50%, 50%);
   border: 2px solid var(--color-accent-secondary);
   padding: 0.5rem 1rem;
-  background: var(--color-accent-primary);
+  background: var(--color-foreground);
   color: var(--color-background);
   text-align: center;
   font-size: var(--fs-400);
@@ -477,6 +477,22 @@ p:not(:last-child) {
 }
 .contact__text .highlight--line {
   cursor: pointer;
+}
+.contact__list {
+  display: grid;
+  grid-gap: 0.5rem;
+  font-size: var(--fs-400);
+}
+.contact__item {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+}
+.contact__item span {
+  font-size: calc(var(--fs-400) + 1rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-accent-secondary);
 }
 
 .nav {

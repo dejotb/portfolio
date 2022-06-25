@@ -1039,17 +1039,9 @@
 
           </div>
           <div class="contact__text">
-            <p>Fill in your info in the form below, or simply send me a message here:
-              <div id="copyText" class="highlight--line contact__email">dejotb@gmail.com
-                <div class="contact__alert contact__alert--email hidden">
-                  <p class="contact__alert--text"></p>
-                </div>
-              </div>
-            </p>
+            <p>Fill in your info in the form below:</p>
           </div>
-          <p>I look forward to hearing from you!</p>
           <div class="contact__wrapper">
-
             <form class="contact__form" method="POST" onsubmit="sendEmail(); reset(); return false">
               <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
               <input type="hidden" name="_subject" value="New email for Portfolio!">
@@ -1072,11 +1064,41 @@
                   ></textarea>
               </div>
               <button class="btn btn--form-submit" type="submit">
-                <span  data-title='Send'></span>
+                <span  data-title='Submit'></span>
               </button>
             </form>
             <p class="contact__alert contact__alert--form hidden">
             </p>
+          </div>
+          <div class="contact__text">
+            <p>or simply send a message here:
+            <ul class='contact__list'>
+              <li class="contact__item">
+                <span class="contact__item  fa-brands fa-google"></span>
+                  <div id="copyText" class="highlight--line contact__email">dejotb@gmail.com
+                    <div class="contact__alert contact__alert--email hidden">
+                      <p class="contact__alert--text"></p>
+                    </div>
+                  </div>
+                </p>
+              </li>
+              <li class="contact__item">
+                <span class="fa-brands fa-github"></span>
+                <a href="https://github.com/dejotb"
+                target="_blank">
+                github.com/dejotb
+                </a>
+              </li>
+              <li class="contact__item">
+                <span class="fa-brands fa-linkedin-in"></span>
+                <a href="https://www.linkedin.com/in/bartosz-kraszewski-14097a118/"
+                target="_blank">linkedin.com/in/bartosz-kraszewski-14097a118/</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="contact__text">
+            <p>I look forward to hearing from you!</p>
           </div>
         </section>
       </main>

@@ -35,7 +35,7 @@
     transform: translateX(50%, 50%);
     border: 2px solid var(--color-accent-secondary);
     padding: 0.5rem 1rem;
-    background: var(--color-accent-primary);
+    background: var(--color-foreground);
     color: var(--color-background);
     text-align: center;
     font-size: var(--fs-400);
@@ -67,6 +67,27 @@
 
       // color: var(--color-accent-primary);
       // font-weight: 900;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 0.5rem;
+    font-size: var(--fs-400);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+
+    & span {
+      font-size: calc(var(--fs-400) + 1rem);
+      // display: block;
+      // font-family: var(--ff-primary);
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--color-accent-secondary);
     }
   }
 }
