@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-gap: 2rem;
+  //   background-color: pink;
+  width: 100%;
+  height: 5rem;
+  max-width: $bp-md;
+
+  &__links {
+    display: flex;
+    grid-gap: 2rem;
+  }
+
+  &__info {
+    font-size: var(--fs-400);
+  }
+}
