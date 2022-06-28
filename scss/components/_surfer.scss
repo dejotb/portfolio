@@ -3,6 +3,7 @@
 .surfer {
   transform: rotate(3deg);
   display: inline-block;
+  max-width: 17rem;
 
   @media screen and (min-width: $bp-lg) {
     max-width: 23rem;

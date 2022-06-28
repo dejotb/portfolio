@@ -433,7 +433,7 @@ p:not(:last-child) {
 .contact__wrapper {
   position: relative;
   display: grid;
-  align-items: center;
+  align-items: start;
 }
 @media screen and (min-width: 45em) {
   .contact__wrapper {
@@ -724,6 +724,7 @@ p:not(:last-child) {
 .surfer {
   transform: rotate(3deg);
   display: inline-block;
+  max-width: 17rem;
 }
 @media screen and (min-width: 50em) {
   .surfer {
