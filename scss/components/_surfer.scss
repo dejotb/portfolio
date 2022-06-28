@@ -1,11 +1,11 @@
 @use "../abstracts" as *;
 
 .surfer {
-  max-width: 23rem;
   transform: rotate(3deg);
   display: inline-block;
 
   @media screen and (min-width: $bp-lg) {
+    max-width: 23rem;
     grid-column: span 2;
   }
 }
