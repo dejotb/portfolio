@@ -9,9 +9,11 @@
   // height: rem;
   display: grid;
   align-items: center;
+  // justify-items: center;
   grid-auto-flow: column;
-  padding: 2rem 1rem 1rem;
+  padding: 1rem;
   background-color: var(--color-background);
+  // background-color: pink;
   // background-image: linear-gradient(
   //   var(--color-background) 75%,
   //   transparent 98%
@@ -43,7 +45,7 @@
     // position: fixed;
     // transform: translateX(-100%);
 
-    @media screen and (min-width: $bp-sm) {
+    @media screen and (min-width: $bp-md) {
       display: grid;
       opacity: 1;
       height: auto;
@@ -73,8 +75,11 @@
   }
 
   &__logo {
-    // width: 4rem;
-    display: none;
+    // display: none;
+    // position: absolute;
+    // bottom: 0;
+    justify-self: center;
+    width: 16rem;
 
     & img {
       transition: all 0.2s linear;
@@ -85,9 +90,11 @@
     // }
     // justify-self: end;
     @media screen and (min-width: $bp-sm) {
-      display: block;
-      width: 5rem;
-      // justify-self: flex-start;
+      position: static;
+      // display: block;
+      // width: 20rem;
+      // height: 1rem;
+      justify-self: start;
     }
   }
 
@@ -160,4 +167,13 @@
 .visible {
   opacity: 1;
   display: grid;
+}
+
+.transparent {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo__letter {
+  fill: var(--color-foreground);
 }

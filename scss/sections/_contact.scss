@@ -9,9 +9,13 @@
     // height: 25rem;
     // background-color: pink;
     position: relative;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    // justify-content: start;
+
+    @media screen and (min-width: $bp-md) {
+      grid-auto-flow: column;
+    }
   }
 
   &__form {
@@ -20,7 +24,7 @@
     display: grid;
     grid-gap: 2rem;
 
-    @media screen and (min-width: $bp-md) {
+    @media screen and (min-width: $bp-lg) {
       width: $bp-md;
     }
   }
@@ -88,6 +92,20 @@
       font-weight: 400;
       text-transform: uppercase;
       color: var(--color-accent-secondary);
+    }
+  }
+
+  // &__text {
+  //   justify-self: start;
+  // }
+
+  &__logo {
+    display: none;
+    justify-self: end;
+
+    @media screen and (min-width: $bp-lg) {
+      display: block;
+      width: 28rem;
     }
   }
 }

@@ -432,9 +432,13 @@ p:not(:last-child) {
 }
 .contact__wrapper {
   position: relative;
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: center;
+}
+@media screen and (min-width: 45em) {
+  .contact__wrapper {
+    grid-auto-flow: column;
+  }
 }
 .contact__form {
   width: 92vw;
@@ -442,7 +446,7 @@ p:not(:last-child) {
   display: grid;
   grid-gap: 2rem;
 }
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
   .contact__form {
     width: 45em;
   }
@@ -494,6 +498,16 @@ p:not(:last-child) {
   text-transform: uppercase;
   color: var(--color-accent-secondary);
 }
+.contact__logo {
+  display: none;
+  justify-self: end;
+}
+@media screen and (min-width: 50em) {
+  .contact__logo {
+    display: block;
+    width: 28rem;
+  }
+}
 
 .nav {
   position: fixed;
@@ -504,7 +518,7 @@ p:not(:last-child) {
   display: grid;
   align-items: center;
   grid-auto-flow: column;
-  padding: 2rem 1rem 1rem;
+  padding: 1rem;
   background-color: var(--color-background);
   z-index: var(--z-index-popup);
 }
@@ -551,15 +565,16 @@ p:not(:last-child) {
   height: 100%;
 }
 .nav__logo {
-  display: none;
+  justify-self: center;
+  width: 16rem;
 }
 .nav__logo img {
   transition: all 0.2s linear;
 }
 @media screen and (min-width: 45em) {
   .nav__logo {
-    display: block;
-    width: 5rem;
+    position: static;
+    justify-self: start;
   }
 }
 .nav__settings {
@@ -606,6 +621,15 @@ p:not(:last-child) {
   display: grid;
 }
 
+.transparent {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo__letter {
+  fill: var(--color-foreground);
+}
+
 .btn {
   position: relative;
   text-decoration: none;
@@ -613,8 +637,13 @@ p:not(:last-child) {
   height: 3.5rem;
   background-color: transparent;
   cursor: pointer;
-  width: 13rem;
+  width: 10rem;
   z-index: var(--z-index-popup);
+}
+@media screen and (min-width: 75em) {
+  .btn {
+    width: 13rem;
+  }
 }
 .btn:active :after {
   transform: translate3d(4px, 4px, 4px);
@@ -816,6 +845,7 @@ textarea {
 .footer__links {
   display: flex;
   grid-gap: 2rem;
+  color: var(--color-accent-secondary);
 }
 .footer__info {
   font-size: var(--fs-400);

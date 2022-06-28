@@ -8,8 +8,12 @@
   height: 3.5rem;
   background-color: transparent;
   cursor: pointer;
-  width: 13rem;
+  width: 10rem;
   z-index: var(--z-index-popup);
+
+  @media screen and (min-width: $bp-xl) {
+    width: 13rem;
+  }
 
   // &:focus,
   &:active {
@@ -63,6 +67,7 @@
   }
 
   &--hamburger {
+    // justify-self: start;
     transform: translateY(-0.5rem);
     @media screen and (min-width: $bp-sm) {
       display: none;
