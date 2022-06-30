@@ -13,7 +13,7 @@ ul {
 }
 
 * {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 8rem;
   &:focus {
     outline-color: var(--color-blue);
     // border-radius: 12vh;
@@ -100,7 +100,7 @@ table {
 p {
   max-width: 70ch;
 
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
+  // &:not(:last-child) {
+  //   margin-bottom: 1rem;
+  // }
 }
