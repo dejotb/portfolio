@@ -413,20 +413,7 @@
         </section>
         <section class="quote">
           <div class="quote__layout">
-            <blockquote
-              class="quote__text"
-              cite="https://www.surfertoday.com/surfing/the-best-surfing-quotes-of-all-time"
-            >
-              <p>
-                <span class="material-symbols-outlined">format_quote</span>
-                Your surfing can get better on every turn, on every wave you
-                catch. Learn to read the ocean better. A big part of my success
-                has been wave knowledge.<span class="material-symbols-outlined"
-                  >format_quote</span
-                >
-                <span class="highlight--text-secondary">- Kelly Slater</span>
-              </p>
-            </blockquote>
+
             <svg
               class="surfer"
               width="100%"
@@ -1023,26 +1010,74 @@
                 </linearGradient>
               </defs>
             </svg>
+            <blockquote
+            class="quote__text"
+            cite="https://www.surfertoday.com/surfing/the-best-surfing-quotes-of-all-time"
+          >
+            <p>
+              <span class="material-symbols-outlined">format_quote</span>
+              Your surfing can get better on every turn, on every wave you
+              catch. Learn to read the ocean better. A big part of my success
+              has been wave knowledge.<span class="material-symbols-outlined"
+                >format_quote</span
+              >
+              <span class="highlight--text-secondary">- Kelly Slater</span>
+            </p>
+          </blockquote>
           </div>
         </section>
         <section id="projects" class="projects">
-          <div class="about__title">
-            <h2 class="highlight--text-primary">- Some things I've built</h2>
-          </div>
+            <h2 class="highlight--text-primary">- Things I've built</h2>
+            <ul class='projects__container'>
+              <li class="project">
+
+                <h3 class="project__title">01. Notes 'n Quotes</h3>
+                <div class="project__wrapper">
+                  <div class="project__image">
+                    <img src="img/smartphone.png" alt=""></img>
+                  </div>
+                  <div class="project__content">
+
+                    <!-- <div class="project__overline">Featured Project</div> -->
+                    <div class="project__description">
+                      <p>Simple SPA that allows the user to add, edit and delete a randomly colored notes.</p>
+                      <p>All notes are visible in the main panel. However, clicking on a note allows to see it on full screen mode and edit it.</p>
+                      <p>The tool's settings options include: generating a random, inspirational quote, changing a theme, deleting all notes, a graphic instruction of how to use the app.
+                      </p>
+                    </div>
+                    <ul class="project__tech-list">
+                      <li>JavaScript</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>SCSS</li>
+                      <li>Affinity</li>
+                      <!-- <li>API</li> -->
+                    </ul>
+                    <div class="project__links">
+                      <a href="">
+                        <span class="fa-brands fa-github"></span>
+                      </a>
+                      <a href="">
+                        <span class="material-symbols-outlined">
+                          outbound
+                          </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+            </ul>
         </section>
         <section id="contact" class="contact">
-          <div class="contact__title">
+          <!-- <div class=""> -->
             <h2 class="highlight--text-primary">- Get in touch</h2>
-            <!-- <p>Got a question or proposal, or just want
-              to say hello?</p> -->
-
-
-          </div>
+          <!-- </div> -->
           <!-- <div class="contact__text">
           </div> -->
-          <div class="contact__text">
+          <!-- <div class="contact__text"> -->
             <p>Fill in your info in the form below:</p>
-          </div>
+          <!-- </div> -->
           <div class="contact__wrapper">
             <form class="contact__form" method="POST" onsubmit="sendEmail(); reset(); return false">
               <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
