@@ -696,13 +696,13 @@ p {
   grid-gap: 4rem;
 }
 .settings__control > .btn--control-code:first-child {
-  transform: translateY(-9rem) translateX(1rem);
+  transform: translateY(-9.5rem) translateX(1rem);
 }
 .settings__control > .btn--control-theme:nth-child(2) {
-  transform: translateY(-4rem) translateX(-4.8rem);
+  transform: translateY(-4.4rem) translateX(-5.1rem);
 }
 .settings__control > .btn--control-sound:nth-child(3) {
-  transform: translateY(-1.5rem) translateX(-7rem);
+  transform: translateY(-1.5rem) translateX(-8rem);
 }
 
 .hidden {
