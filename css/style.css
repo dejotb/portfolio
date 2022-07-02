@@ -342,7 +342,7 @@ p {
 }
 @media screen and (min-width: 50em) {
   .about__image {
-    max-width: 25rem;
+    max-width: 21rem;
     justify-self: end;
   }
 }
@@ -495,7 +495,7 @@ p {
   align-self: center;
 }
 .project__image--right {
-  width: 90%;
+  width: 80%;
 }
 @media screen and (min-width: 45em) {
   .project__image--right {
@@ -503,11 +503,11 @@ p {
   }
 }
 .project__image--left {
-  width: 40%;
+  width: 30%;
 }
 @media screen and (min-width: 45em) {
   .project__image--left {
-    width: 50%;
+    width: 45%;
   }
 }
 
@@ -526,6 +526,7 @@ p {
   }
 }
 .contact__form {
+  justify-self: center;
   width: 92vw;
   margin: 2rem 0;
   display: grid;

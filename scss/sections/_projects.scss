@@ -18,6 +18,9 @@
 
 .project {
   display: grid;
+  // background-color: rgba($color: white, $alpha: 0.025);
+  // padding: 2rem;
+  // border-radius: 1rem;
   // grid-gap: 4rem;
 
   &__wrapper {
@@ -118,15 +121,15 @@
     align-self: center;
 
     &--right {
-      width: 90%;
+      width: 80%;
       @media screen and (min-width: $bp-md) {
         width: 100%;
       }
     }
     &--left {
-      width: 40%;
+      width: 30%;
       @media screen and (min-width: $bp-md) {
-        width: 50%;
+        width: 45%;
       }
     }
   }
