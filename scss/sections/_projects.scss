@@ -127,9 +127,12 @@
       }
     }
     &--left {
-      width: 30%;
+      width: 15rem;
+      // @media screen and (min-width: $bp-sm) {
+      //   width: 30%;
+      // }
       @media screen and (min-width: $bp-md) {
-        width: 45%;
+        // width: 45%;
       }
     }
   }

@@ -503,14 +503,8 @@ p {
   }
 }
 .project__image--left {
-  width: 30%;
+  width: 15rem;
 }
-@media screen and (min-width: 45em) {
-  .project__image--left {
-    width: 45%;
-  }
-}
-
 .contact {
   display: grid;
   grid-gap: 2rem;
