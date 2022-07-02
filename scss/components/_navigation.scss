@@ -138,16 +138,15 @@
     justify-content: center;
     grid-gap: 4rem;
 
-    & > .btn--control-theme:first-child,
-    & > .btn--control-sound:first-child {
-      // transform: translate3d(3rem, 8rem, 0);
-      transform: translateY(-4.5rem) translateX(-1.5rem);
+    & > .btn--control-code:first-child {
+      transform: translateY(-9rem) translateX(1rem);
+    }
+    & > .btn--control-theme:nth-child(2) {
+      transform: translateY(-4rem) translateX(-4.8rem);
     }
 
-    & > .btn--control-theme:nth-child(2),
-    & > .btn--control-sound:nth-child(2) {
-      transform: translateY(-2rem) translateX(-4rem);
-      // transform: translate3d(10rem, 9.5rem, 0);
+    & > .btn--control-sound:nth-child(3) {
+      transform: translateY(-1.5rem) translateX(-7rem);
     }
 
     // & :first-child {

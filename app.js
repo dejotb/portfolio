@@ -71,7 +71,6 @@ btnSettings.addEventListener('click', handleSettingsPanel)
 
 document.body.addEventListener('click', (e) => {
     if(!e.target.closest('.settings__control') && !e.target.classList.contains('btn--settings')) {
-        console.log('dsds');
         settingsControlBar.classList.add('hidden')
         btnSettings.setAttribute('aria-expanded', 'false');
     }

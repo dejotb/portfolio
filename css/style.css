@@ -695,11 +695,14 @@ p {
   justify-content: center;
   grid-gap: 4rem;
 }
-.settings__control > .btn--control-theme:first-child, .settings__control > .btn--control-sound:first-child {
-  transform: translateY(-4.5rem) translateX(-1.5rem);
+.settings__control > .btn--control-code:first-child {
+  transform: translateY(-9rem) translateX(1rem);
 }
-.settings__control > .btn--control-theme:nth-child(2), .settings__control > .btn--control-sound:nth-child(2) {
-  transform: translateY(-2rem) translateX(-4rem);
+.settings__control > .btn--control-theme:nth-child(2) {
+  transform: translateY(-4rem) translateX(-4.8rem);
+}
+.settings__control > .btn--control-sound:nth-child(3) {
+  transform: translateY(-1.5rem) translateX(-7rem);
 }
 
 .hidden {
@@ -792,11 +795,11 @@ p {
     display: none;
   }
 }
-.btn--settings, .btn--control-theme, .btn--control-sound {
+.btn--settings, .btn--control-theme, .btn--control-sound, .btn--control-code {
   width: 4rem;
   font-size: 2rem;
 }
-.btn--settings:hover :after, .btn--control-theme:hover :after, .btn--control-sound:hover :after {
+.btn--settings:hover :after, .btn--control-theme:hover :after, .btn--control-sound:hover :after, .btn--control-code:hover :after {
   background-color: var(--color-white);
 }
 .btn--form-submit {
