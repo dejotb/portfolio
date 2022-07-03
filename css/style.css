@@ -507,7 +507,7 @@ p {
 }
 @media screen and (min-width: 45em) {
   .project__image--left {
-    width: 18rem;
+    width: 17rem;
   }
 }
 
@@ -596,7 +596,7 @@ p {
 @media screen and (min-width: 50em) {
   .contact__logo {
     display: block;
-    width: 28rem;
+    width: 80%;
   }
 }
 
