@@ -1,14 +1,8 @@
 @use "../abstracts/" as *;
 
-//? add surfer from about section to here
-
 .projects {
   display: grid;
   grid-gap: 4rem;
-  // background-color: pink;
-  // justify-content: center;
-  // align-content: flex-start;
-  // max-width: $bp-md;
 
   &__container {
     display: grid;
@@ -18,10 +12,6 @@
 
 .project {
   display: grid;
-  // background-color: rgba($color: white, $alpha: 0.025);
-  // padding: 2rem;
-  // border-radius: 1rem;
-  // grid-gap: 4rem;
 
   &__wrapper {
     display: grid;
@@ -57,27 +47,14 @@
     }
   }
 
-  &__overline {
-  }
-
   &__title--right {
-    // margin-bottom: 2rem;
-
     @media screen and (min-width: $bp-md) {
       justify-self: end;
     }
   }
 
   &__description {
-    // color: var(--color-accent-secondary);
-    // background-color: var(--color-accent-primary);
-    // background-color: rgba(255, 255, 255, 0.1);
-    // padding-left: 2rem;
-
     &--right {
-      // display: grid;
-      // justify-items: center;
-
       & p {
         @media screen and (min-width: $bp-md) {
           text-align: end;
@@ -128,12 +105,9 @@
     }
     &--left {
       width: 15rem;
-      // @media screen and (min-width: $bp-sm) {
-      //   width: 30%;
-      // }
+
       @media screen and (min-width: $bp-md) {
         width: 17rem;
-        // width: 45%;
       }
     }
   }
