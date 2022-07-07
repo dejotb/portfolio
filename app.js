@@ -24,12 +24,8 @@ hamburger.addEventListener('click', function(e) {
     if (hamburgerState === 'false') {
         navWrapper.classList.add('visible');
         hamburger.setAttribute('aria-expanded', 'true');
-        // document.body.style.overflowY = 'hidden'
-        // nav.style.opacity = '0';
         hamburger.classList.add('transparent')
         btnSettings.classList.add('transparent')
-        // settingsControlBar.classList.add('hidden')
-        // btnSettings.setAttribute('aria-expanded', 'false');
 
     }
 });
@@ -109,7 +105,6 @@ const switchSoundState = () => {
     state === 'true' ? btnSound.setAttribute('data-sound', 'false') : btnSound.setAttribute('data-sound', 'true');
 }
 
-// ??  ustawić local storage i data-sound atrybut
 
 const handleSound = function() {
     let volumeOn = localStorage.getItem('volumeOn');
@@ -191,29 +186,16 @@ const handleTheme = function() {
         }
 
     })
-
-
-    // let volumeOn = localStorage.getItem('volumeOn');
-
-    // const disableSound = () => {
-
-    // }
 }
 
 handleTheme()
 
 
 
-
-
-
-
-
-
 nav.addEventListener('click', function(e) {
 
     if (e.target.closest('.hamburger')) {
-        playSound('click9');
+        playSound('click-sound');
         return
     }
 
@@ -224,12 +206,12 @@ nav.addEventListener('click', function(e) {
         btnSettings.classList.remove('transparent')
 
 
-        playSound('click9');
+        playSound('click-sound');
 
         return
     }
     if (e.target.closest('.btn--settings')) {
-        playSound('click9');
+        playSound('click-sound');
         return
     }
 
@@ -280,7 +262,6 @@ surfer.addEventListener('click', () => {
 const contactEmail = document.querySelector('.contact__email');
 const contactAlertForm = document.querySelector('.contact__alert--form');
 const contactAlertEmail = document.querySelector('.contact__alert--email');
-// const contactAlertText = document.querySelector('.contact__alert--text');
 
 const handlePopup = function (contactAlert, text) {
     contactAlert.textContent = text;
