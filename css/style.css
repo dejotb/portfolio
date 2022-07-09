@@ -15,7 +15,8 @@
   --color-background: var(--color-dark);
   --color-green: #00ce7c;
   --color-yellow: #fdd01b;
-  --color-blue: #275fac;
+  --color-blue: #5068dc;
+  --color-blue-light: #8191e6;
   --color-red: #db3445;
   --color-white: #f5f5f5;
   --color-grey: #363636;
@@ -110,6 +111,20 @@ a {
   transition: 0.2s all;
 }
 
+html {
+  scrollbar-color: var(--color-blue-light) var(--color-dark);
+  scrollbar-width: thin;
+}
+html ::-webkit-scrollbar {
+  width: 5px;
+}
+html ::-webkit-scrollbar-thumb {
+  background: var(--color-blue-light);
+}
+html ::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+
 input,
 textarea {
   border: none;
@@ -192,6 +207,177 @@ p {
 .heading--4 {
   font-size: var(--fs-base);
   font-weight: 400;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes eyebrowHead {
+  5% {
+    transform: translateY(-3%);
+  }
+  80% {
+    transform: translateY(-3%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+}
+@keyframes cheeksHead {
+  5% {
+    transform: rotate(-1deg);
+  }
+  80% {
+    transform: rotate(-1deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mouthHead {
+  5% {
+    transform: rotate(-0.7deg) skewX(0.5deg);
+  }
+  70% {
+    transform: rotate(-0.7deg) skewX(0.5deg);
+  }
+  100% {
+    transform: rotate(0deg) skewX(0);
+  }
+}
+/* BODY ANIMATE */
+@keyframes surfer-total {
+  0%, 100% {
+    transform: translate(0%, 5%);
+  }
+  50% {
+    transform: translate(-5%, 5%);
+  }
+  85% {
+    transform: translate(6%, 3%);
+  }
+}
+@keyframes board-legs {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-1.5%);
+  }
+}
+@keyframes face-total {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.05) rotate(-10deg);
+  }
+  70% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+@keyframes eyebrow {
+  0% {
+    transform: translateY(0%);
+  }
+  10% {
+    transform: translateY(-1%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(-1%);
+  }
+}
+@keyframes cheeks {
+  10% {
+    transform: rotate(-0.2deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-0.2deg);
+  }
+  100% {
+    transform: rotate(-0.2deg);
+  }
+}
+@keyframes mouth {
+  10% {
+    transform: rotate(-0.3deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  70% {
+    transform: rotate(-0.3deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(-0.3deg) scale(1.05);
+  }
+}
+@keyframes hand-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(8deg);
+  }
+}
+@keyframes hand-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-29deg);
+  }
+}
+/* WAVE ANIMATE */
+@keyframes whitewater {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(0%, 10%) skewY(20deg) scale(1.2);
+  }
+}
+@keyframes waves {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(17deg);
+  }
+}
+/*  ANIAMTE SUN */
+@keyframes sunMiddle {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes sunOuter {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
 }
 .main {
   display: grid;
@@ -301,17 +487,13 @@ p {
   justify-items: center;
   color: var(--color-foreground);
   padding: 23rem 1.5rem 2rem;
-  background-color: #8191e6;
-  background-color: #00ce7c;
-  background-color: #0b0b0f;
-  background-color: #181818;
-  background-color: #141b1f;
   background-color: var(--color-background);
 }
+
 .lightMode {
   --color-foreground: var(--color-dark);
   --color-background: var(--color-light);
-  --color-accent-primary: #5068dc;
+  --color-accent-primary: var(--color-blue);
   --color-accent-secondary: #737373;
 }
 
@@ -743,7 +925,7 @@ p {
   transform: translate3d(4px, 4px, 4px);
 }
 .btn:hover :after {
-  background-color: #8191e6;
+  background-color: var(--color-blue-light);
 }
 .btn ::before,
 .btn ::after {
@@ -753,13 +935,13 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 12vh;
-  border: 1px solid #000;
+  border: 1px solid var(--color-dark);
   z-index: -1;
   pointer-events: none;
 }
 .btn ::before {
   content: "";
-  background-color: var(--color-white);
+  background-color: var(--color-light);
   transform: translate(4px, 4px);
 }
 .btn ::after {
@@ -767,7 +949,7 @@ p {
   display: grid;
   align-content: center;
   justify-items: center;
-  color: #000;
+  color: var(--color-dark);
   background-color: var(--color-primary);
   transition: background-color 0.125s linear, transform 0.125s ease-out;
 }
@@ -800,7 +982,7 @@ p {
   font-size: 2rem;
 }
 .btn--settings:hover :after, .btn--control-theme:hover :after, .btn--control-sound:hover :after, .btn--control-code:hover :after {
-  background-color: var(--color-white);
+  background-color: var(--color-light);
 }
 .btn--form-submit {
   z-index: 0;
@@ -812,9 +994,10 @@ p {
   }
 }
 .hamburger__text {
-  color: black;
+  color: var(--color-dark);
 }
 
+/* SURFER ANIMATE */
 .surfer {
   transform: rotate(3deg);
   display: inline-block;
@@ -944,177 +1127,6 @@ textarea {
 }
 .footer__info {
   font-size: var(--fs-400);
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes eyebrowHead {
-  5% {
-    transform: translateY(-3%);
-  }
-  80% {
-    transform: translateY(-3%);
-  }
-  90% {
-    transform: translateY(0%);
-  }
-}
-@keyframes cheeksHead {
-  5% {
-    transform: rotate(-1deg);
-  }
-  80% {
-    transform: rotate(-1deg);
-  }
-  90% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes mouthHead {
-  5% {
-    transform: rotate(-0.7deg) skewX(0.5deg);
-  }
-  70% {
-    transform: rotate(-0.7deg) skewX(0.5deg);
-  }
-  100% {
-    transform: rotate(0deg) skewX(0);
-  }
-}
-/* BODY ANIMATE */
-@keyframes surfer-total {
-  0%, 100% {
-    transform: translate(0%, 5%);
-  }
-  50% {
-    transform: translate(-5%, 5%);
-  }
-  85% {
-    transform: translate(6%, 3%);
-  }
-}
-@keyframes board-legs {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-1.5%);
-  }
-}
-@keyframes face-total {
-  0% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.05) rotate(-10deg);
-  }
-  70% {
-    transform: scale(1.05) rotate(2deg);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-@keyframes eyebrow {
-  0% {
-    transform: translateY(0%);
-  }
-  10% {
-    transform: translateY(-1%);
-  }
-  50% {
-    transform: translateY(0%);
-  }
-  70% {
-    transform: translateY(-1%);
-  }
-  100% {
-    transform: translateY(-1%);
-  }
-}
-@keyframes cheeks {
-  10% {
-    transform: rotate(-0.2deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  70% {
-    transform: rotate(-0.2deg);
-  }
-  100% {
-    transform: rotate(-0.2deg);
-  }
-}
-@keyframes mouth {
-  10% {
-    transform: rotate(-0.3deg) scale(1.05);
-  }
-  50% {
-    transform: rotate(0deg) scale(1);
-  }
-  70% {
-    transform: rotate(-0.3deg) scale(1.05);
-  }
-  100% {
-    transform: rotate(-0.3deg) scale(1.05);
-  }
-}
-@keyframes hand-left {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(8deg);
-  }
-}
-@keyframes hand-right {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-29deg);
-  }
-}
-/* WAVE ANIMATE */
-@keyframes whitewater {
-  from {
-    transform: translate(0%, 0%);
-  }
-  to {
-    transform: translate(0%, 10%) skewY(20deg) scale(1.2);
-  }
-}
-@keyframes waves {
-  from {
-    transform: rotate(5deg);
-  }
-  to {
-    transform: rotate(17deg);
-  }
-}
-/*  ANIAMTE SUN */
-@keyframes sunMiddle {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-@keyframes sunOuter {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(-360deg);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

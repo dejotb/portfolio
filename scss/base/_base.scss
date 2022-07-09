@@ -16,8 +16,6 @@ ul {
   scroll-margin-top: 8rem;
   &:focus {
     outline-color: var(--color-blue);
-    // border-radius: 12vh;
-    // transform: translate3d(4px, 4px, 4px);
   }
 }
 
@@ -30,8 +28,6 @@ html {
 body {
   font-size: var(--fs-base);
   font-family: var(--ff-primary);
-
-  // font-weight: 300;
   line-height: 1.6;
   text-rendering: optimizeSpeed;
 }
@@ -57,7 +53,6 @@ canvas,
 svg {
   display: block;
   width: 100%;
-  // z-index: var(--z-index-box);
 }
 
 input,
@@ -84,8 +79,20 @@ a {
 }
 
 html {
-  // scrollbar-color: var(--color-blue) #e0e0e0;
-  // scrollbar-width: thin;
+  scrollbar-color: var(--color-blue-light) var(--color-dark);
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-blue-light);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-dark);
+  }
 }
 
 input,
@@ -99,8 +106,4 @@ table {
 
 p {
   max-width: 70ch;
-
-  // &:not(:last-child) {
-  //   margin-bottom: 1rem;
-  // }
 }

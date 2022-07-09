@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 
+/* SURFER ANIMATE */
+
 .surfer {
   transform: rotate(3deg);
   display: inline-block;
@@ -17,7 +19,6 @@
 
 .board-legs {
   animation: board-legs 0.5s ease-in-out infinite alternate;
-  //   transform-origin: center;
   transform-box: fill-box;
 }
 

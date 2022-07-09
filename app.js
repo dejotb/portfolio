@@ -279,7 +279,7 @@ const sendEmail = async function() {
         const formName = document.querySelector('#name').value;
         const formMessage = document.querySelector('#message').value;
 
-        const resForm = await fetch("https://formsubmit.co/ajax/dejotb1@gmail.com", {
+        const resForm = await fetch("https://formsubmit.co/ajax/dejotb@gmail.com", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
