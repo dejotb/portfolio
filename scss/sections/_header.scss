@@ -50,7 +50,6 @@
     display: none;
     width: auto;
     max-height: 12rem;
-    // z-index: 0;
 
     @media screen and (min-width: $bp-min) {
       display: block;
@@ -60,8 +59,6 @@
     }
 
     & img {
-      //   position: absolute;
-      //   top: 0;
       height: 100%;
     }
 

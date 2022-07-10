@@ -528,7 +528,7 @@ p {
     justify-self: end;
   }
 }
-.about__image img:nth-child(2) {
+.about__image picture:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
@@ -537,7 +537,7 @@ p {
 .about__image:hover {
   transform: rotate(-2deg);
 }
-.about__image:hover img:nth-child(2) {
+.about__image:hover picture:nth-child(2) {
   display: block;
 }
 .about__skills {
