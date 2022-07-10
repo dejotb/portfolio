@@ -9,7 +9,6 @@
     grid-gap: 2rem;
 
     @media screen and (min-width: $bp-md) {
-      // grid-auto-flow: column;
       flex-direction: row;
       grid-column: span 2;
       padding: 4rem 0;

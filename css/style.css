@@ -521,6 +521,7 @@ p {
 }
 .about__image {
   max-width: 17rem;
+  height: auto;
 }
 @media screen and (min-width: 50em) {
   .about__image {
@@ -580,6 +581,7 @@ p {
   height: 4rem;
   width: auto;
 }
+
 .quote__layout {
   display: flex;
   flex-direction: column-reverse;
@@ -678,18 +680,22 @@ p {
 }
 .project__image--right {
   width: 80%;
+  height: auto;
 }
 @media screen and (min-width: 45em) {
   .project__image--right {
     width: 100%;
+    height: auto;
   }
 }
 .project__image--left {
   width: 15rem;
+  height: auto;
 }
 @media screen and (min-width: 45em) {
   .project__image--left {
     width: 17rem;
+    height: auto;
   }
 }
 
@@ -779,6 +785,7 @@ p {
   .contact__logo {
     display: block;
     width: 80%;
+    height: auto;
   }
 }
 

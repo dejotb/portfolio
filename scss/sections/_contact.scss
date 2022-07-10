@@ -1,18 +1,13 @@
 @use "../abstracts/" as *;
 
 .contact {
-  //   max-width: $bp-md;
   display: grid;
   grid-gap: 2rem;
-  // padding: 5rem 0 0;
 
   &__wrapper {
-    // height: 25rem;
-    // background-color: pink;
     position: relative;
     display: grid;
     align-items: center;
-    // justify-content: start;
 
     @media screen and (min-width: $bp-md) {
       grid-auto-flow: column;
@@ -33,7 +28,6 @@
 
   &__form--field {
     display: grid;
-    // background-color: pink;
   }
 
   &__alert {
@@ -67,15 +61,11 @@
   }
 
   &__text {
-    // position: relative;
     display: grid;
     grid-gap: 2rem;
 
     & .highlight--line {
       cursor: pointer;
-
-      // color: var(--color-accent-primary);
-      // font-weight: 900;
     }
   }
 
@@ -92,17 +82,11 @@
 
     & span {
       font-size: calc(var(--fs-400) + 1rem);
-      // display: block;
-      // font-family: var(--ff-primary);
       font-weight: 400;
       text-transform: uppercase;
       color: var(--color-accent-secondary);
     }
   }
-
-  // &__text {
-  //   justify-self: start;
-  // }
 
   &__logo {
     display: none;
@@ -111,7 +95,7 @@
     @media screen and (min-width: $bp-lg) {
       display: block;
       width: 80%;
-      // width: 40rem;
+      height: auto;
     }
   }
 }

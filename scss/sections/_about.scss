@@ -3,13 +3,8 @@
 .about {
   display: grid;
   grid-gap: 2rem;
-  // background-color: pink;
-  // justify-content: start;
-  // min-height: 100vh;
-  // padding: 10rem 0 0;
   justify-items: center;
   align-content: flex-start;
-  // max-width: $bp-md;
 
   &__layout {
     display: grid;
@@ -17,11 +12,8 @@
     row-gap: 4rem;
     justify-items: center;
     align-items: center;
-    // grid-template-columns: 1fr;
 
     @media screen and (min-width: $bp-md) {
-      // grid-auto-flow: column;
-      // grid-gap: 1rem;
       grid-template-columns: 2fr 1fr;
       grid-auto-columns: 1fr;
     }
@@ -31,16 +23,9 @@
     justify-self: start;
   }
 
-  &__content {
-    // width: 70%;
-    // display: grid;
-    // justify-content: end;
-    // z-index: 1;
-  }
-
   &__image {
     max-width: 17rem;
-    // position: relative;
+    height: auto;
 
     @media screen and (min-width: $bp-lg) {
       max-width: 21rem;
@@ -52,30 +37,21 @@
       top: 0;
       left: 0;
       display: none;
-
-      // opacity: 1;
     }
 
     &:hover {
-      // z-index: -1;
       transform: rotate(-2deg);
       & picture:nth-child(2) {
         display: block;
       }
     }
-
-    // &:hover img:nth-child(2) {
-    //   display: block;
-    // }
   }
+
   &__skills {
     display: grid;
 
     grid-gap: 1rem;
     justify-self: start;
-    // grid-column: span 2;
-
-    // background-color: pink;
 
     @media screen and (min-width: $bp-md) {
       grid-column: span 2;
@@ -86,7 +62,6 @@
     display: flex;
     flex-wrap: wrap;
     grid-gap: 2rem;
-    // font-weight: 100;
     color: var(--color-accent-secondary);
   }
   &__item {
@@ -96,7 +71,6 @@
     text-align: center;
 
     & span {
-      // padding-top: 0.5rem;
       font-size: calc(var(--fs-base) - 0.7rem);
       display: block;
       font-family: var(--ff-primary);
@@ -117,11 +91,5 @@
       height: 4rem;
       width: auto;
     }
-  }
-
-  &__surfer {
-  }
-
-  &__quote {
   }
 }

@@ -99,15 +99,19 @@
 
     &--right {
       width: 80%;
+      height: auto;
       @media screen and (min-width: $bp-md) {
         width: 100%;
+        height: auto;
       }
     }
     &--left {
       width: 15rem;
+      height: auto;
 
       @media screen and (min-width: $bp-md) {
         width: 17rem;
+        height: auto;
       }
     }
   }

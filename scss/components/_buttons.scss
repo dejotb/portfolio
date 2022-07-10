@@ -4,7 +4,6 @@
   position: relative;
   text-decoration: none;
   border: none;
-  // border-radius: 2rem;
   height: 3.5rem;
   background-color: transparent;
   cursor: pointer;
@@ -15,7 +14,6 @@
     width: 13rem;
   }
 
-  // &:focus,
   &:active {
     :after {
       transform: translate3d(4px, 4px, 4px);
