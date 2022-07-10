@@ -520,8 +520,10 @@ p {
   justify-self: start;
 }
 .about__image {
-  max-width: 17rem;
-  height: auto;
+  max-width: 18rem;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 50em) {
   .about__image {
