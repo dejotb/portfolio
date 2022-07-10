@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>I'm Bartosz Kraszewski</title>
     <script defer src="app.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div class="layout">
@@ -331,7 +332,7 @@
                 I am passionate, diligent, detail-oriented and I work very well
                 as part of a team. I always work towards achieving best result
                 on each project I lay my hands on. You can view some of my work
-                <a class="" href=""><i>here</i></a
+                <a class="" href="#projects"><i>here</i></a
                 >.
               </p>
               <p>
@@ -1204,7 +1205,8 @@
                   required ='true'
                   ></textarea>
               </div>
-              <button class="btn btn--form-submit" type="submit">
+              <div class="g-recaptcha" data-sitekey="6Lfbk9wgAAAAANxPxs6GU6KdHHhh6C3ADjdU0Ztl"></div>
+              <button class="btn btn--form-submit" type="submit" title="form submit">
                 <span  data-title='Submit'></span>
               </button>
             </form>
