@@ -523,7 +523,7 @@ p {
   max-width: 18rem;
 }
 .about__image img {
-  aspect-ratio: 16/21;
+  aspect-ratio: 1599/2132;
 }
 @media screen and (min-width: 50em) {
   .about__image {
