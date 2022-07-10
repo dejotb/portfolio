@@ -680,23 +680,25 @@ p {
 }
 .project__image--right {
   width: 80%;
-  height: auto;
 }
 @media screen and (min-width: 45em) {
   .project__image--right {
     width: 100%;
-    height: auto;
   }
+}
+.project__image--right img {
+  aspect-ratio: 419/254;
 }
 .project__image--left {
   width: 15rem;
-  height: auto;
 }
 @media screen and (min-width: 45em) {
   .project__image--left {
     width: 17rem;
-    height: auto;
   }
+}
+.project__image--left img {
+  aspect-ratio: 850/1779;
 }
 
 .contact {

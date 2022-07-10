@@ -99,19 +99,21 @@
 
     &--right {
       width: 80%;
-      height: auto;
       @media screen and (min-width: $bp-md) {
         width: 100%;
-        height: auto;
+      }
+      & img {
+        aspect-ratio: 419 / 254;
       }
     }
     &--left {
       width: 15rem;
-      height: auto;
 
       @media screen and (min-width: $bp-md) {
         width: 17rem;
-        height: auto;
+      }
+      & img {
+        aspect-ratio: 850 / 1779;
       }
     }
   }
