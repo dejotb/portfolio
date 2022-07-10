@@ -1186,7 +1186,6 @@
           <div class="contact__wrapper">
             <form class="contact__form" method="POST" onsubmit="sendEmail(); reset(); return false">
               <input type="hidden" name="_subject" value="New email for Portfolio!">
-              <!-- <input type="hidden" name="_captcha" value="false"> -->
               <div class="contact__form--field">
                 <label  for="name">Name *</label>
                 <input id='name' type="text" id="name" name="name" required ='true' />
@@ -1204,7 +1203,8 @@
                   required ='true'
                   ></textarea>
               </div>
-              <div class="g-recaptcha" data-sitekey="6Lfbk9wgAAAAANxPxs6GU6KdHHhh6C3ADjdU0Ztl"></div>
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_template" value="table">
               <button class="btn btn--form-submit" type="submit" title="form submit">
                 <span  data-title='Submit'></span>
               </button>
