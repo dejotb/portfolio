@@ -293,6 +293,9 @@ const sendEmail = async function() {
     });
 
         const responseForm = await resForm.json();
+        // const recaptchaCheckBoxStatus = document.querySelector('#recaptcha-anchor').querySelector('[aria-checked]');
+        // console.log(recaptchaCheckBoxStatus);
+
         if (responseForm.success !== 'true') {
             handlePopup(contactAlertForm, `Something went wrong! 🚫 Your message wasn't sent!`);
             throw new Error(responseForm.message);
