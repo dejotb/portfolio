@@ -521,13 +521,13 @@ p {
 }
 .about__image {
   max-width: 18rem;
-  height: 100%;
-  max-height: 100%;
-  object-fit: cover;
+}
+.about__image img {
+  aspect-ratio: 16/21;
 }
 @media screen and (min-width: 50em) {
   .about__image {
-    max-width: 21rem;
+    max-width: 23rem;
     justify-self: end;
   }
 }
