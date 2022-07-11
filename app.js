@@ -13,6 +13,8 @@ const headerImageText = document.querySelector('.header__image--text');
 const settingsControlBar = document.querySelector('.settings__control');
 const surfer = document.querySelector('.surfer-total');
 
+// Handle Hamburger
+
 hamburger.addEventListener('click', (e) => {
   const hamburgerState = e.currentTarget.getAttribute('aria-expanded');
 
@@ -23,6 +25,8 @@ hamburger.addEventListener('click', (e) => {
     btnSettings.classList.add('transparent');
   }
 });
+
+// Header image resize
 
 const calcHeight = function () {
   const h1 = document.querySelector('h1');
@@ -37,10 +41,6 @@ const calcHeight = function () {
 calcHeight();
 
 window.addEventListener('resize', calcHeight);
-
-// Console Information
-
-console.info('Hey! 👋');
 
 // handle settings panel
 
@@ -81,7 +81,7 @@ const switchControlBtnIconState = function (btnType, state1, state2) {
   }
 };
 
-// Sounds
+// Handle sounds
 
 const playSound = function (soundName) {
   if (btnSound.getAttribute('data-sound') === 'false') {
@@ -129,6 +129,8 @@ const handleSound = function () {
 };
 
 handleSound();
+
+// Handle theme switch
 
 const handleTheme = function () {
   let lightMode = localStorage.getItem('lightMode');
@@ -266,7 +268,7 @@ const sendEmail = async function () {
   }
 };
 
-// copy mail to clippboard
+// Copy mail to clippboard
 
 const coppiedText = document.querySelector('#copyText');
 
@@ -279,3 +281,31 @@ coppiedText.addEventListener('click', copyToClipboard);
 contactEmail.addEventListener('click', () => {
   handlePopup(contactAlertEmail, 'Copied!');
 });
+
+// GSAP animation - projects scroll trigger
+
+gsap.registerPlugin(ScrollTrigger);
+const projects = document.querySelectorAll('.project');
+
+projects.forEach((project) =>
+  gsap.fromTo(
+    project.children,
+    { y: '+=100', opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.2,
+      duration: 1,
+      ease: 'easeInOut',
+      scrollTrigger: {
+        trigger: project,
+        start: 'top 140%',
+        scrub: 1,
+      },
+    }
+  )
+);
+
+// Console Information
+
+console.info('Hey! 👋');
