@@ -440,9 +440,6 @@ p {
     height: 22rem;
   }
 }
-.header__image img {
-  height: 100%;
-}
 .header__image--text {
   position: absolute;
   bottom: -5rem;

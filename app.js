@@ -28,19 +28,19 @@ hamburger.addEventListener('click', (e) => {
 
 // Header image resize
 
-const calcHeight = function () {
-  const h1 = document.querySelector('h1');
-  const headingCompStyle = window.getComputedStyle(h1);
-  const img = document.querySelector('.header__image');
+// const calcHeight = function () {
+//   const h1 = document.querySelector('h1');
+//   const headingCompStyle = window.getComputedStyle(h1);
+//   const img = document.querySelector('.header__image');
 
-  const handleHeadingHeight = headingCompStyle.getPropertyValue('height');
+//   const handleHeadingHeight = headingCompStyle.getPropertyValue('height');
 
-  img.style.height = handleHeadingHeight;
-};
+//   img.style.height = handleHeadingHeight;
+// };
 
-calcHeight();
+// calcHeight();
 
-window.addEventListener('resize', calcHeight);
+// window.addEventListener('resize', calcHeight);
 
 // handle settings panel
 
