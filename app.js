@@ -26,22 +26,6 @@ hamburger.addEventListener('click', (e) => {
   }
 });
 
-// Header image resize
-
-// const calcHeight = function () {
-//   const h1 = document.querySelector('h1');
-//   const headingCompStyle = window.getComputedStyle(h1);
-//   const img = document.querySelector('.header__image');
-
-//   const handleHeadingHeight = headingCompStyle.getPropertyValue('height');
-
-//   img.style.height = handleHeadingHeight;
-// };
-
-// calcHeight();
-
-// window.addEventListener('resize', calcHeight);
-
 // handle settings panel
 
 const handleSettingsPanel = () => {
@@ -194,26 +178,6 @@ nav.addEventListener('click', (e) => {
   }
 });
 
-// Animation of header image text on click
-
-header.addEventListener('click', (e) => {
-  if (e.target.closest('.header__image')) {
-    headerImage.style.position = 'relative';
-    headerImageText.classList.remove('hidden');
-    setTimeout(() => {
-      headerImageText.classList.add('hidden');
-      headerImage.style.position = 'static';
-    }, 650);
-    playSound('hello');
-  }
-});
-
-// Animarion of surfer on click
-
-surfer.addEventListener('click', () => {
-  playSound('happy');
-});
-
 // send email
 
 const contactEmail = document.querySelector('.contact__email');
@@ -299,14 +263,31 @@ projects.forEach((project) =>
       ease: 'easeInOut',
       scrollTrigger: {
         trigger: project,
-        start: 'top 140%',
-        scrub: 1,
+        start: 'top 80%',
       },
     }
   )
 );
 
-// transform: rotate(-1deg) skewX(0.5deg);
+// Animation of header image text on click
+
+header.addEventListener('click', (e) => {
+  if (e.target.closest('.header__image')) {
+    headerImage.style.position = 'relative';
+    headerImageText.classList.remove('hidden');
+    setTimeout(() => {
+      headerImageText.classList.add('hidden');
+      headerImage.style.position = 'static';
+    }, 650);
+    playSound('hello');
+  }
+});
+
+// Animation of surfer on click
+
+surfer.addEventListener('click', () => {
+  playSound('happy');
+});
 
 // Console Information
 

@@ -69,6 +69,7 @@
     }
   }
 
+  &__image,
   &__eyebrows,
   &__mouth,
   &__cheeks {
@@ -76,14 +77,16 @@
   }
 
   &:hover {
+    .header__image {
+      transform: rotate(2deg) skewX(-1deg);
+    }
+
     .header__mouth {
       transform: rotate(-1deg) skewX(0.5deg);
     }
-
     .header__cheeks {
       transform: rotate(-0.8deg);
     }
-
     .header__eyebrows {
       transform: translateY(-3%);
     }

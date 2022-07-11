@@ -453,8 +453,11 @@ p {
     width: 25rem;
   }
 }
-.header__eyebrows, .header__mouth, .header__cheeks {
+.header__image, .header__eyebrows, .header__mouth, .header__cheeks {
   transition: transform 0.2s linear;
+}
+.header:hover .header__image {
+  transform: rotate(2deg) skewX(-1deg);
 }
 .header:hover .header__mouth {
   transform: rotate(-1deg) skewX(0.5deg);
