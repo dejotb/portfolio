@@ -428,7 +428,7 @@ p {
   border: none;
   display: none;
   width: auto;
-  max-height: 12rem;
+  height: 12rem;
 }
 @media screen and (min-width: 22em) {
   .header__image {
@@ -437,34 +437,11 @@ p {
 }
 @media screen and (min-width: 45em) {
   .header__image {
-    max-height: 22rem;
+    height: 22rem;
   }
 }
 .header__image img {
   height: 100%;
-}
-.header__image .header__mouth {
-  animation: 4s mouthHead 1s ease-in-out;
-}
-.header__image .header__cheeks {
-  animation: 4s cheeksHead 1s ease-in-out;
-}
-.header__image .header__eyebrows {
-  animation: 4s eyebrowHead 1s ease-in-out;
-}
-.header__image .header__eyebrows,
-.header__image .header__mouth,
-.header__image .header__cheeks {
-  transition: transform 0.2s linear;
-}
-.header__image:hover .header__mouth {
-  transform: rotate(-1deg) skewX(0.5deg);
-}
-.header__image:hover .header__cheeks {
-  transform: rotate(-0.8deg);
-}
-.header__image:hover .header__eyebrows {
-  transform: translateY(-3%);
 }
 .header__image--text {
   position: absolute;
@@ -478,6 +455,18 @@ p {
     left: 4rem;
     width: 25rem;
   }
+}
+.header__eyebrows, .header__mouth, .header__cheeks {
+  transition: transform 0.2s linear;
+}
+.header:hover .header__mouth {
+  transform: rotate(-1deg) skewX(0.5deg);
+}
+.header:hover .header__cheeks {
+  transform: rotate(-0.8deg);
+}
+.header:hover .header__eyebrows {
+  transform: translateY(-3%);
 }
 
 .layout {

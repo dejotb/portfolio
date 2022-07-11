@@ -42,47 +42,17 @@
     border: none;
     display: none;
     width: auto;
-    max-height: 12rem;
+    height: 12rem;
 
     @media screen and (min-width: $bp-min) {
       display: block;
     }
     @media screen and (min-width: $bp-md) {
-      max-height: 22rem;
+      height: 22rem;
     }
 
     & img {
       height: 100%;
-    }
-
-    .header__mouth {
-      animation: 4s mouthHead 1s ease-in-out;
-    }
-    .header__cheeks {
-      animation: 4s cheeksHead 1s ease-in-out;
-    }
-    .header__eyebrows {
-      animation: 4s eyebrowHead 1s ease-in-out;
-    }
-
-    .header__eyebrows,
-    .header__mouth,
-    .header__cheeks {
-      transition: transform 0.2s linear;
-    }
-
-    &:hover {
-      .header__mouth {
-        transform: rotate(-1deg) skewX(0.5deg);
-      }
-
-      .header__cheeks {
-        transform: rotate(-0.8deg);
-      }
-
-      .header__eyebrows {
-        transform: translateY(-3%);
-      }
     }
 
     &--text {
@@ -96,6 +66,26 @@
         left: 4rem;
         width: 25rem;
       }
+    }
+  }
+
+  &__eyebrows,
+  &__mouth,
+  &__cheeks {
+    transition: transform 0.2s linear;
+  }
+
+  &:hover {
+    .header__mouth {
+      transform: rotate(-1deg) skewX(0.5deg);
+    }
+
+    .header__cheeks {
+      transform: rotate(-0.8deg);
+    }
+
+    .header__eyebrows {
+      transform: translateY(-3%);
     }
   }
 }
