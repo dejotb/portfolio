@@ -457,7 +457,7 @@ p {
   transition: transform 0.2s linear;
 }
 .header:hover .header__image {
-  transform: rotate(2deg) skewX(-1deg);
+  transform: rotate(4deg);
 }
 .header:hover .header__mouth {
   transform: rotate(-1deg) skewX(0.5deg);
