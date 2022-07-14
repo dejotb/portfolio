@@ -6,8 +6,16 @@
   grid-gap: 10rem;
   justify-items: center;
   color: var(--color-foreground);
-  padding: 23rem 1.5rem 2rem;
+  padding: 23rem 1.5rem 0;
   background-color: var(--color-background);
+  background-image: url("../../img/waves2.png");
+  background-size: 35%;
+  background-repeat: repeat-x;
+  background-position: bottom;
+
+  @media screen and (min-width: $bp-lg) {
+    background-size: 10%;
+  }
 }
 
 .lightMode {
