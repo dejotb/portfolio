@@ -487,7 +487,12 @@ p {
 }
 @media screen and (min-width: 50em) {
   .layout {
-    background-size: 12%;
+    background-size: 20%;
+  }
+}
+@media screen and (min-width: 75em) {
+  .layout {
+    background-size: 10%;
   }
 }
 
