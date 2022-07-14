@@ -730,6 +730,7 @@ p {
   margin: 2rem 0;
   display: grid;
   grid-gap: 2rem;
+  font-size: var(--fs-400);
 }
 @media screen and (min-width: 50em) {
   .contact__form {
