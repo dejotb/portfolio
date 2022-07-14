@@ -492,6 +492,12 @@ p {
   justify-items: center;
   align-content: flex-start;
 }
+.about:hover .about__image {
+  transform: rotate(-2deg);
+}
+.about:hover .about__image picture:nth-child(2) {
+  display: block;
+}
 .about__layout {
   display: grid;
   column-gap: 2rem;
@@ -510,8 +516,9 @@ p {
 }
 .about__image {
   max-width: 18rem;
+  transition: all 0.1s ease-in-out;
 }
-.about__image img {
+.about__image picture {
   aspect-ratio: 1599/2132;
 }
 @media screen and (min-width: 50em) {
@@ -525,12 +532,6 @@ p {
   top: 0;
   left: 0;
   display: none;
-}
-.about__image:hover {
-  transform: rotate(-2deg);
-}
-.about__image:hover picture:nth-child(2) {
-  display: block;
 }
 .about__skills {
   display: grid;

@@ -6,6 +6,13 @@
   justify-items: center;
   align-content: flex-start;
 
+  &:hover &__image {
+    transform: rotate(-2deg);
+    & picture:nth-child(2) {
+      display: block;
+    }
+  }
+
   &__layout {
     display: grid;
     column-gap: 2rem;
@@ -25,8 +32,9 @@
 
   &__image {
     max-width: 18rem;
+    transition: all 0.1s ease-in-out;
 
-    & img {
+    & picture {
       aspect-ratio: 1599 / 2132;
     }
 
@@ -40,13 +48,6 @@
       top: 0;
       left: 0;
       display: none;
-    }
-
-    &:hover {
-      transform: rotate(-2deg);
-      & picture:nth-child(2) {
-        display: block;
-      }
     }
   }
 
