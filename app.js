@@ -1,5 +1,3 @@
-// Navigation
-
 const layout = document.querySelector('.layout');
 const nav = document.querySelector('.nav');
 const navWrapper = document.querySelector('.nav__list--wrapper');
