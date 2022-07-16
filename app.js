@@ -116,7 +116,6 @@ handleSound();
 
 const handleTheme = function () {
   let lightMode = localStorage.getItem('lightMode');
-  // let themeIconState = localStorage.getItem('themeIconState');
 
   const enableLightMode = () => {
     // add the class lightMode to the layout container
@@ -190,6 +189,8 @@ const handlePopup = function (contactAlert, text) {
     contactAlert.classList.add('hidden');
   }, 4000);
 };
+
+// Function call added in HTML, inline
 
 const sendEmail = async function () {
   try {
