@@ -1001,7 +1001,7 @@ p {
   font-size: 2rem;
 }
 .btn--settings:hover :after, .btn--control-theme:hover :after, .btn--control-sound:hover :after, .btn--control-code:hover :after {
-  background-color: var(--color-light);
+  background-color: var(--color-green);
 }
 .btn--form-submit {
   z-index: 0;
