@@ -3,7 +3,7 @@
 .header {
   width: 100%;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
   justify-items: center;
   padding: 0 0 8rem;
   max-width: $bp-md;
@@ -67,6 +67,11 @@
         width: 25rem;
       }
     }
+  }
+
+  &__tagline {
+    display: grid;
+    grid-gap: 1.5rem;
   }
 
   &__image,

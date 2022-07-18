@@ -389,7 +389,7 @@ p {
 .header {
   width: 100%;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
   justify-items: center;
   padding: 0 0 8rem;
   max-width: 45em;
@@ -455,6 +455,10 @@ p {
     left: 4rem;
     width: 25rem;
   }
+}
+.header__tagline {
+  display: grid;
+  grid-gap: 1.5rem;
 }
 .header__image, .header__eyebrows, .header__mouth, .header__cheeks {
   transition: transform 0.2s linear;
