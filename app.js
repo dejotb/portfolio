@@ -1,17 +1,37 @@
+// ==========================================================================
+// Page elements
+// ==========================================================================
+
 const layout = document.querySelector('.layout');
+
+// Navigation
 const nav = document.querySelector('.nav');
-const navWrapper = document.querySelector('.nav__list--wrapper');
-const header = document.querySelector('.header');
-const btnSettings = document.querySelector('.btn--settings');
 const hamburger = document.querySelector('.btn--hamburger');
-const btnTheme = document.querySelector('.btn--control-theme');
-const btnSound = document.querySelector('.btn--control-sound');
+const settingsControlBar = document.querySelector('.settings__control');
+
+// Header section
+const header = document.querySelector('.header');
 const headerImage = document.querySelector('.header__image');
 const headerImageText = document.querySelector('.header__image--text');
-const settingsControlBar = document.querySelector('.settings__control');
+
+// buttons
+const navWrapper = document.querySelector('.nav__list--wrapper');
+const btnSettings = document.querySelector('.btn--settings');
+const btnTheme = document.querySelector('.btn--control-theme');
+const btnSound = document.querySelector('.btn--control-sound');
+
+// contact section
+const contactEmail = document.querySelector('.contact__email');
+const contactAlertForm = document.querySelector('.contact__alert--form');
+const contactAlertEmail = document.querySelector('.contact__alert--email');
+const coppiedText = document.querySelector('#copyText');
+
+// Image
 const surfer = document.querySelector('.surfer-total');
 
+// ==========================================================================
 // Handle Hamburger
+// ==========================================================================
 
 hamburger.addEventListener('click', (e) => {
   const hamburgerState = e.currentTarget.getAttribute('aria-expanded');
@@ -24,7 +44,9 @@ hamburger.addEventListener('click', (e) => {
   }
 });
 
+// ==========================================================================
 // handle settings panel
+// ==========================================================================
 
 const handleSettingsPanel = () => {
   if (btnSettings.getAttribute('aria-expanded') === 'false') {
@@ -35,8 +57,6 @@ const handleSettingsPanel = () => {
     btnSettings.setAttribute('aria-expanded', 'false');
   }
 };
-
-btnSettings.addEventListener('click', handleSettingsPanel);
 
 document.body.addEventListener('click', (e) => {
   if (
@@ -63,7 +83,11 @@ const switchControlBtnIconState = function (btnType, state1, state2) {
   }
 };
 
+btnSettings.addEventListener('click', handleSettingsPanel);
+
+// ==========================================================================
 // Handle sounds
+// ==========================================================================
 
 const playSound = function (soundName) {
   if (btnSound.getAttribute('data-sound') === 'false') {
@@ -112,7 +136,9 @@ const handleSound = function () {
 
 handleSound();
 
+// ==========================================================================
 // Handle theme switch
+// ==========================================================================
 
 const handleTheme = function () {
   let lightMode = localStorage.getItem('lightMode');
@@ -155,6 +181,10 @@ const handleTheme = function () {
 
 handleTheme();
 
+// ==========================================================================
+// Handle Navigation
+// ==========================================================================
+
 nav.addEventListener('click', (e) => {
   if (e.target.closest('.hamburger')) {
     playSound('click-sound');
@@ -175,11 +205,9 @@ nav.addEventListener('click', (e) => {
   }
 });
 
-// send email
-
-const contactEmail = document.querySelector('.contact__email');
-const contactAlertForm = document.querySelector('.contact__alert--form');
-const contactAlertEmail = document.querySelector('.contact__alert--email');
+// ==========================================================================
+// Handle email
+// ==========================================================================
 
 const handlePopup = function (contactAlert, text) {
   contactAlert.textContent = text;
@@ -231,9 +259,9 @@ const sendEmail = async function () {
   }
 };
 
+// ==========================================================================
 // Copy mail to clippboard
-
-const coppiedText = document.querySelector('#copyText');
+// ==========================================================================
 
 const copyToClipboard = () => {
   navigator.clipboard.writeText(coppiedText.textContent.split('\n')[0]);
@@ -244,6 +272,10 @@ coppiedText.addEventListener('click', copyToClipboard);
 contactEmail.addEventListener('click', () => {
   handlePopup(contactAlertEmail, 'Copied!');
 });
+
+// ==========================================================================
+// Animations
+// ==========================================================================
 
 // GSAP animation - projects scroll trigger
 
