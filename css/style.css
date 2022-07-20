@@ -38,7 +38,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 ul {
@@ -70,13 +70,9 @@ body {
   color: var(--color-grey);
 }
 
-a:hover,
-button:hover {
-  cursor: pointer;
-}
-
 button {
   font-family: inherit;
+  cursor: pointer;
 }
 
 img,
@@ -130,12 +126,32 @@ textarea {
   border: none;
 }
 
+textarea {
+  resize: vertical;
+}
+
 table {
   contain: strict;
 }
 
 p {
   max-width: 70ch;
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr:after {
+  content: "";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
 }
 
 .highlight--bold {
@@ -509,7 +525,7 @@ p {
 
 .about {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 4rem;
   justify-items: center;
   align-content: flex-start;
 }
@@ -621,13 +637,18 @@ p {
   display: grid;
   grid-gap: 8rem;
 }
+@media screen and (min-width: 45em) {
+  .projects__container {
+    grid-gap: 10rem;
+  }
+}
 
 .project {
   display: grid;
 }
 .project__wrapper {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 6rem;
   grid-template-areas: "image" "content";
 }
 @media screen and (min-width: 45em) {
@@ -717,6 +738,9 @@ p {
 .contact {
   display: grid;
   grid-gap: 2rem;
+}
+.contact h2 {
+  margin-bottom: 2rem;
 }
 .contact__wrapper {
   position: relative;
@@ -935,7 +959,6 @@ p {
   border: none;
   height: 3.5rem;
   background-color: transparent;
-  cursor: pointer;
   width: 10rem;
   z-index: var(--z-index-popup);
 }
@@ -989,8 +1012,8 @@ p {
 }
 .btn--close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  left: 1rem;
 }
 .btn--close:hover :after {
   background-color: var(--color-red);
@@ -1024,11 +1047,11 @@ p {
 .surfer {
   transform: rotate(3deg);
   display: inline-block;
-  max-width: 17rem;
+  max-width: 22rem;
 }
 @media screen and (min-width: 50em) {
   .surfer {
-    max-width: 23rem;
+    max-width: 30rem;
     grid-column: span 2;
   }
 }
@@ -1139,6 +1162,7 @@ textarea {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  margin-top: 10rem;
   grid-gap: 2rem;
   height: 4rem;
   padding-bottom: 1rem;

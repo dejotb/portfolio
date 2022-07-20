@@ -6,7 +6,6 @@
   border: none;
   height: 3.5rem;
   background-color: transparent;
-  cursor: pointer;
   width: 10rem;
   z-index: var(--z-index-popup);
 
@@ -68,8 +67,8 @@
 
   &--close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem;
+    left: 1rem;
 
     &:hover {
       :after {

@@ -4,6 +4,10 @@
   display: grid;
   grid-gap: 2rem;
 
+  & h2 {
+    margin-bottom: 2rem;
+  }
+
   &__wrapper {
     position: relative;
     display: grid;

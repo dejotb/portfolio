@@ -5,10 +5,10 @@
 .surfer {
   transform: rotate(3deg);
   display: inline-block;
-  max-width: 17rem;
+  max-width: 22rem;
 
   @media screen and (min-width: $bp-lg) {
-    max-width: 23rem;
+    max-width: 30rem;
     grid-column: span 2;
   }
 }

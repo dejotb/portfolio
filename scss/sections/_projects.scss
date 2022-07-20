@@ -7,6 +7,10 @@
   &__container {
     display: grid;
     grid-gap: 8rem;
+
+    @media screen and (min-width: $bp-md) {
+      grid-gap: 10rem;
+    }
   }
 }
 
@@ -16,7 +20,7 @@
 
   &__wrapper {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 6rem;
     grid-template-areas:
       "image"
       "content";
