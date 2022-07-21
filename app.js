@@ -33,22 +33,24 @@ const surfer = document.querySelector('.surfer-total');
 // Handle Hamburger
 // ==========================================================================
 
-hamburger.addEventListener('click', (e) => {
+const handleHamburger = (e) => {
   const hamburgerState = e.currentTarget.getAttribute('aria-expanded');
-
   if (hamburgerState === 'false') {
     navWrapper.classList.add('visible');
+    document.body.classList.add('sticky__body');
     hamburger.setAttribute('aria-expanded', 'true');
     hamburger.classList.add('transparent');
     btnSettings.classList.add('transparent');
   }
-});
+};
+
+hamburger.addEventListener('click', handleHamburger);
 
 // ==========================================================================
 // handle settings panel
 // ==========================================================================
 
-const handleSettingsPanel = () => {
+const handleSettingsPanelOnButtonClick = () => {
   if (btnSettings.getAttribute('aria-expanded') === 'false') {
     settingsControlBar.classList.remove('hidden');
     btnSettings.setAttribute('aria-expanded', 'true');
@@ -58,7 +60,7 @@ const handleSettingsPanel = () => {
   }
 };
 
-document.body.addEventListener('click', (e) => {
+const handleSettingsPanelOnBodyClick = (e) => {
   if (
     !e.target.closest('.settings__control') &&
     !e.target.classList.contains('btn--settings')
@@ -66,7 +68,9 @@ document.body.addEventListener('click', (e) => {
     settingsControlBar.classList.add('hidden');
     btnSettings.setAttribute('aria-expanded', 'false');
   }
-});
+};
+
+document.body.addEventListener('click', handleSettingsPanelOnBodyClick);
 
 const switchControlBtnIconState = function (btnType, state1, state2) {
   const state = btnType
@@ -83,7 +87,7 @@ const switchControlBtnIconState = function (btnType, state1, state2) {
   }
 };
 
-btnSettings.addEventListener('click', handleSettingsPanel);
+btnSettings.addEventListener('click', handleSettingsPanelOnButtonClick);
 
 // ==========================================================================
 // Handle sounds
@@ -185,7 +189,7 @@ handleTheme();
 // Handle Navigation
 // ==========================================================================
 
-nav.addEventListener('click', (e) => {
+const handleNavigation = (e) => {
   if (e.target.closest('.hamburger')) {
     playSound('click-sound');
     return;
@@ -196,6 +200,7 @@ nav.addEventListener('click', (e) => {
     navWrapper.classList.remove('visible');
     hamburger.classList.remove('transparent');
     btnSettings.classList.remove('transparent');
+    document.body.classList.remove('sticky__body');
 
     playSound('click-sound');
     return;
@@ -203,7 +208,9 @@ nav.addEventListener('click', (e) => {
   if (e.target.closest('.btn--settings')) {
     playSound('click-sound');
   }
-});
+};
+
+nav.addEventListener('click', handleNavigation);
 
 // ==========================================================================
 // Handle email
@@ -302,7 +309,7 @@ projects.forEach((project) =>
 
 // Animation of header image text on click
 
-header.addEventListener('click', (e) => {
+const animateHeaderImage = (e) => {
   if (e.target.closest('.header__image')) {
     headerImage.style.position = 'relative';
     headerImageText.classList.remove('hidden');
@@ -312,13 +319,13 @@ header.addEventListener('click', (e) => {
     }, 650);
     playSound('hello');
   }
-});
+};
+
+header.addEventListener('click', animateHeaderImage);
 
 // Animation of surfer on click
 
-surfer.addEventListener('click', () => {
-  playSound('happy');
-});
+surfer.addEventListener('click', () => playSound('happy'));
 
 // Console Information
 
