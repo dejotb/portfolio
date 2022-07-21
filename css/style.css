@@ -1165,25 +1165,23 @@ textarea {
 .footer {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: end;
   width: 100%;
   margin-top: 6rem;
-  grid-gap: 2rem;
-  height: 4rem;
-  padding-bottom: 1rem;
+  grid-gap: 1rem;
   max-width: 50em;
-  color: var(--color-dark);
-}
-.footer span {
-  background-color: var(--color-blue-light);
+  color: var(--color-light);
 }
 .footer__links {
   display: flex;
   grid-gap: 2rem;
   color: inherit;
+  background-color: var(--color-dark);
+  padding: 0.2rem 0.6rem 0;
 }
 .footer__info {
   font-size: var(--fs-400);
+  background-color: var(--color-dark);
 }
 
 /*# sourceMappingURL=style.css.map */
