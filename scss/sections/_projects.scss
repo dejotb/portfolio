@@ -16,11 +16,10 @@
 
 .project {
   display: grid;
-  // background-color: pink;
 
   &__wrapper {
     display: grid;
-    grid-gap: 6rem;
+    grid-gap: 2rem;
     grid-template-areas:
       "image"
       "content";

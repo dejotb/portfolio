@@ -657,7 +657,7 @@ hr:after {
 }
 .project__wrapper {
   display: grid;
-  grid-gap: 6rem;
+  grid-gap: 2rem;
   grid-template-areas: "image" "content";
 }
 @media screen and (min-width: 45em) {
@@ -772,6 +772,7 @@ hr:after {
 @media screen and (min-width: 50em) {
   .contact__form {
     width: 45em;
+    grid-gap: 3rem;
   }
 }
 .contact__form--field {
