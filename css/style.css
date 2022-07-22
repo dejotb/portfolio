@@ -154,9 +154,8 @@ hr:after {
   top: -13px;
 }
 
-.highlight--bold {
+.highlight {
   color: var(--color-accent-primary);
-  font-weight: 900;
 }
 .highlight--line {
   position: relative;
@@ -198,7 +197,6 @@ hr:after {
 .heading--1, .heading--2, .heading--3, .heading--4 {
   font-family: var(--ff-primary);
   max-width: 33ch;
-  color: var(--color-foreground);
 }
 .heading--1 {
   font-weight: 900;
@@ -478,8 +476,15 @@ hr:after {
   }
 }
 .header__tagline {
+  justify-self: start;
   display: grid;
   grid-gap: 1.5rem;
+}
+.header__links {
+  display: flex;
+  grid-gap: 2rem;
+  font-size: calc(var(--fs-500) + 0.5rem);
+  color: var(--color-accent-primary);
 }
 .header__image, .header__eyebrows, .header__mouth, .header__cheeks {
   transition: transform 0.2s linear;

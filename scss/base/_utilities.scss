@@ -1,10 +1,7 @@
 @use "../abstracts" as *;
 
 .highlight {
-  &--bold {
-    color: var(--color-accent-primary);
-    font-weight: 900;
-  }
+  color: var(--color-accent-primary);
 
   &--line {
     position: relative;
