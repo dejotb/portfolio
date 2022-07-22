@@ -476,7 +476,6 @@ hr:after {
   }
 }
 .header__tagline {
-  justify-self: start;
   display: grid;
   grid-gap: 1.5rem;
 }

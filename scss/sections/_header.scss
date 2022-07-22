@@ -70,13 +70,11 @@
   }
 
   &__tagline {
-    justify-self: start;
     display: grid;
     grid-gap: 1.5rem;
   }
 
   &__links {
-    // justify-self: start;
     display: flex;
     grid-gap: 2rem;
     font-size: calc(var(--fs-500) + 0.5rem);
