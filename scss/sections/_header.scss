@@ -18,7 +18,7 @@
       display: block;
       font-size: calc(var(--fs-600) * 1.5);
 
-      @media screen and (min-width: $bp-sm) {
+      @media screen and (min-width: $bp-md) {
         font-size: calc(var(--fs-600) * 3);
       }
     }
@@ -27,12 +27,12 @@
       display: block;
       font-size: calc(var(--fs-600) * 1.175);
 
-      @media screen and (min-width: $bp-sm) {
+      @media screen and (min-width: $bp-md) {
         font-size: calc(var(--fs-600) * 2.0585);
       }
     }
 
-    @media screen and (min-width: $bp-sm) {
+    @media screen and (min-width: $bp-md) {
       grid-gap: 2rem;
     }
   }
@@ -61,7 +61,7 @@
       left: 2rem;
       width: 15rem;
 
-      @media screen and (min-width: $bp-sm) {
+      @media screen and (min-width: $bp-md) {
         bottom: -9rem;
         left: 4rem;
         width: 25rem;
@@ -70,6 +70,7 @@
   }
 
   &__tagline {
+    justify-self: center;
     display: grid;
     grid-gap: 1.5rem;
   }
