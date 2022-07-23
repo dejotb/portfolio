@@ -520,7 +520,7 @@ p:not(:last-child) {
 }
 @media screen and (min-width: 75em) {
   .layout {
-    background-size: 10%;
+    background-size: 15%;
   }
 }
 
@@ -1168,24 +1168,27 @@ textarea {
 
 .footer {
   display: flex;
-  justify-content: flex-end;
   align-items: end;
-  width: 100%;
+  width: fit-content;
   margin-top: 6rem;
   grid-gap: 1rem;
   max-width: 50em;
   color: var(--color-light);
+  background-color: var(--color-dark);
+  font-size: calc(var(--fs-400) - 0.2rem);
+}
+@media screen and (min-width: 45em) {
+  .footer {
+    font-size: var(--fs-400);
+  }
+}
+.footer__links, .footer__info {
+  padding: 0.2rem 0.6rem 0;
 }
 .footer__links {
   display: flex;
   grid-gap: 2rem;
   color: inherit;
-  background-color: var(--color-dark);
-  padding: 0.2rem 0.6rem 0;
-}
-.footer__info {
-  font-size: var(--fs-400);
-  background-color: var(--color-dark);
 }
 
 /*# sourceMappingURL=style.css.map */
