@@ -476,7 +476,7 @@ p:not(:last-child) {
 .header__tagline {
   justify-self: center;
   display: grid;
-  grid-gap: 1.5rem;
+  grid-gap: 0.5rem;
 }
 .header__links {
   display: flex;
