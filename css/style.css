@@ -1197,6 +1197,7 @@ textarea {
 }
 .footer__links, .footer__info {
   padding: 0.2rem 0.6rem 0;
+  font-family: var(--ff-display);
 }
 .footer__links {
   display: flex;
