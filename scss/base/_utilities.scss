@@ -2,6 +2,7 @@
 
 .highlight {
   color: var(--color-accent-primary);
+  font-family: var(--ff-display);
 
   &--line {
     position: relative;
@@ -29,6 +30,7 @@
     font-size: calc(var(--fs-500));
     font-weight: 400;
     color: var(--color-accent-primary);
+    font-family: var(--ff-display);
   }
 
   &--text-secondary {

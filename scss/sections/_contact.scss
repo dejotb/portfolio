@@ -79,6 +79,10 @@
     display: grid;
     grid-gap: 0.5rem;
     font-size: var(--fs-400);
+
+    & ~ p {
+      font-family: var(--ff-display);
+    }
   }
 
   &__item {

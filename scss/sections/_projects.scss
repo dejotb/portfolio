@@ -70,6 +70,7 @@
   &__tech-list {
     color: var(--color-accent-secondary);
     font-size: calc(var(--fs-base) - 0.2rem);
+    font-family: var(--ff-display);
     display: flex;
     flex-wrap: wrap;
     grid-gap: 1rem;

@@ -144,6 +144,7 @@ p:not(:last-child) {
 
 .highlight {
   color: var(--color-accent-primary);
+  font-family: var(--ff-display);
 }
 .highlight--line {
   position: relative;
@@ -169,6 +170,7 @@ p:not(:last-child) {
   font-size: calc(var(--fs-500));
   font-weight: 400;
   color: var(--color-accent-primary);
+  font-family: var(--ff-display);
 }
 .highlight--text-secondary {
   font-family: var(--ff-primary);
@@ -694,6 +696,7 @@ p:not(:last-child) {
 .project__tech-list {
   color: var(--color-accent-secondary);
   font-size: calc(var(--fs-base) - 0.2rem);
+  font-family: var(--ff-display);
   display: flex;
   flex-wrap: wrap;
   grid-gap: 1rem;
@@ -815,6 +818,9 @@ p:not(:last-child) {
   grid-gap: 0.5rem;
   font-size: var(--fs-400);
 }
+.contact__list ~ p {
+  font-family: var(--ff-display);
+}
 .contact__item {
   display: flex;
   align-items: center;
@@ -859,7 +865,7 @@ p:not(:last-child) {
 }
 .nav__list--wrapper {
   position: absolute;
-  background-color: var(--color-primary);
+  background-color: var(--color-blue-light);
   display: grid;
   align-items: center;
   justify-items: center;
@@ -868,6 +874,10 @@ p:not(:last-child) {
   inset: 0;
   opacity: 0;
   display: none;
+  background-image: url("../../img/waves.png");
+  background-size: 35%;
+  background-repeat: repeat-x;
+  background-position: bottom;
 }
 @media screen and (min-width: 45em) {
   .nav__list--wrapper {
@@ -876,6 +886,7 @@ p:not(:last-child) {
     height: auto;
     background-color: transparent;
     position: relative;
+    background-image: none;
   }
 }
 .nav__items {
@@ -970,6 +981,7 @@ p:not(:last-child) {
   background-color: transparent;
   width: 10rem;
   z-index: var(--z-index-popup);
+  font-family: var(--ff-display);
 }
 @media screen and (min-width: 75em) {
   .btn {
@@ -1041,6 +1053,7 @@ p:not(:last-child) {
 }
 .btn--form-submit {
   z-index: 0;
+  font-size: var(--fs-500);
 }
 
 @media screen and (min-width: 45em) {

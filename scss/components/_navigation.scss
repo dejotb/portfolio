@@ -20,7 +20,7 @@
 
   &__list--wrapper {
     position: absolute;
-    background-color: var(--color-primary);
+    background-color: var(--color-blue-light);
     display: grid;
     align-items: center;
     justify-items: center;
@@ -29,6 +29,10 @@
     inset: 0;
     opacity: 0;
     display: none;
+    background-image: url("../../img/waves.png");
+    background-size: 35%;
+    background-repeat: repeat-x;
+    background-position: bottom;
 
     @media screen and (min-width: $bp-md) {
       display: grid;
@@ -36,6 +40,7 @@
       height: auto;
       background-color: transparent;
       position: relative;
+      background-image: none;
     }
   }
 
