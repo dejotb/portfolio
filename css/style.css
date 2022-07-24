@@ -520,7 +520,7 @@ p:not(:last-child) {
 }
 @media screen and (min-width: 75em) {
   .layout {
-    background-size: 15%;
+    background-size: 12%;
   }
 }
 
