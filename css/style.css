@@ -1,6 +1,6 @@
 :root {
   --ff-primary: "Inter", sans-serif;
-  --ff-display: "Original Surfer", cursive;
+  --ff-display: "Libre Baskerville", serif;
   --fs-base: calc(15px + 0.2vw);
   --fs-xl: clamp(3.5rem, 6vw + 1rem, 5rem);
   --fs-600: clamp(3.25rem, 6vw + 1rem, 4rem);
@@ -145,6 +145,7 @@ p:not(:last-child) {
 .highlight {
   color: var(--color-accent-primary);
   font-family: var(--ff-display);
+  font-weight: 700;
 }
 .highlight--line {
   position: relative;
@@ -185,11 +186,9 @@ p:not(:last-child) {
   }
 }
 .heading--1, .heading--2, .heading--3, .heading--4 {
-  font-family: var(--ff-primary);
   max-width: 33ch;
 }
 .heading--1 {
-  font-weight: 900;
   line-height: 1;
 }
 .heading--2 {
@@ -627,6 +626,7 @@ p:not(:last-child) {
   align-items: center;
   justify-items: center;
   grid-gap: 2rem;
+  font-family: var(--ff-display);
 }
 @media screen and (min-width: 45em) {
   .quote__layout {
@@ -1053,7 +1053,6 @@ p:not(:last-child) {
 }
 .btn--form-submit {
   z-index: 0;
-  font-size: var(--fs-500);
 }
 
 @media screen and (min-width: 45em) {
