@@ -32,7 +32,7 @@
     background-image: url("../../img/waves.png");
     background-size: 50%;
     background-repeat: repeat-x;
-    background-position-y: 92%;
+    background-position-y: 93%;
 
     @media screen and (min-width: $bp-md) {
       display: grid;
@@ -41,6 +41,7 @@
       background-color: transparent;
       position: relative;
       background-image: none;
+      min-height: auto;
     }
   }
 
