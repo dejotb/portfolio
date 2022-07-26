@@ -28,10 +28,14 @@
   }
 
   &--text-primary {
-    font-size: calc(var(--fs-500));
+    font-size: calc(var(--fs-400) * 1.1);
     font-weight: 400;
     color: var(--color-accent-primary);
     font-family: var(--ff-display);
+
+    @media screen and (min-width: $bp-md) {
+      font-size: var(--fs-500);
+    }
   }
 
   &--text-secondary {

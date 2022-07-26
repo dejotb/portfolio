@@ -168,10 +168,15 @@ p:not(:last-child) {
   background-color: var(--color-accent-primary);
 }
 .highlight--text-primary {
-  font-size: calc(var(--fs-500));
+  font-size: calc(var(--fs-400) * 1.1);
   font-weight: 400;
   color: var(--color-accent-primary);
   font-family: var(--ff-display);
+}
+@media screen and (min-width: 45em) {
+  .highlight--text-primary {
+    font-size: var(--fs-500);
+  }
 }
 .highlight--text-secondary {
   font-family: var(--ff-primary);
