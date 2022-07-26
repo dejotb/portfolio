@@ -882,7 +882,7 @@ p:not(:last-child) {
   background-image: url("../../img/waves.png");
   background-size: 100%;
   background-repeat: repeat-x;
-  background-position: bottom;
+  background-position-y: 95%;
 }
 @media screen and (min-width: 45em) {
   .nav__list--wrapper {
