@@ -762,6 +762,7 @@ p:not(:last-child) {
   position: relative;
   display: grid;
   align-items: center;
+  grid-gap: 7rem;
 }
 @media screen and (min-width: 45em) {
   .contact__wrapper {
@@ -838,11 +839,14 @@ p:not(:last-child) {
   color: var(--color-accent-secondary);
 }
 .contact__logo {
-  display: none;
-  justify-self: end;
+  width: 50%;
+  justify-self: center;
+  margin-bottom: -4rem;
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 45em) {
   .contact__logo {
+    justify-self: end;
+    margin-bottom: 0;
     display: block;
     width: 80%;
     height: auto;

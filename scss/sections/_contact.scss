@@ -12,6 +12,7 @@
     position: relative;
     display: grid;
     align-items: center;
+    grid-gap: 7rem;
 
     @media screen and (min-width: $bp-md) {
       grid-auto-flow: column;
@@ -99,10 +100,13 @@
   }
 
   &__logo {
-    display: none;
-    justify-self: end;
+    width: 50%;
+    justify-self: center;
+    margin-bottom: -4rem;
 
-    @media screen and (min-width: $bp-lg) {
+    @media screen and (min-width: $bp-md) {
+      justify-self: end;
+      margin-bottom: 0;
       display: block;
       width: 80%;
       height: auto;
