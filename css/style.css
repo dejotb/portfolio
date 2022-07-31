@@ -290,7 +290,7 @@ p:not(:last-child) {
     transform: translateY(0%);
   }
   to {
-    transform: translateY(-1.5%);
+    transform: translateY(-1.8%);
   }
 }
 @keyframes face-total {
@@ -514,7 +514,7 @@ p:not(:last-child) {
   color: var(--color-foreground);
   padding: 23rem 1.5rem 0;
   background-color: var(--color-background);
-  background-image: url("../../img/waves.png");
+  background-image: url(../../img/waves.png);
   background-size: 35%;
   background-repeat: repeat-x;
   background-position: bottom;
@@ -637,7 +637,7 @@ p:not(:last-child) {
   .quote__layout {
     flex-direction: row;
     grid-column: span 2;
-    padding: 4rem 0;
+    padding: 1rem 0;
   }
 }
 .quote__text {
@@ -1205,7 +1205,7 @@ textarea {
   }
 }
 .footer__links, .footer__info {
-  padding: 0.2rem 0.6rem 0;
+  padding: 0.2rem 0.6rem;
   font-family: var(--ff-display);
 }
 .footer__links {
