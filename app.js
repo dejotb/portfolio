@@ -163,12 +163,7 @@ const handleTheme = function () {
     localStorage.setItem('lightMode', null);
   };
 
-  if (lightMode === 'enabled') {
-    enableLightMode();
-    switchControlBtnIconState(btnTheme, 'dark_mode', 'sunny');
-  }
-
-  btnTheme.addEventListener('click', (e) => {
+  const switchTheme = () => {
     lightMode = localStorage.getItem('lightMode');
 
     if (lightMode !== 'enabled') {
@@ -180,7 +175,14 @@ const handleTheme = function () {
       playSound('theme-light-off-sound');
       switchControlBtnIconState(btnTheme, 'dark_mode', 'sunny');
     }
-  });
+  };
+
+  if (lightMode === 'enabled') {
+    enableLightMode();
+    switchControlBtnIconState(btnTheme, 'dark_mode', 'sunny');
+  }
+
+  btnTheme.addEventListener('click', switchTheme);
 };
 
 handleTheme();
