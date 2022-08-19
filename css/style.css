@@ -869,7 +869,7 @@ p:not(:last-child) {
 @media screen and (min-width: 45em) {
   .nav {
     padding: 1rem 2rem;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
   }
 }
 .nav__list--wrapper {
