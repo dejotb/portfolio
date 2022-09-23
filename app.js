@@ -323,8 +323,8 @@ function animateHead(time) {
 const animateHeaderImage = (e) => {
   if (e.target.closest('.header__image')) {
     animateHead(650);
+    playSound('hello');
   }
-  playSound('hello');
 };
 
 header.addEventListener('click', animateHeaderImage);
