@@ -309,21 +309,31 @@ projects.forEach((project) =>
   )
 );
 
-// Animation of header image text on click
+// Animation of header image text on page load and on click
+
+function animateHead(time) {
+  headerImage.style.position = 'relative';
+  headerImageText.classList.remove('hidden');
+  setTimeout(() => {
+    headerImageText.classList.add('hidden');
+    headerImage.style.position = 'static';
+  }, time);
+}
 
 const animateHeaderImage = (e) => {
   if (e.target.closest('.header__image')) {
-    headerImage.style.position = 'relative';
-    headerImageText.classList.remove('hidden');
-    setTimeout(() => {
-      headerImageText.classList.add('hidden');
-      headerImage.style.position = 'static';
-    }, 650);
-    playSound('hello');
+    animateHead(650);
   }
+  playSound('hello');
 };
 
 header.addEventListener('click', animateHeaderImage);
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    animateHead(1500);
+  }, 1000);
+});
 
 // Animation of surfer on click
 
